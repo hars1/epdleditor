@@ -1,0 +1,1395 @@
+<EPDL>
+  <agents>
+    <agent>
+      <agentId>Permanent Weak Driver</agentId>
+      <agentType>Event Processing Agent</agentType>
+      <agentSubType>Detect Pattern</agentSubType>
+      <agentSelection>
+        <selectionExpression></selectionExpression>
+      </agentSelection>
+      <agentPattern>
+        <patternType>Always</patternType>
+        <participantSet/>
+        <contexts/>
+        <relevanceAssertion>assignment count &lt; 5</relevanceAssertion>
+        <orderPolicy> </orderPolicy>
+        <orderPolicyParam></orderPolicyParam>
+        <matchingPolicy> </matchingPolicy>
+        <matchingPolicyParam></matchingPolicyParam>
+        <annotation></annotation>
+      </agentPattern>
+      <agentDerivation>
+        <derivationSet/>
+      </agentDerivation>
+    </agent>
+    <agent>
+      <agentId>Manager</agentId>
+      <agentType>Consumer</agentType>
+      <agentSubType>Human</agentSubType>
+      <agentSelection>
+        <selectionExpression></selectionExpression>
+      </agentSelection>
+      <agentPattern>
+        <patternType> </patternType>
+        <participantSet/>
+        <contexts/>
+        <relevanceAssertion></relevanceAssertion>
+        <orderPolicy> </orderPolicy>
+        <orderPolicyParam></orderPolicyParam>
+        <matchingPolicy> </matchingPolicy>
+        <matchingPolicyParam></matchingPolicyParam>
+        <annotation></annotation>
+      </agentPattern>
+      <agentDerivation>
+        <derivationSet/>
+      </agentDerivation>
+    </agent>
+    <agent>
+      <agentId>No bidders</agentId>
+      <agentType>Event Processing Agent</agentType>
+      <agentSubType>Detect Pattern</agentSubType>
+      <agentSelection>
+        <selectionExpression></selectionExpression>
+      </agentSelection>
+      <agentPattern>
+        <patternType>Absence</patternType>
+        <participantSet/>
+        <contexts/>
+        <relevanceAssertion></relevanceAssertion>
+        <orderPolicy> </orderPolicy>
+        <orderPolicyParam></orderPolicyParam>
+        <matchingPolicy> </matchingPolicy>
+        <matchingPolicyParam></matchingPolicyParam>
+        <annotation></annotation>
+      </agentPattern>
+      <agentDerivation>
+        <derivationSet/>
+      </agentDerivation>
+    </agent>
+    <agent>
+      <agentId>Vehicle</agentId>
+      <agentType>Producer</agentType>
+      <agentSubType>Human</agentSubType>
+      <agentSelection>
+        <selectionExpression></selectionExpression>
+      </agentSelection>
+      <agentPattern>
+        <patternType> </patternType>
+        <participantSet/>
+        <contexts/>
+        <relevanceAssertion></relevanceAssertion>
+        <orderPolicy> </orderPolicy>
+        <orderPolicyParam></orderPolicyParam>
+        <matchingPolicy> </matchingPolicy>
+        <matchingPolicyParam></matchingPolicyParam>
+        <annotation></annotation>
+      </agentPattern>
+      <agentDerivation>
+        <derivationSet/>
+      </agentDerivation>
+    </agent>
+    <agent>
+      <agentId>Driver&apos;s Guild</agentId>
+      <agentType>Consumer</agentType>
+      <agentSubType>Human</agentSubType>
+      <agentSelection>
+        <selectionExpression></selectionExpression>
+      </agentSelection>
+      <agentPattern>
+        <patternType> </patternType>
+        <participantSet/>
+        <contexts/>
+        <relevanceAssertion></relevanceAssertion>
+        <orderPolicy> </orderPolicy>
+        <orderPolicyParam></orderPolicyParam>
+        <matchingPolicy> </matchingPolicy>
+        <matchingPolicyParam></matchingPolicyParam>
+        <annotation></annotation>
+      </agentPattern>
+      <agentDerivation>
+        <derivationSet/>
+      </agentDerivation>
+    </agent>
+    <agent>
+      <agentId>Assignment not done</agentId>
+      <agentType>Event Processing Agent</agentType>
+      <agentSubType>Detect Pattern</agentSubType>
+      <agentSelection>
+        <selectionExpression></selectionExpression>
+      </agentSelection>
+      <agentPattern>
+        <patternType>Absence</patternType>
+        <participantSet>
+          <EPDLEditor.Types.ParticipantEvent>
+            <eventId>Assingment</eventId>
+          </EPDLEditor.Types.ParticipantEvent>
+        </participantSet>
+        <contexts/>
+        <relevanceAssertion></relevanceAssertion>
+        <orderPolicy> </orderPolicy>
+        <orderPolicyParam></orderPolicyParam>
+        <matchingPolicy> </matchingPolicy>
+        <matchingPolicyParam></matchingPolicyParam>
+        <annotation></annotation>
+      </agentPattern>
+      <agentDerivation>
+        <derivationSet/>
+      </agentDerivation>
+    </agent>
+    <agent>
+      <agentId>Driver as consumer</agentId>
+      <agentType>Consumer</agentType>
+      <agentSubType>Human</agentSubType>
+      <agentSelection>
+        <selectionExpression></selectionExpression>
+      </agentSelection>
+      <agentPattern>
+        <patternType> </patternType>
+        <participantSet/>
+        <contexts/>
+        <relevanceAssertion></relevanceAssertion>
+        <orderPolicy> </orderPolicy>
+        <orderPolicyParam></orderPolicyParam>
+        <matchingPolicy> </matchingPolicy>
+        <matchingPolicyParam></matchingPolicyParam>
+        <annotation></annotation>
+      </agentPattern>
+      <agentDerivation>
+        <derivationSet/>
+      </agentDerivation>
+    </agent>
+    <agent>
+      <agentId>Ranking Increase</agentId>
+      <agentType>Event Processing Agent</agentType>
+      <agentSubType>Detect Pattern</agentSubType>
+      <agentSelection>
+        <selectionExpression></selectionExpression>
+      </agentSelection>
+      <agentPattern>
+        <patternType>Absence</patternType>
+        <participantSet/>
+        <contexts/>
+        <relevanceAssertion></relevanceAssertion>
+        <orderPolicy> </orderPolicy>
+        <orderPolicyParam></orderPolicyParam>
+        <matchingPolicy> </matchingPolicy>
+        <matchingPolicyParam></matchingPolicyParam>
+        <annotation></annotation>
+      </agentPattern>
+      <agentDerivation>
+        <derivationSet/>
+      </agentDerivation>
+    </agent>
+    <agent>
+      <agentId>Daily Statistics creator</agentId>
+      <agentType>Event Processing Agent</agentType>
+      <agentSubType>Aggregate</agentSubType>
+      <agentSelection>
+        <selectionExpression></selectionExpression>
+      </agentSelection>
+      <agentPattern>
+        <patternType> </patternType>
+        <participantSet/>
+        <contexts/>
+        <relevanceAssertion></relevanceAssertion>
+        <orderPolicy> </orderPolicy>
+        <orderPolicyParam></orderPolicyParam>
+        <matchingPolicy> </matchingPolicy>
+        <matchingPolicyParam></matchingPolicyParam>
+        <annotation></annotation>
+      </agentPattern>
+      <agentDerivation>
+        <derivationSet/>
+      </agentDerivation>
+    </agent>
+    <agent>
+      <agentId>Location service</agentId>
+      <agentType>Event Processing Agent</agentType>
+      <agentSubType>Translate</agentSubType>
+      <agentSelection>
+        <selectionExpression></selectionExpression>
+      </agentSelection>
+      <agentPattern>
+        <patternType> </patternType>
+        <participantSet/>
+        <contexts/>
+        <relevanceAssertion></relevanceAssertion>
+        <orderPolicy> </orderPolicy>
+        <orderPolicyParam></orderPolicyParam>
+        <matchingPolicy> </matchingPolicy>
+        <matchingPolicyParam></matchingPolicyParam>
+        <annotation></annotation>
+      </agentPattern>
+      <agentDerivation>
+        <derivationSet/>
+      </agentDerivation>
+    </agent>
+    <agent>
+      <agentId>Store-Reference</agentId>
+      <agentType>Global State Agent</agentType>
+      <agentSubType></agentSubType>
+      <agentSelection>
+        <selectionExpression></selectionExpression>
+      </agentSelection>
+      <agentPattern>
+        <patternType> </patternType>
+        <participantSet/>
+        <contexts/>
+        <relevanceAssertion></relevanceAssertion>
+        <orderPolicy> </orderPolicy>
+        <orderPolicyParam></orderPolicyParam>
+        <matchingPolicy> </matchingPolicy>
+        <matchingPolicyParam></matchingPolicyParam>
+        <annotation></annotation>
+      </agentPattern>
+      <agentDerivation>
+        <derivationSet/>
+      </agentDerivation>
+    </agent>
+    <agent>
+      <agentId>Daily Assignment calculator </agentId>
+      <agentType>Event Processing Agent</agentType>
+      <agentSubType>Aggregate</agentSubType>
+      <agentSelection>
+        <selectionExpression></selectionExpression>
+      </agentSelection>
+      <agentPattern>
+        <patternType> </patternType>
+        <participantSet/>
+        <contexts/>
+        <relevanceAssertion></relevanceAssertion>
+        <orderPolicy> </orderPolicy>
+        <orderPolicyParam></orderPolicyParam>
+        <matchingPolicy> </matchingPolicy>
+        <matchingPolicyParam></matchingPolicyParam>
+        <annotation></annotation>
+      </agentPattern>
+      <agentDerivation>
+        <derivationSet/>
+      </agentDerivation>
+    </agent>
+    <agent>
+      <agentId>Store as consumer</agentId>
+      <agentType>Consumer</agentType>
+      <agentSubType>Human</agentSubType>
+      <agentSelection>
+        <selectionExpression></selectionExpression>
+      </agentSelection>
+      <agentPattern>
+        <patternType> </patternType>
+        <participantSet/>
+        <contexts/>
+        <relevanceAssertion></relevanceAssertion>
+        <orderPolicy> </orderPolicy>
+        <orderPolicyParam></orderPolicyParam>
+        <matchingPolicy> </matchingPolicy>
+        <matchingPolicyParam></matchingPolicyParam>
+        <annotation></annotation>
+      </agentPattern>
+      <agentDerivation>
+        <derivationSet/>
+      </agentDerivation>
+    </agent>
+    <agent>
+      <agentId>Automatic Matching</agentId>
+      <agentType>Event Processing Agent</agentType>
+      <agentSubType>Detect Pattern</agentSubType>
+      <agentSelection>
+        <selectionExpression></selectionExpression>
+      </agentSelection>
+      <agentPattern>
+        <patternType>Any</patternType>
+        <participantSet/>
+        <contexts/>
+        <relevanceAssertion>Delivery Bid.Committed Pick Up Time  &lt; Bid Request. Required Pick Up Time + 5 minutes</relevanceAssertion>
+        <orderPolicy> </orderPolicy>
+        <orderPolicyParam></orderPolicyParam>
+        <matchingPolicy> </matchingPolicy>
+        <matchingPolicyParam></matchingPolicyParam>
+        <annotation>Automatic matching </annotation>
+      </agentPattern>
+      <agentDerivation>
+        <derivationSet/>
+      </agentDerivation>
+    </agent>
+    <agent>
+      <agentId>Idle Driver</agentId>
+      <agentType>Event Processing Agent</agentType>
+      <agentSubType>Detect Pattern</agentSubType>
+      <agentSelection>
+        <selectionExpression></selectionExpression>
+      </agentSelection>
+      <agentPattern>
+        <patternType>Sometimes</patternType>
+        <participantSet/>
+        <contexts/>
+        <relevanceAssertion>assignment count = 0</relevanceAssertion>
+        <orderPolicy> </orderPolicy>
+        <orderPolicyParam></orderPolicyParam>
+        <matchingPolicy> </matchingPolicy>
+        <matchingPolicyParam></matchingPolicyParam>
+        <annotation></annotation>
+      </agentPattern>
+      <agentDerivation>
+        <derivationSet/>
+      </agentDerivation>
+    </agent>
+    <agent>
+      <agentId>Automatic or manual match </agentId>
+      <agentType>Event Processing Agent</agentType>
+      <agentSubType>Filter</agentSubType>
+      <agentSelection>
+        <selectionExpression>Store-manual-matching-prefence is true</selectionExpression>
+      </agentSelection>
+      <agentPattern>
+        <patternType> </patternType>
+        <participantSet/>
+        <contexts/>
+        <relevanceAssertion></relevanceAssertion>
+        <orderPolicy> </orderPolicy>
+        <orderPolicyParam></orderPolicyParam>
+        <matchingPolicy> </matchingPolicy>
+        <matchingPolicyParam></matchingPolicyParam>
+        <annotation></annotation>
+      </agentPattern>
+      <agentDerivation>
+        <derivationSet/>
+      </agentDerivation>
+    </agent>
+    <agent>
+      <agentId>Improvement Note</agentId>
+      <agentType>Event Processing Agent</agentType>
+      <agentSubType>Detect Pattern</agentSubType>
+      <agentSelection>
+        <selectionExpression></selectionExpression>
+      </agentSelection>
+      <agentPattern>
+        <patternType>Sequence</patternType>
+        <participantSet/>
+        <contexts/>
+        <relevanceAssertion></relevanceAssertion>
+        <orderPolicy> </orderPolicy>
+        <orderPolicyParam></orderPolicyParam>
+        <matchingPolicy> </matchingPolicy>
+        <matchingPolicyParam></matchingPolicyParam>
+        <annotation></annotation>
+      </agentPattern>
+      <agentDerivation>
+        <derivationSet/>
+      </agentDerivation>
+    </agent>
+    <agent>
+      <agentId>Driver</agentId>
+      <agentType>Producer</agentType>
+      <agentSubType>Human</agentSubType>
+      <agentSelection>
+        <selectionExpression></selectionExpression>
+      </agentSelection>
+      <agentPattern>
+        <patternType> </patternType>
+        <participantSet/>
+        <contexts/>
+        <relevanceAssertion></relevanceAssertion>
+        <orderPolicy> </orderPolicy>
+        <orderPolicyParam></orderPolicyParam>
+        <matchingPolicy> </matchingPolicy>
+        <matchingPolicyParam></matchingPolicyParam>
+        <annotation></annotation>
+      </agentPattern>
+      <agentDerivation>
+        <derivationSet/>
+      </agentDerivation>
+    </agent>
+    <agent>
+      <agentId>Store</agentId>
+      <agentType>Producer</agentType>
+      <agentSubType>Human</agentSubType>
+      <agentSelection>
+        <selectionExpression></selectionExpression>
+      </agentSelection>
+      <agentPattern>
+        <patternType> </patternType>
+        <participantSet/>
+        <contexts/>
+        <relevanceAssertion></relevanceAssertion>
+        <orderPolicy> </orderPolicy>
+        <orderPolicyParam></orderPolicyParam>
+        <matchingPolicy> </matchingPolicy>
+        <matchingPolicyParam></matchingPolicyParam>
+        <annotation></annotation>
+      </agentPattern>
+      <agentDerivation>
+        <derivationSet/>
+      </agentDerivation>
+    </agent>
+    <agent>
+      <agentId>Consistent Weak Driver</agentId>
+      <agentType>Event Processing Agent</agentType>
+      <agentSubType>Detect Pattern</agentSubType>
+      <agentSelection>
+        <selectionExpression></selectionExpression>
+      </agentSelection>
+      <agentPattern>
+        <patternType>Always</patternType>
+        <participantSet/>
+        <contexts/>
+        <relevanceAssertion></relevanceAssertion>
+        <orderPolicy> </orderPolicy>
+        <orderPolicyParam></orderPolicyParam>
+        <matchingPolicy> </matchingPolicy>
+        <matchingPolicyParam></matchingPolicyParam>
+        <annotation></annotation>
+      </agentPattern>
+      <agentDerivation>
+        <derivationSet/>
+      </agentDerivation>
+    </agent>
+    <agent>
+      <agentId>Consistent Strong Driver</agentId>
+      <agentType>Event Processing Agent</agentType>
+      <agentSubType>Detect Pattern</agentSubType>
+      <agentSelection>
+        <selectionExpression></selectionExpression>
+      </agentSelection>
+      <agentPattern>
+        <patternType>Always</patternType>
+        <participantSet/>
+        <contexts/>
+        <relevanceAssertion></relevanceAssertion>
+        <orderPolicy> </orderPolicy>
+        <orderPolicyParam></orderPolicyParam>
+        <matchingPolicy> </matchingPolicy>
+        <matchingPolicyParam></matchingPolicyParam>
+        <annotation></annotation>
+      </agentPattern>
+      <agentDerivation>
+        <derivationSet/>
+      </agentDerivation>
+    </agent>
+    <agent>
+      <agentId>Driver-Variable</agentId>
+      <agentType>Global State Agent</agentType>
+      <agentSubType></agentSubType>
+      <agentSelection>
+        <selectionExpression></selectionExpression>
+      </agentSelection>
+      <agentPattern>
+        <patternType> </patternType>
+        <participantSet/>
+        <contexts/>
+        <relevanceAssertion></relevanceAssertion>
+        <orderPolicy> </orderPolicy>
+        <orderPolicyParam></orderPolicyParam>
+        <matchingPolicy> </matchingPolicy>
+        <matchingPolicyParam></matchingPolicyParam>
+        <annotation></annotation>
+      </agentPattern>
+      <agentDerivation>
+        <derivationSet/>
+      </agentDerivation>
+    </agent>
+    <agent>
+      <agentId>Bid Request Creator</agentId>
+      <agentType>Event Processing Agent</agentType>
+      <agentSubType>Enrich</agentSubType>
+      <agentSelection>
+        <selectionExpression></selectionExpression>
+      </agentSelection>
+      <agentPattern>
+        <patternType> </patternType>
+        <participantSet/>
+        <contexts/>
+        <relevanceAssertion></relevanceAssertion>
+        <orderPolicy> </orderPolicy>
+        <orderPolicyParam></orderPolicyParam>
+        <matchingPolicy> </matchingPolicy>
+        <matchingPolicyParam></matchingPolicyParam>
+        <annotation></annotation>
+      </agentPattern>
+      <agentDerivation>
+        <derivationSet/>
+      </agentDerivation>
+    </agent>
+    <agent>
+      <agentId>Decrease Ranking</agentId>
+      <agentType>Event Processing Agent</agentType>
+      <agentSubType>Detect Pattern</agentSubType>
+      <agentSelection>
+        <selectionExpression></selectionExpression>
+      </agentSelection>
+      <agentPattern>
+        <patternType>Count</patternType>
+        <participantSet/>
+        <contexts/>
+        <relevanceAssertion> &gt; 5 </relevanceAssertion>
+        <orderPolicy> </orderPolicy>
+        <orderPolicyParam></orderPolicyParam>
+        <matchingPolicy> </matchingPolicy>
+        <matchingPolicyParam></matchingPolicyParam>
+        <annotation></annotation>
+      </agentPattern>
+      <agentDerivation>
+        <derivationSet/>
+      </agentDerivation>
+    </agent>
+    <agent>
+      <agentId>Improving Driver</agentId>
+      <agentType>Event Processing Agent</agentType>
+      <agentSubType>Detect Pattern</agentSubType>
+      <agentSelection>
+        <selectionExpression></selectionExpression>
+      </agentSelection>
+      <agentPattern>
+        <patternType>Decreasing</patternType>
+        <participantSet/>
+        <contexts/>
+        <relevanceAssertion>Assignment Count</relevanceAssertion>
+        <orderPolicy> </orderPolicy>
+        <orderPolicyParam></orderPolicyParam>
+        <matchingPolicy> </matchingPolicy>
+        <matchingPolicyParam></matchingPolicyParam>
+        <annotation></annotation>
+      </agentPattern>
+      <agentDerivation>
+        <derivationSet/>
+      </agentDerivation>
+    </agent>
+    <agent>
+      <agentId>Pick Up Alert</agentId>
+      <agentType>Event Processing Agent</agentType>
+      <agentSubType>Detect Pattern</agentSubType>
+      <agentSelection>
+        <selectionExpression></selectionExpression>
+      </agentSelection>
+      <agentPattern>
+        <patternType>Absence</patternType>
+        <participantSet/>
+        <contexts/>
+        <relevanceAssertion></relevanceAssertion>
+        <orderPolicy> </orderPolicy>
+        <orderPolicyParam></orderPolicyParam>
+        <matchingPolicy> </matchingPolicy>
+        <matchingPolicyParam></matchingPolicyParam>
+        <annotation></annotation>
+      </agentPattern>
+      <agentDerivation>
+        <derivationSet/>
+      </agentDerivation>
+    </agent>
+    <agent>
+      <agentId>Delivery Alert</agentId>
+      <agentType>Event Processing Agent</agentType>
+      <agentSubType>Filter</agentSubType>
+      <agentSelection>
+        <selectionExpression></selectionExpression>
+      </agentSelection>
+      <agentPattern>
+        <patternType> </patternType>
+        <participantSet/>
+        <contexts/>
+        <relevanceAssertion></relevanceAssertion>
+        <orderPolicy> </orderPolicy>
+        <orderPolicyParam></orderPolicyParam>
+        <matchingPolicy> </matchingPolicy>
+        <matchingPolicyParam></matchingPolicyParam>
+        <annotation></annotation>
+      </agentPattern>
+      <agentDerivation>
+        <derivationSet/>
+      </agentDerivation>
+    </agent>
+  </agents>
+  <channels>
+    <channel>
+      <name>Link47</name>
+      <source>Consistent Weak Driver</source>
+      <destination>Driver&apos;s Guild</destination>
+      <events>
+        <referenceIdentifier>Driver Monitoring indication </referenceIdentifier>
+      </events>
+    </channel>
+    <channel>
+      <name>Link32</name>
+      <source>Ranking Increase</source>
+      <destination>Driver-Variable</destination>
+      <events>
+        <referenceIdentifier>Ranking Increase</referenceIdentifier>
+      </events>
+    </channel>
+    <channel>
+      <name>Link46</name>
+      <source>Consistent Strong Driver</source>
+      <destination>Driver&apos;s Guild</destination>
+      <events>
+        <referenceIdentifier>Driver Monitoring indication </referenceIdentifier>
+      </events>
+    </channel>
+    <channel>
+      <name>Link29</name>
+      <source>Delivery Alert</source>
+      <destination>Ranking Increase</destination>
+      <events>
+        <referenceIdentifier>Delivery Alert</referenceIdentifier>
+      </events>
+    </channel>
+    <channel>
+      <name>Link24</name>
+      <source>Pick Up Alert</source>
+      <destination>Manager</destination>
+      <events>
+        <referenceIdentifier>Pick-up Alert</referenceIdentifier>
+      </events>
+    </channel>
+    <channel>
+      <name>Link6</name>
+      <source>Store</source>
+      <destination>Bid Request Creator</destination>
+      <events>
+        <referenceIdentifier>Delivery Request</referenceIdentifier>
+      </events>
+    </channel>
+    <channel>
+      <name>Link34</name>
+      <source>Decrease Ranking</source>
+      <destination>Improvement Note</destination>
+      <events>
+        <referenceIdentifier>Ranking Decrease</referenceIdentifier>
+      </events>
+    </channel>
+    <channel>
+      <name>Link22</name>
+      <source>Store</source>
+      <destination>Assignment not done</destination>
+      <events>
+        <referenceIdentifier>Assingment</referenceIdentifier>
+      </events>
+    </channel>
+    <channel>
+      <name>Link18</name>
+      <source>Driver</source>
+      <destination>No bidders</destination>
+      <events>
+        <referenceIdentifier>Delivery Bid</referenceIdentifier>
+      </events>
+    </channel>
+    <channel>
+      <name>Link41</name>
+      <source>Daily Assignment calculator </source>
+      <destination>Idle Driver</destination>
+      <events>
+        <referenceIdentifier>Daily Assingments</referenceIdentifier>
+      </events>
+    </channel>
+    <channel>
+      <name>Link44</name>
+      <source>Daily Assignment calculator </source>
+      <destination>Improving Driver</destination>
+      <events>
+        <referenceIdentifier>Daily Statistics</referenceIdentifier>
+      </events>
+    </channel>
+    <channel>
+      <name>Link13</name>
+      <source>Automatic or manual match </source>
+      <destination>Store as consumer</destination>
+      <events>
+        <referenceIdentifier>Delivery Bid</referenceIdentifier>
+      </events>
+    </channel>
+    <channel>
+      <name>Link54</name>
+      <source>Daily Statistics creator</source>
+      <destination>Consistent Strong Driver</destination>
+      <events>
+        <referenceIdentifier>Daily Statistics</referenceIdentifier>
+      </events>
+    </channel>
+    <channel>
+      <name>Link19</name>
+      <source>No bidders</source>
+      <destination>Manager</destination>
+      <events>
+        <referenceIdentifier>Delivery Bid Alert</referenceIdentifier>
+      </events>
+    </channel>
+    <channel>
+      <name>Link17</name>
+      <source>Store</source>
+      <destination>Driver as consumer</destination>
+      <events>
+        <referenceIdentifier>Assingment</referenceIdentifier>
+      </events>
+    </channel>
+    <channel>
+      <name>Link26</name>
+      <source>Driver</source>
+      <destination>Delivery Alert</destination>
+      <events>
+        <referenceIdentifier>Delivery confirmation</referenceIdentifier>
+      </events>
+    </channel>
+    <channel>
+      <name>Link7</name>
+      <source>Location service</source>
+      <destination>Bid Request Creator</destination>
+      <events>
+        <referenceIdentifier>Vehicle Location</referenceIdentifier>
+      </events>
+    </channel>
+    <channel>
+      <name>Link5</name>
+      <source>Store-Reference</source>
+      <destination>Bid Request Creator</destination>
+    </channel>
+    <channel>
+      <name>Link37</name>
+      <source>Store</source>
+      <destination>Daily Assignment calculator </destination>
+      <events>
+        <referenceIdentifier>Assingment</referenceIdentifier>
+      </events>
+    </channel>
+    <channel>
+      <name>Link43</name>
+      <source>Daily Assignment calculator </source>
+      <destination>Consistent Strong Driver</destination>
+      <events>
+        <referenceIdentifier>Daily Assingments</referenceIdentifier>
+      </events>
+    </channel>
+    <channel>
+      <name>Link45</name>
+      <source>Improving Driver</source>
+      <destination>Driver&apos;s Guild</destination>
+      <events>
+        <referenceIdentifier>Driver Monitoring indication </referenceIdentifier>
+      </events>
+    </channel>
+    <channel>
+      <name>Link28</name>
+      <source>Delivery Alert</source>
+      <destination>Decrease Ranking</destination>
+      <events>
+        <referenceIdentifier>Delivery Alert</referenceIdentifier>
+      </events>
+    </channel>
+    <channel>
+      <name>Link16</name>
+      <source>Automatic Matching</source>
+      <destination>Driver as consumer</destination>
+      <events>
+        <referenceIdentifier>Assingment</referenceIdentifier>
+      </events>
+    </channel>
+    <channel>
+      <name>Link27</name>
+      <source>Delivery Alert</source>
+      <destination>Manager</destination>
+      <events>
+        <referenceIdentifier>Delivery Alert</referenceIdentifier>
+      </events>
+    </channel>
+    <channel>
+      <name>Link33</name>
+      <source>Decrease Ranking</source>
+      <destination>Driver-Variable</destination>
+      <events>
+        <referenceIdentifier>Ranking Decrease</referenceIdentifier>
+      </events>
+    </channel>
+    <channel>
+      <name>Link23</name>
+      <source>Store</source>
+      <destination>Pick Up Alert</destination>
+      <events>
+        <referenceIdentifier>Pick-Up Confirmation</referenceIdentifier>
+      </events>
+    </channel>
+    <channel>
+      <name>Link14</name>
+      <source>Automatic or manual match </source>
+      <destination>Automatic Matching</destination>
+      <events>
+        <referenceIdentifier>Delivery Bid</referenceIdentifier>
+      </events>
+    </channel>
+    <channel>
+      <name>Link35</name>
+      <source>Ranking Increase</source>
+      <destination>Improvement Note</destination>
+      <events>
+        <referenceIdentifier>Ranking Increase</referenceIdentifier>
+      </events>
+    </channel>
+    <channel>
+      <name>Link53</name>
+      <source>Daily Statistics creator</source>
+      <destination>Consistent Weak Driver</destination>
+    </channel>
+    <channel>
+      <name>Link39</name>
+      <source>Automatic Matching</source>
+      <destination>Daily Assignment calculator </destination>
+      <events>
+        <referenceIdentifier>Assingment</referenceIdentifier>
+      </events>
+    </channel>
+    <channel>
+      <name>Link11</name>
+      <source>Bid Request Creator</source>
+      <destination>Automatic or manual match </destination>
+      <events>
+        <referenceIdentifier>Bid Request</referenceIdentifier>
+      </events>
+    </channel>
+    <channel>
+      <name>Link0</name>
+      <source>Vehicle</source>
+      <destination>Location service</destination>
+      <events>
+        <referenceIdentifier>GPS Location</referenceIdentifier>
+      </events>
+    </channel>
+    <channel>
+      <name>Link21</name>
+      <source>Assignment not done</source>
+      <destination>Manager</destination>
+      <events>
+        <referenceIdentifier>manual assignment time-out alert</referenceIdentifier>
+      </events>
+    </channel>
+    <channel>
+      <name>Link49</name>
+      <source>Permanent Weak Driver</source>
+      <destination>Driver&apos;s Guild</destination>
+      <events>
+        <referenceIdentifier>Driver Monitoring indication </referenceIdentifier>
+      </events>
+    </channel>
+    <channel>
+      <name>Link48</name>
+      <source>Idle Driver</source>
+      <destination>Driver&apos;s Guild</destination>
+      <events>
+        <referenceIdentifier>Driver Monitoring indication </referenceIdentifier>
+      </events>
+    </channel>
+    <channel>
+      <name>Link8</name>
+      <source>Bid Request Creator</source>
+      <destination>Driver as consumer</destination>
+      <events>
+        <referenceIdentifier>Bid Request</referenceIdentifier>
+      </events>
+    </channel>
+    <channel>
+      <name>Link42</name>
+      <source>Daily Assignment calculator </source>
+      <destination>Consistent Weak Driver</destination>
+      <events>
+        <referenceIdentifier>Daily Assingments</referenceIdentifier>
+      </events>
+    </channel>
+    <channel>
+      <name>Link36</name>
+      <source>Improvement Note</source>
+      <destination>Driver as consumer</destination>
+      <events>
+        <referenceIdentifier>Impove Note</referenceIdentifier>
+      </events>
+    </channel>
+    <channel>
+      <name>Link15</name>
+      <source>Bid Request Creator</source>
+      <destination>Automatic Matching</destination>
+      <events>
+        <referenceIdentifier>Bid Request</referenceIdentifier>
+      </events>
+    </channel>
+    <channel>
+      <name>Link12</name>
+      <source>Driver</source>
+      <destination>Automatic or manual match </destination>
+      <events>
+        <referenceIdentifier>Delivery Bid</referenceIdentifier>
+      </events>
+    </channel>
+    <channel>
+      <name>Link52</name>
+      <source>Daily Assignment calculator </source>
+      <destination>Daily Statistics creator</destination>
+      <events>
+        <referenceIdentifier>Daily Assingments</referenceIdentifier>
+      </events>
+    </channel>
+    <channel>
+      <name>Link40</name>
+      <source>Daily Assignment calculator </source>
+      <destination>Permanent Weak Driver</destination>
+      <events>
+        <referenceIdentifier>Daily Assingments</referenceIdentifier>
+      </events>
+    </channel>
+  </channels>
+  <eventTypes>
+    <type>
+      <eventTypeIdentifier>Delivery Request</eventTypeIdentifier>
+      <eventCompositionIndicator>false</eventCompositionIndicator>
+      <eventTemporalGranularity>Minute</eventTemporalGranularity>
+      <payload>
+        <attribute>
+          <attributeName>Reqyest Id</attributeName>
+          <dataType>Integer</dataType>
+          <semanticRole>Common Attribute</semanticRole>
+        </attribute>
+        <attribute>
+          <attributeName>Store</attributeName>
+          <dataType>String</dataType>
+          <semanticRole>Reference</semanticRole>
+        </attribute>
+        <attribute>
+          <attributeName>Addressee&apos;s Location</attributeName>
+          <dataType>Location</dataType>
+          <semanticRole></semanticRole>
+        </attribute>
+        <attribute>
+          <attributeName>Required Pick-up Time</attributeName>
+          <dataType>Time Stamp</dataType>
+          <semanticRole></semanticRole>
+        </attribute>
+        <attribute>
+          <attributeName>Required Delivery Time</attributeName>
+          <dataType>Time Stamp</dataType>
+          <semanticRole></semanticRole>
+        </attribute>
+      </payload>
+      <referencedEvent>Delivery Request Cancellation</referencedEvent>
+      <referenceRelationship>Retraction</referenceRelationship>
+    </type>
+    <type>
+      <eventTypeIdentifier>GPS Location</eventTypeIdentifier>
+      <eventCompositionIndicator>false</eventCompositionIndicator>
+      <eventTemporalGranularity>Second</eventTemporalGranularity>
+      <payload>
+        <attribute>
+          <attributeName>Driver</attributeName>
+          <dataType>String</dataType>
+          <semanticRole>Reference</semanticRole>
+        </attribute>
+        <attribute>
+          <attributeName>Driver&apos;s Location</attributeName>
+          <dataType>Location</dataType>
+          <semanticRole></semanticRole>
+        </attribute>
+      </payload>
+      <referencedEvent>GPS Location</referencedEvent>
+      <referenceRelationship>None</referenceRelationship>
+    </type>
+    <type>
+      <eventTypeIdentifier>Delivery Bid</eventTypeIdentifier>
+      <eventCompositionIndicator>false</eventCompositionIndicator>
+      <eventTemporalGranularity>Second</eventTemporalGranularity>
+      <payload>
+        <attribute>
+          <attributeName>Request Id</attributeName>
+          <dataType>Integer</dataType>
+          <semanticRole>Common Attribute</semanticRole>
+        </attribute>
+        <attribute>
+          <attributeName>Store</attributeName>
+          <dataType>String</dataType>
+          <semanticRole>Reference</semanticRole>
+        </attribute>
+        <attribute>
+          <attributeName>Driver</attributeName>
+          <dataType>String</dataType>
+          <semanticRole>Reference</semanticRole>
+        </attribute>
+        <attribute>
+          <attributeName>Committed Pick-Up Time</attributeName>
+          <dataType>Time Stamp</dataType>
+          <semanticRole></semanticRole>
+        </attribute>
+      </payload>
+      <referencedEvent>Delivery Bid</referencedEvent>
+      <referenceRelationship>None</referenceRelationship>
+    </type>
+    <type>
+      <eventTypeIdentifier>Assingment</eventTypeIdentifier>
+      <eventCompositionIndicator>false</eventCompositionIndicator>
+      <eventTemporalGranularity>Second</eventTemporalGranularity>
+      <payload>
+        <attribute>
+          <attributeName>Request Id</attributeName>
+          <dataType>Integer</dataType>
+          <semanticRole>Common Attribute</semanticRole>
+        </attribute>
+        <attribute>
+          <attributeName>Store</attributeName>
+          <dataType>String</dataType>
+          <semanticRole>Reference</semanticRole>
+        </attribute>
+        <attribute>
+          <attributeName>Driver</attributeName>
+          <dataType>String</dataType>
+          <semanticRole>Reference</semanticRole>
+        </attribute>
+        <attribute>
+          <attributeName>Adresse&apos;s location</attributeName>
+          <dataType>Location</dataType>
+          <semanticRole></semanticRole>
+        </attribute>
+        <attribute>
+          <attributeName>Required Pick-up Time</attributeName>
+          <dataType>Time Stamp</dataType>
+          <semanticRole></semanticRole>
+        </attribute>
+        <attribute>
+          <attributeName>Required Delivery Time</attributeName>
+          <dataType>Time Stamp</dataType>
+          <semanticRole></semanticRole>
+        </attribute>
+      </payload>
+      <referencedEvent>Delivery Request Cancellation</referencedEvent>
+      <referenceRelationship>Retraction</referenceRelationship>
+    </type>
+    <type>
+      <eventTypeIdentifier>Pick-Up Confirmation</eventTypeIdentifier>
+      <eventCompositionIndicator>false</eventCompositionIndicator>
+      <eventTemporalGranularity>Second</eventTemporalGranularity>
+      <payload>
+        <attribute>
+          <attributeName>Request Id</attributeName>
+          <dataType>Integer</dataType>
+          <semanticRole>Common Attribute</semanticRole>
+        </attribute>
+        <attribute>
+          <attributeName>Store</attributeName>
+          <dataType>String</dataType>
+          <semanticRole>Reference</semanticRole>
+        </attribute>
+        <attribute>
+          <attributeName>driver</attributeName>
+          <dataType>String</dataType>
+          <semanticRole>Reference</semanticRole>
+        </attribute>
+      </payload>
+      <referencedEvent>Pick-Up Confirmation</referencedEvent>
+      <referenceRelationship>None</referenceRelationship>
+    </type>
+    <type>
+      <eventTypeIdentifier>Delivery confirmation</eventTypeIdentifier>
+      <eventCompositionIndicator>false</eventCompositionIndicator>
+      <eventTemporalGranularity>Second</eventTemporalGranularity>
+      <payload>
+        <attribute>
+          <attributeName>Request Id</attributeName>
+          <dataType>Integer</dataType>
+          <semanticRole>Common Attribute</semanticRole>
+        </attribute>
+        <attribute>
+          <attributeName>Driver</attributeName>
+          <dataType>String</dataType>
+          <semanticRole>Reference</semanticRole>
+        </attribute>
+      </payload>
+      <referencedEvent>Delivery confirmation</referencedEvent>
+      <referenceRelationship>Generalization</referenceRelationship>
+    </type>
+    <type>
+      <eventTypeIdentifier>Delivery Request Cancellation</eventTypeIdentifier>
+      <eventCompositionIndicator>false</eventCompositionIndicator>
+      <eventTemporalGranularity>Second</eventTemporalGranularity>
+      <payload>
+        <attribute>
+          <attributeName>Request Id</attributeName>
+          <dataType>Integer</dataType>
+          <semanticRole>Common Attribute</semanticRole>
+        </attribute>
+      </payload>
+      <referencedEvent>Delivery Request Cancellation</referencedEvent>
+      <referenceRelationship>None</referenceRelationship>
+    </type>
+    <type>
+      <eventTypeIdentifier>Vehicle Location</eventTypeIdentifier>
+      <eventCompositionIndicator>false</eventCompositionIndicator>
+      <eventTemporalGranularity>Second</eventTemporalGranularity>
+      <payload>
+        <attribute>
+          <attributeName>Location</attributeName>
+          <dataType>Location</dataType>
+          <semanticRole></semanticRole>
+        </attribute>
+      </payload>
+      <referencedEvent>Vehicle Location</referencedEvent>
+      <referenceRelationship>None</referenceRelationship>
+    </type>
+    <type>
+      <eventTypeIdentifier></eventTypeIdentifier>
+      <eventCompositionIndicator>false</eventCompositionIndicator>
+      <eventTemporalGranularity>Second</eventTemporalGranularity>
+      <referencedEvent></referencedEvent>
+      <referenceRelationship>None</referenceRelationship>
+    </type>
+    <type>
+      <eventTypeIdentifier>Bid Request</eventTypeIdentifier>
+      <eventCompositionIndicator>true</eventCompositionIndicator>
+      <eventTemporalGranularity>Second</eventTemporalGranularity>
+      <payload>
+        <attribute>
+          <attributeName>Request Id</attributeName>
+          <dataType>Integer</dataType>
+          <semanticRole>Common Attribute</semanticRole>
+        </attribute>
+        <attribute>
+          <attributeName>Store</attributeName>
+          <dataType>String</dataType>
+          <semanticRole>Reference</semanticRole>
+        </attribute>
+        <attribute>
+          <attributeName>Addressee&apos;s location</attributeName>
+          <dataType>Location</dataType>
+          <semanticRole></semanticRole>
+        </attribute>
+        <attribute>
+          <attributeName>Requested Pick-Up Time</attributeName>
+          <dataType>Time Stamp</dataType>
+          <semanticRole></semanticRole>
+        </attribute>
+        <attribute>
+          <attributeName>Requested Delivery Time</attributeName>
+          <dataType>Time Stamp</dataType>
+          <semanticRole></semanticRole>
+        </attribute>
+        <attribute>
+          <attributeName>Store&apos;s Ranking Limit</attributeName>
+          <dataType>Integer</dataType>
+          <semanticRole></semanticRole>
+        </attribute>
+        <attribute>
+          <attributeName>Store&apos;s  manual matching preference</attributeName>
+          <dataType>Boolean</dataType>
+          <semanticRole></semanticRole>
+        </attribute>
+        <attribute>
+          <attributeName>Driver  (collection) </attributeName>
+          <dataType>Reference to Another Event</dataType>
+          <semanticRole></semanticRole>
+        </attribute>
+        <attribute>
+          <attributeName>Driver Id</attributeName>
+          <dataType></dataType>
+          <semanticRole>Reference</semanticRole>
+        </attribute>
+        <attribute>
+          <attributeName>Vehicle Location</attributeName>
+          <dataType>Location</dataType>
+          <semanticRole></semanticRole>
+        </attribute>
+      </payload>
+      <referencedEvent></referencedEvent>
+      <referenceRelationship>None</referenceRelationship>
+    </type>
+    <type>
+      <eventTypeIdentifier>Delivery Bid Alert</eventTypeIdentifier>
+      <eventCompositionIndicator>false</eventCompositionIndicator>
+      <eventTemporalGranularity>Second</eventTemporalGranularity>
+      <payload>
+        <attribute>
+          <attributeName>Request Id</attributeName>
+          <dataType>Integer</dataType>
+          <semanticRole>Common Attribute</semanticRole>
+        </attribute>
+      </payload>
+      <referencedEvent></referencedEvent>
+      <referenceRelationship>None</referenceRelationship>
+    </type>
+    <type>
+      <eventTypeIdentifier>manual assignment time-out alert</eventTypeIdentifier>
+      <eventCompositionIndicator>false</eventCompositionIndicator>
+      <eventTemporalGranularity>Second</eventTemporalGranularity>
+      <payload>
+        <attribute>
+          <attributeName>Request Id</attributeName>
+          <dataType>Integer</dataType>
+          <semanticRole>Common Attribute</semanticRole>
+        </attribute>
+        <attribute>
+          <attributeName>Store</attributeName>
+          <dataType>String</dataType>
+          <semanticRole>Reference</semanticRole>
+        </attribute>
+      </payload>
+      <referencedEvent></referencedEvent>
+      <referenceRelationship>None</referenceRelationship>
+    </type>
+    <type>
+      <eventTypeIdentifier>Pick-up Alert</eventTypeIdentifier>
+      <eventCompositionIndicator>false</eventCompositionIndicator>
+      <eventTemporalGranularity>Second</eventTemporalGranularity>
+      <payload>
+        <attribute>
+          <attributeName>Request Id</attributeName>
+          <dataType>Integer</dataType>
+          <semanticRole>Common Attribute</semanticRole>
+        </attribute>
+        <attribute>
+          <attributeName>Driver</attributeName>
+          <dataType>String</dataType>
+          <semanticRole>Reference</semanticRole>
+        </attribute>
+      </payload>
+      <referencedEvent></referencedEvent>
+      <referenceRelationship>None</referenceRelationship>
+    </type>
+    <type>
+      <eventTypeIdentifier>Delivery Alert</eventTypeIdentifier>
+      <eventCompositionIndicator>false</eventCompositionIndicator>
+      <eventTemporalGranularity>Second</eventTemporalGranularity>
+      <payload>
+        <attribute>
+          <attributeName>Request Id</attributeName>
+          <dataType>Integer</dataType>
+          <semanticRole>Common Attribute</semanticRole>
+        </attribute>
+        <attribute>
+          <attributeName>Driver</attributeName>
+          <dataType>String</dataType>
+          <semanticRole>Reference</semanticRole>
+        </attribute>
+      </payload>
+      <referencedEvent></referencedEvent>
+      <referenceRelationship>None</referenceRelationship>
+    </type>
+    <type>
+      <eventTypeIdentifier>Ranking Increase</eventTypeIdentifier>
+      <eventCompositionIndicator>false</eventCompositionIndicator>
+      <eventTemporalGranularity>Second</eventTemporalGranularity>
+      <payload>
+        <attribute>
+          <attributeName>Driver</attributeName>
+          <dataType>String</dataType>
+          <semanticRole>Reference</semanticRole>
+        </attribute>
+      </payload>
+      <referencedEvent></referencedEvent>
+      <referenceRelationship>None</referenceRelationship>
+    </type>
+    <type>
+      <eventTypeIdentifier>Ranking Decrease</eventTypeIdentifier>
+      <eventCompositionIndicator>false</eventCompositionIndicator>
+      <eventTemporalGranularity>Second</eventTemporalGranularity>
+      <payload>
+        <attribute>
+          <attributeName>Driver</attributeName>
+          <dataType>String</dataType>
+          <semanticRole>Reference</semanticRole>
+        </attribute>
+      </payload>
+      <referencedEvent></referencedEvent>
+      <referenceRelationship>None</referenceRelationship>
+    </type>
+    <type>
+      <eventTypeIdentifier>Impove Note</eventTypeIdentifier>
+      <eventCompositionIndicator>false</eventCompositionIndicator>
+      <eventTemporalGranularity>Second</eventTemporalGranularity>
+      <payload>
+        <attribute>
+          <attributeName>Driver</attributeName>
+          <dataType>String</dataType>
+          <semanticRole>Reference</semanticRole>
+        </attribute>
+      </payload>
+      <referencedEvent></referencedEvent>
+      <referenceRelationship>None</referenceRelationship>
+    </type>
+    <type>
+      <eventTypeIdentifier>Daily Assingments</eventTypeIdentifier>
+      <eventCompositionIndicator>false</eventCompositionIndicator>
+      <eventTemporalGranularity>Second</eventTemporalGranularity>
+      <payload>
+        <attribute>
+          <attributeName>Driver</attributeName>
+          <dataType>String</dataType>
+          <semanticRole>Reference</semanticRole>
+        </attribute>
+        <attribute>
+          <attributeName>Day</attributeName>
+          <dataType>Time Stamp</dataType>
+          <semanticRole></semanticRole>
+        </attribute>
+        <attribute>
+          <attributeName>Assignment Count</attributeName>
+          <dataType>Integer</dataType>
+          <semanticRole></semanticRole>
+        </attribute>
+      </payload>
+      <referencedEvent></referencedEvent>
+      <referenceRelationship>None</referenceRelationship>
+    </type>
+    <type>
+      <eventTypeIdentifier>Driver Monitoring indication </eventTypeIdentifier>
+      <eventCompositionIndicator>false</eventCompositionIndicator>
+      <eventTemporalGranularity>Second</eventTemporalGranularity>
+      <payload>
+        <attribute>
+          <attributeName>Driver</attributeName>
+          <dataType>String</dataType>
+          <semanticRole>Reference</semanticRole>
+        </attribute>
+        <attribute>
+          <attributeName>Consistent Strong Driver</attributeName>
+          <dataType>Boolean</dataType>
+          <semanticRole></semanticRole>
+        </attribute>
+        <attribute>
+          <attributeName>Improving Driver</attributeName>
+          <dataType>Boolean</dataType>
+          <semanticRole></semanticRole>
+        </attribute>
+        <attribute>
+          <attributeName>Permanent Weak Driver</attributeName>
+          <dataType>Boolean</dataType>
+          <semanticRole></semanticRole>
+        </attribute>
+        <attribute>
+          <attributeName>Consistent Weaj Driver</attributeName>
+          <dataType>Boolean</dataType>
+          <semanticRole></semanticRole>
+        </attribute>
+        <attribute>
+          <attributeName>Idle Driver</attributeName>
+          <dataType>Boolean</dataType>
+          <semanticRole></semanticRole>
+        </attribute>
+      </payload>
+      <referencedEvent></referencedEvent>
+      <referenceRelationship>None</referenceRelationship>
+    </type>
+    <type>
+      <eventTypeIdentifier>Daily Statistics</eventTypeIdentifier>
+      <eventCompositionIndicator>false</eventCompositionIndicator>
+      <eventTemporalGranularity>Second</eventTemporalGranularity>
+      <payload>
+        <attribute>
+          <attributeName>Day</attributeName>
+          <dataType>Time Stamp</dataType>
+          <semanticRole></semanticRole>
+        </attribute>
+        <attribute>
+          <attributeName>Assignment Mean</attributeName>
+          <dataType>Fixed Precision Decimal Number</dataType>
+          <semanticRole></semanticRole>
+        </attribute>
+        <attribute>
+          <attributeName>Assignment STDV</attributeName>
+          <dataType>Fixed Precision Decimal Number</dataType>
+          <semanticRole></semanticRole>
+        </attribute>
+      </payload>
+      <referencedEvent></referencedEvent>
+      <referenceRelationship>None</referenceRelationship>
+    </type>
+  </eventTypes>
+  <contexts/>
+</EPDL>

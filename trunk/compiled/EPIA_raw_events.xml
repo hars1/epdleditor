@@ -1,0 +1,185 @@
+<EPDL>
+  <agents/>
+  <channels/>
+  <eventTypes>
+    <type>
+      <eventTypeIdentifier>Delivery Request</eventTypeIdentifier>
+      <eventCompositionIndicator>false</eventCompositionIndicator>
+      <eventTemporalGranularity>Minute</eventTemporalGranularity>
+      <payload>
+        <attribute>
+          <attributeName>Reqyest Id</attributeName>
+          <dataType>Integer</dataType>
+          <semanticRole>Common Attribute</semanticRole>
+        </attribute>
+        <attribute>
+          <attributeName>Store</attributeName>
+          <dataType>String</dataType>
+          <semanticRole>Reference</semanticRole>
+        </attribute>
+        <attribute>
+          <attributeName>Addressee&apos;s Location</attributeName>
+          <dataType>Location</dataType>
+          <semanticRole></semanticRole>
+        </attribute>
+        <attribute>
+          <attributeName>Required Pick-up Time</attributeName>
+          <dataType>Time Stamp</dataType>
+          <semanticRole></semanticRole>
+        </attribute>
+        <attribute>
+          <attributeName>Required Delivery Time</attributeName>
+          <dataType>Time Stamp</dataType>
+          <semanticRole></semanticRole>
+        </attribute>
+      </payload>
+      <referencedEvent>Delivery Request Cancellation</referencedEvent>
+      <referenceRelationship>Retraction</referenceRelationship>
+    </type>
+    <type>
+      <eventTypeIdentifier>GPS Location</eventTypeIdentifier>
+      <eventCompositionIndicator>false</eventCompositionIndicator>
+      <eventTemporalGranularity>Second</eventTemporalGranularity>
+      <payload>
+        <attribute>
+          <attributeName>Driver</attributeName>
+          <dataType>String</dataType>
+          <semanticRole>Reference</semanticRole>
+        </attribute>
+        <attribute>
+          <attributeName>Driver&apos;s Location</attributeName>
+          <dataType>Location</dataType>
+          <semanticRole></semanticRole>
+        </attribute>
+      </payload>
+      <referencedEvent>GPS Location</referencedEvent>
+      <referenceRelationship>Generalization</referenceRelationship>
+    </type>
+    <type>
+      <eventTypeIdentifier>Delivery Bid</eventTypeIdentifier>
+      <eventCompositionIndicator>false</eventCompositionIndicator>
+      <eventTemporalGranularity>Second</eventTemporalGranularity>
+      <payload>
+        <attribute>
+          <attributeName>Request Id</attributeName>
+          <dataType>Integer</dataType>
+          <semanticRole>Common Attribute</semanticRole>
+        </attribute>
+        <attribute>
+          <attributeName>Store</attributeName>
+          <dataType>String</dataType>
+          <semanticRole>Reference</semanticRole>
+        </attribute>
+        <attribute>
+          <attributeName>Driver</attributeName>
+          <dataType>String</dataType>
+          <semanticRole>Reference</semanticRole>
+        </attribute>
+        <attribute>
+          <attributeName>Committed Pick-Up Time</attributeName>
+          <dataType>Time Stamp</dataType>
+          <semanticRole></semanticRole>
+        </attribute>
+      </payload>
+      <referencedEvent>Delivery Bid</referencedEvent>
+      <referenceRelationship>Generalization</referenceRelationship>
+    </type>
+    <type>
+      <eventTypeIdentifier>Manual Assingment</eventTypeIdentifier>
+      <eventCompositionIndicator>false</eventCompositionIndicator>
+      <eventTemporalGranularity>Second</eventTemporalGranularity>
+      <payload>
+        <attribute>
+          <attributeName>Request Id</attributeName>
+          <dataType>Integer</dataType>
+          <semanticRole>Common Attribute</semanticRole>
+        </attribute>
+        <attribute>
+          <attributeName>Store</attributeName>
+          <dataType>String</dataType>
+          <semanticRole>Reference</semanticRole>
+        </attribute>
+        <attribute>
+          <attributeName>Driver</attributeName>
+          <dataType>String</dataType>
+          <semanticRole>Reference</semanticRole>
+        </attribute>
+        <attribute>
+          <attributeName>Adresse&apos;s location</attributeName>
+          <dataType>Location</dataType>
+          <semanticRole></semanticRole>
+        </attribute>
+        <attribute>
+          <attributeName>Required Pick-up Time</attributeName>
+          <dataType>Time Stamp</dataType>
+          <semanticRole></semanticRole>
+        </attribute>
+        <attribute>
+          <attributeName>Required Delivery Time</attributeName>
+          <dataType>Time Stamp</dataType>
+          <semanticRole></semanticRole>
+        </attribute>
+      </payload>
+      <referencedEvent>Delivery Request Cancellation</referencedEvent>
+      <referenceRelationship>Retraction</referenceRelationship>
+    </type>
+    <type>
+      <eventTypeIdentifier>Pick-Up Confirmation</eventTypeIdentifier>
+      <eventCompositionIndicator>false</eventCompositionIndicator>
+      <eventTemporalGranularity>Second</eventTemporalGranularity>
+      <payload>
+        <attribute>
+          <attributeName>Request Id</attributeName>
+          <dataType>Integer</dataType>
+          <semanticRole>Common Attribute</semanticRole>
+        </attribute>
+        <attribute>
+          <attributeName>Store</attributeName>
+          <dataType>String</dataType>
+          <semanticRole>Reference</semanticRole>
+        </attribute>
+        <attribute>
+          <attributeName>driver</attributeName>
+          <dataType>String</dataType>
+          <semanticRole>Reference</semanticRole>
+        </attribute>
+      </payload>
+      <referencedEvent>Pick-Up Confirmation</referencedEvent>
+      <referenceRelationship>Generalization</referenceRelationship>
+    </type>
+    <type>
+      <eventTypeIdentifier>Delivery confirmation</eventTypeIdentifier>
+      <eventCompositionIndicator>false</eventCompositionIndicator>
+      <eventTemporalGranularity>Second</eventTemporalGranularity>
+      <payload>
+        <attribute>
+          <attributeName>Request Id</attributeName>
+          <dataType>Integer</dataType>
+          <semanticRole>Common Attribute</semanticRole>
+        </attribute>
+        <attribute>
+          <attributeName>Driver</attributeName>
+          <dataType>String</dataType>
+          <semanticRole>Reference</semanticRole>
+        </attribute>
+      </payload>
+      <referencedEvent>Delivery confirmation</referencedEvent>
+      <referenceRelationship>Generalization</referenceRelationship>
+    </type>
+    <type>
+      <eventTypeIdentifier>Delivery Request Cancellation</eventTypeIdentifier>
+      <eventCompositionIndicator>false</eventCompositionIndicator>
+      <eventTemporalGranularity>Second</eventTemporalGranularity>
+      <payload>
+        <attribute>
+          <attributeName>Request Id</attributeName>
+          <dataType>Integer</dataType>
+          <semanticRole>Common Attribute</semanticRole>
+        </attribute>
+      </payload>
+      <referencedEvent>Delivery Request Cancellation</referencedEvent>
+      <referenceRelationship>Generalization</referenceRelationship>
+    </type>
+  </eventTypes>
+  <contexts/>
+</EPDL>
