@@ -263,7 +263,7 @@ public class MainEditor {
 	        about.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					JOptionPane.showMessageDialog(frame,"EPDL Editor Version: "+version+" Maintained by Ronen Vaisenberg and Opher Etzion "+
-	        				'\n'+"Please email ronen@uci.edu with any questions/suggestions.","About EPDL Editor",JOptionPane.INFORMATION_MESSAGE);
+	        				'\n'+"Please go to http://code.google.com/p/epdleditor/","About EPDL Editor",JOptionPane.INFORMATION_MESSAGE);
 	        	}
 	        	});
 	        file.add(about);
