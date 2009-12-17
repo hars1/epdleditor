@@ -4,14 +4,14 @@
       <agentId>Permanent Weak Driver</agentId>
       <agentType>Event Processing Agent</agentType>
       <agentSubType>Detect Pattern</agentSubType>
-      <agentSelection>
-        <selectionExpression></selectionExpression>
-      </agentSelection>
+      <agentFiltering>
+        <filteringExpression></filteringExpression>
+      </agentFiltering>
       <agentPattern>
         <patternType>Always</patternType>
         <participantSet/>
         <contexts/>
-        <relevanceAssertion>assignment count &lt; 5</relevanceAssertion>
+        <patternAssertion>assignment count &lt; 5</patternAssertion>
         <orderPolicy> </orderPolicy>
         <orderPolicyParam></orderPolicyParam>
         <matchingPolicy> </matchingPolicy>
@@ -26,14 +26,14 @@
       <agentId>Manager</agentId>
       <agentType>Consumer</agentType>
       <agentSubType>Human</agentSubType>
-      <agentSelection>
-        <selectionExpression></selectionExpression>
-      </agentSelection>
+      <agentFiltering>
+        <filteringExpression></filteringExpression>
+      </agentFiltering>
       <agentPattern>
         <patternType> </patternType>
         <participantSet/>
         <contexts/>
-        <relevanceAssertion></relevanceAssertion>
+        <patternAssertion></patternAssertion>
         <orderPolicy> </orderPolicy>
         <orderPolicyParam></orderPolicyParam>
         <matchingPolicy> </matchingPolicy>
@@ -48,14 +48,14 @@
       <agentId>No bidders</agentId>
       <agentType>Event Processing Agent</agentType>
       <agentSubType>Detect Pattern</agentSubType>
-      <agentSelection>
-        <selectionExpression></selectionExpression>
-      </agentSelection>
+      <agentFiltering>
+        <filteringExpression></filteringExpression>
+      </agentFiltering>
       <agentPattern>
         <patternType>Absence</patternType>
         <participantSet/>
         <contexts/>
-        <relevanceAssertion></relevanceAssertion>
+        <patternAssertion></patternAssertion>
         <orderPolicy> </orderPolicy>
         <orderPolicyParam></orderPolicyParam>
         <matchingPolicy> </matchingPolicy>
@@ -70,14 +70,14 @@
       <agentId>Vehicle</agentId>
       <agentType>Producer</agentType>
       <agentSubType>Human</agentSubType>
-      <agentSelection>
-        <selectionExpression></selectionExpression>
-      </agentSelection>
+      <agentFiltering>
+        <filteringExpression></filteringExpression>
+      </agentFiltering>
       <agentPattern>
         <patternType> </patternType>
         <participantSet/>
         <contexts/>
-        <relevanceAssertion></relevanceAssertion>
+        <patternAssertion></patternAssertion>
         <orderPolicy> </orderPolicy>
         <orderPolicyParam></orderPolicyParam>
         <matchingPolicy> </matchingPolicy>
@@ -92,14 +92,14 @@
       <agentId>Driver&apos;s Guild</agentId>
       <agentType>Consumer</agentType>
       <agentSubType>Human</agentSubType>
-      <agentSelection>
-        <selectionExpression></selectionExpression>
-      </agentSelection>
+      <agentFiltering>
+        <filteringExpression></filteringExpression>
+      </agentFiltering>
       <agentPattern>
         <patternType> </patternType>
         <participantSet/>
         <contexts/>
-        <relevanceAssertion></relevanceAssertion>
+        <patternAssertion></patternAssertion>
         <orderPolicy> </orderPolicy>
         <orderPolicyParam></orderPolicyParam>
         <matchingPolicy> </matchingPolicy>
@@ -114,9 +114,9 @@
       <agentId>Assignment not done</agentId>
       <agentType>Event Processing Agent</agentType>
       <agentSubType>Detect Pattern</agentSubType>
-      <agentSelection>
-        <selectionExpression></selectionExpression>
-      </agentSelection>
+      <agentFiltering>
+        <filteringExpression></filteringExpression>
+      </agentFiltering>
       <agentPattern>
         <patternType>Absence</patternType>
         <participantSet>
@@ -125,7 +125,7 @@
           </EPDLEditor.Types.ParticipantEvent>
         </participantSet>
         <contexts/>
-        <relevanceAssertion></relevanceAssertion>
+        <patternAssertion></patternAssertion>
         <orderPolicy> </orderPolicy>
         <orderPolicyParam></orderPolicyParam>
         <matchingPolicy> </matchingPolicy>
@@ -140,14 +140,14 @@
       <agentId>Driver as consumer</agentId>
       <agentType>Consumer</agentType>
       <agentSubType>Human</agentSubType>
-      <agentSelection>
-        <selectionExpression></selectionExpression>
-      </agentSelection>
+      <agentFiltering>
+        <filteringExpression></filteringExpression>
+      </agentFiltering>
       <agentPattern>
         <patternType> </patternType>
         <participantSet/>
         <contexts/>
-        <relevanceAssertion></relevanceAssertion>
+        <patternAssertion></patternAssertion>
         <orderPolicy> </orderPolicy>
         <orderPolicyParam></orderPolicyParam>
         <matchingPolicy> </matchingPolicy>
@@ -162,14 +162,14 @@
       <agentId>Ranking Increase</agentId>
       <agentType>Event Processing Agent</agentType>
       <agentSubType>Detect Pattern</agentSubType>
-      <agentSelection>
-        <selectionExpression></selectionExpression>
-      </agentSelection>
+      <agentFiltering>
+        <filteringExpression></filteringExpression>
+      </agentFiltering>
       <agentPattern>
         <patternType>Absence</patternType>
         <participantSet/>
         <contexts/>
-        <relevanceAssertion></relevanceAssertion>
+        <patternAssertion></patternAssertion>
         <orderPolicy> </orderPolicy>
         <orderPolicyParam></orderPolicyParam>
         <matchingPolicy> </matchingPolicy>
@@ -184,14 +184,14 @@
       <agentId>Daily Statistics creator</agentId>
       <agentType>Event Processing Agent</agentType>
       <agentSubType>Aggregate</agentSubType>
-      <agentSelection>
-        <selectionExpression></selectionExpression>
-      </agentSelection>
+      <agentFiltering>
+        <filteringExpression></filteringExpression>
+      </agentFiltering>
       <agentPattern>
         <patternType> </patternType>
         <participantSet/>
         <contexts/>
-        <relevanceAssertion></relevanceAssertion>
+        <patternAssertion></patternAssertion>
         <orderPolicy> </orderPolicy>
         <orderPolicyParam></orderPolicyParam>
         <matchingPolicy> </matchingPolicy>
@@ -206,14 +206,14 @@
       <agentId>Location service</agentId>
       <agentType>Event Processing Agent</agentType>
       <agentSubType>Translate</agentSubType>
-      <agentSelection>
-        <selectionExpression></selectionExpression>
-      </agentSelection>
+      <agentFiltering>
+        <filteringExpression></filteringExpression>
+      </agentFiltering>
       <agentPattern>
         <patternType> </patternType>
         <participantSet/>
         <contexts/>
-        <relevanceAssertion></relevanceAssertion>
+        <patternAssertion></patternAssertion>
         <orderPolicy> </orderPolicy>
         <orderPolicyParam></orderPolicyParam>
         <matchingPolicy> </matchingPolicy>
@@ -228,14 +228,14 @@
       <agentId>Store-Reference</agentId>
       <agentType>Global State Agent</agentType>
       <agentSubType></agentSubType>
-      <agentSelection>
-        <selectionExpression></selectionExpression>
-      </agentSelection>
+      <agentFiltering>
+        <filteringExpression></filteringExpression>
+      </agentFiltering>
       <agentPattern>
         <patternType> </patternType>
         <participantSet/>
         <contexts/>
-        <relevanceAssertion></relevanceAssertion>
+        <patternAssertion></patternAssertion>
         <orderPolicy> </orderPolicy>
         <orderPolicyParam></orderPolicyParam>
         <matchingPolicy> </matchingPolicy>
@@ -250,14 +250,14 @@
       <agentId>Daily Assignment calculator </agentId>
       <agentType>Event Processing Agent</agentType>
       <agentSubType>Aggregate</agentSubType>
-      <agentSelection>
-        <selectionExpression></selectionExpression>
-      </agentSelection>
+      <agentFiltering>
+        <filteringExpression></filteringExpression>
+      </agentFiltering>
       <agentPattern>
         <patternType> </patternType>
         <participantSet/>
         <contexts/>
-        <relevanceAssertion></relevanceAssertion>
+        <patternAssertion></patternAssertion>
         <orderPolicy> </orderPolicy>
         <orderPolicyParam></orderPolicyParam>
         <matchingPolicy> </matchingPolicy>
@@ -272,14 +272,14 @@
       <agentId>Store as consumer</agentId>
       <agentType>Consumer</agentType>
       <agentSubType>Human</agentSubType>
-      <agentSelection>
-        <selectionExpression></selectionExpression>
-      </agentSelection>
+      <agentFiltering>
+        <filteringExpression></filteringExpression>
+      </agentFiltering>
       <agentPattern>
         <patternType> </patternType>
         <participantSet/>
         <contexts/>
-        <relevanceAssertion></relevanceAssertion>
+        <patternAssertion></patternAssertion>
         <orderPolicy> </orderPolicy>
         <orderPolicyParam></orderPolicyParam>
         <matchingPolicy> </matchingPolicy>
@@ -294,14 +294,14 @@
       <agentId>Automatic Matching</agentId>
       <agentType>Event Processing Agent</agentType>
       <agentSubType>Detect Pattern</agentSubType>
-      <agentSelection>
-        <selectionExpression></selectionExpression>
-      </agentSelection>
+      <agentFiltering>
+        <filteringExpression></filteringExpression>
+      </agentFiltering>
       <agentPattern>
         <patternType>Any</patternType>
         <participantSet/>
         <contexts/>
-        <relevanceAssertion>Delivery Bid.Committed Pick Up Time  &lt; Bid Request. Required Pick Up Time + 5 minutes</relevanceAssertion>
+        <patternAssertion>Delivery Bid.Committed Pick Up Time  &lt; Bid Request. Required Pick Up Time + 5 minutes</patternAssertion>
         <orderPolicy> </orderPolicy>
         <orderPolicyParam></orderPolicyParam>
         <matchingPolicy> </matchingPolicy>
@@ -316,14 +316,14 @@
       <agentId>Idle Driver</agentId>
       <agentType>Event Processing Agent</agentType>
       <agentSubType>Detect Pattern</agentSubType>
-      <agentSelection>
-        <selectionExpression></selectionExpression>
-      </agentSelection>
+      <agentFiltering>
+        <filteringExpression></filteringExpression>
+      </agentFiltering>
       <agentPattern>
         <patternType>Sometimes</patternType>
         <participantSet/>
         <contexts/>
-        <relevanceAssertion>assignment count = 0</relevanceAssertion>
+        <patternAssertion>assignment count = 0</patternAssertion>
         <orderPolicy> </orderPolicy>
         <orderPolicyParam></orderPolicyParam>
         <matchingPolicy> </matchingPolicy>
@@ -338,14 +338,14 @@
       <agentId>Automatic or manual match </agentId>
       <agentType>Event Processing Agent</agentType>
       <agentSubType>Filter</agentSubType>
-      <agentSelection>
-        <selectionExpression>Store-manual-matching-prefence is true</selectionExpression>
-      </agentSelection>
+      <agentFiltering>
+        <filteringExpression>Store-manual-matching-prefence is true</filteringExpression>
+      </agentFiltering>
       <agentPattern>
         <patternType> </patternType>
         <participantSet/>
         <contexts/>
-        <relevanceAssertion></relevanceAssertion>
+        <patternAssertion></patternAssertion>
         <orderPolicy> </orderPolicy>
         <orderPolicyParam></orderPolicyParam>
         <matchingPolicy> </matchingPolicy>
@@ -360,14 +360,14 @@
       <agentId>Improvement Note</agentId>
       <agentType>Event Processing Agent</agentType>
       <agentSubType>Detect Pattern</agentSubType>
-      <agentSelection>
-        <selectionExpression></selectionExpression>
-      </agentSelection>
+      <agentFiltering>
+        <filteringExpression></filteringExpression>
+      </agentFiltering>
       <agentPattern>
         <patternType>Sequence</patternType>
         <participantSet/>
         <contexts/>
-        <relevanceAssertion></relevanceAssertion>
+        <patternAssertion></patternAssertion>
         <orderPolicy> </orderPolicy>
         <orderPolicyParam></orderPolicyParam>
         <matchingPolicy> </matchingPolicy>
@@ -382,14 +382,14 @@
       <agentId>Driver</agentId>
       <agentType>Producer</agentType>
       <agentSubType>Human</agentSubType>
-      <agentSelection>
-        <selectionExpression></selectionExpression>
-      </agentSelection>
+      <agentFiltering>
+        <filteringExpression></filteringExpression>
+      </agentFiltering>
       <agentPattern>
         <patternType> </patternType>
         <participantSet/>
         <contexts/>
-        <relevanceAssertion></relevanceAssertion>
+        <patternAssertion></patternAssertion>
         <orderPolicy> </orderPolicy>
         <orderPolicyParam></orderPolicyParam>
         <matchingPolicy> </matchingPolicy>
@@ -404,14 +404,14 @@
       <agentId>Store</agentId>
       <agentType>Producer</agentType>
       <agentSubType>Human</agentSubType>
-      <agentSelection>
-        <selectionExpression></selectionExpression>
-      </agentSelection>
+      <agentFiltering>
+        <filteringExpression></filteringExpression>
+      </agentFiltering>
       <agentPattern>
         <patternType> </patternType>
         <participantSet/>
         <contexts/>
-        <relevanceAssertion></relevanceAssertion>
+        <patternAssertion></patternAssertion>
         <orderPolicy> </orderPolicy>
         <orderPolicyParam></orderPolicyParam>
         <matchingPolicy> </matchingPolicy>
@@ -426,14 +426,14 @@
       <agentId>Consistent Weak Driver</agentId>
       <agentType>Event Processing Agent</agentType>
       <agentSubType>Detect Pattern</agentSubType>
-      <agentSelection>
-        <selectionExpression></selectionExpression>
-      </agentSelection>
+      <agentFiltering>
+        <filteringExpression></filteringExpression>
+      </agentFiltering>
       <agentPattern>
         <patternType>Always</patternType>
         <participantSet/>
         <contexts/>
-        <relevanceAssertion></relevanceAssertion>
+        <patternAssertion></patternAssertion>
         <orderPolicy> </orderPolicy>
         <orderPolicyParam></orderPolicyParam>
         <matchingPolicy> </matchingPolicy>
@@ -448,14 +448,14 @@
       <agentId>Consistent Strong Driver</agentId>
       <agentType>Event Processing Agent</agentType>
       <agentSubType>Detect Pattern</agentSubType>
-      <agentSelection>
-        <selectionExpression></selectionExpression>
-      </agentSelection>
+      <agentFiltering>
+        <filteringExpression></filteringExpression>
+      </agentFiltering>
       <agentPattern>
         <patternType>Always</patternType>
         <participantSet/>
         <contexts/>
-        <relevanceAssertion></relevanceAssertion>
+        <patternAssertion></patternAssertion>
         <orderPolicy> </orderPolicy>
         <orderPolicyParam></orderPolicyParam>
         <matchingPolicy> </matchingPolicy>
@@ -470,14 +470,14 @@
       <agentId>Driver-Variable</agentId>
       <agentType>Global State Agent</agentType>
       <agentSubType></agentSubType>
-      <agentSelection>
-        <selectionExpression></selectionExpression>
-      </agentSelection>
+      <agentFiltering>
+        <filteringExpression></filteringExpression>
+      </agentFiltering>
       <agentPattern>
         <patternType> </patternType>
         <participantSet/>
         <contexts/>
-        <relevanceAssertion></relevanceAssertion>
+        <patternAssertion></patternAssertion>
         <orderPolicy> </orderPolicy>
         <orderPolicyParam></orderPolicyParam>
         <matchingPolicy> </matchingPolicy>
@@ -492,14 +492,14 @@
       <agentId>Bid Request Creator</agentId>
       <agentType>Event Processing Agent</agentType>
       <agentSubType>Enrich</agentSubType>
-      <agentSelection>
-        <selectionExpression></selectionExpression>
-      </agentSelection>
+      <agentFiltering>
+        <filteringExpression></filteringExpression>
+      </agentFiltering>
       <agentPattern>
         <patternType> </patternType>
         <participantSet/>
         <contexts/>
-        <relevanceAssertion></relevanceAssertion>
+        <patternAssertion></patternAssertion>
         <orderPolicy> </orderPolicy>
         <orderPolicyParam></orderPolicyParam>
         <matchingPolicy> </matchingPolicy>
@@ -514,14 +514,14 @@
       <agentId>Decrease Ranking</agentId>
       <agentType>Event Processing Agent</agentType>
       <agentSubType>Detect Pattern</agentSubType>
-      <agentSelection>
-        <selectionExpression></selectionExpression>
-      </agentSelection>
+      <agentFiltering>
+        <filteringExpression></filteringExpression>
+      </agentFiltering>
       <agentPattern>
         <patternType>Count</patternType>
         <participantSet/>
         <contexts/>
-        <relevanceAssertion> &gt; 5 </relevanceAssertion>
+        <patternAssertion> &gt; 5 </patternAssertion>
         <orderPolicy> </orderPolicy>
         <orderPolicyParam></orderPolicyParam>
         <matchingPolicy> </matchingPolicy>
@@ -536,14 +536,14 @@
       <agentId>Improving Driver</agentId>
       <agentType>Event Processing Agent</agentType>
       <agentSubType>Detect Pattern</agentSubType>
-      <agentSelection>
-        <selectionExpression></selectionExpression>
-      </agentSelection>
+      <agentFiltering>
+        <filteringExpression></filteringExpression>
+      </agentFiltering>
       <agentPattern>
         <patternType>Decreasing</patternType>
         <participantSet/>
         <contexts/>
-        <relevanceAssertion>Assignment Count</relevanceAssertion>
+        <patternAssertion>Assignment Count</patternAssertion>
         <orderPolicy> </orderPolicy>
         <orderPolicyParam></orderPolicyParam>
         <matchingPolicy> </matchingPolicy>
@@ -558,14 +558,14 @@
       <agentId>Pick Up Alert</agentId>
       <agentType>Event Processing Agent</agentType>
       <agentSubType>Detect Pattern</agentSubType>
-      <agentSelection>
-        <selectionExpression></selectionExpression>
-      </agentSelection>
+      <agentFiltering>
+        <filteringExpression></filteringExpression>
+      </agentFiltering>
       <agentPattern>
         <patternType>Absence</patternType>
         <participantSet/>
         <contexts/>
-        <relevanceAssertion></relevanceAssertion>
+        <patternAssertion></patternAssertion>
         <orderPolicy> </orderPolicy>
         <orderPolicyParam></orderPolicyParam>
         <matchingPolicy> </matchingPolicy>
@@ -580,14 +580,14 @@
       <agentId>Delivery Alert</agentId>
       <agentType>Event Processing Agent</agentType>
       <agentSubType>Filter</agentSubType>
-      <agentSelection>
-        <selectionExpression></selectionExpression>
-      </agentSelection>
+      <agentFiltering>
+        <filteringExpression></filteringExpression>
+      </agentFiltering>
       <agentPattern>
         <patternType> </patternType>
         <participantSet/>
         <contexts/>
-        <relevanceAssertion></relevanceAssertion>
+        <patternAssertion></patternAssertion>
         <orderPolicy> </orderPolicy>
         <orderPolicyParam></orderPolicyParam>
         <matchingPolicy> </matchingPolicy>

@@ -7,7 +7,7 @@ public class EPAPattern {
 	public String patternType;
 	public ParticipantEvent[] participantSet;
 	public String[] contexts;
-	public String relevanceAssertion;
+	public String patternAssertion;
 	public String orderPolicy;
 	public String orderPolicyParam;
 	public String matchingPolicy;
