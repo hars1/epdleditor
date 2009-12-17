@@ -23,7 +23,7 @@ import EPDLEditor.MainEditor;
 import EPDLEditor.Types.DerivedEvent;
 import EPDLEditor.Types.EPADerivation;
 import EPDLEditor.Types.EPAPattern;
-import EPDLEditor.Types.EPASelection;
+import EPDLEditor.Types.EPAFiltering;
 import EPDLEditor.Types.GraphElements;
 import EPDLEditor.Types.ParticipantEvent;
 import EPDLEditor.Types.GraphElements.MyVertex;
@@ -163,7 +163,7 @@ public class VertexPropertyDialog extends javax.swing.JDialog {
         jAgentSelectionTextArea.setRows(1);
         jAgentSelection.setViewportView(jAgentSelectionTextArea);
 
-        jAgentSelectionLabel.setText("Selection:");
+        jAgentSelectionLabel.setText("Filter:");
 
         jPatternLabel.setText("Pattern:");
 
@@ -221,7 +221,7 @@ public class VertexPropertyDialog extends javax.swing.JDialog {
         jRelevanceAssertionTextArea.setRows(5);
         jRelevanceAssertScrollPane.setViewportView(jRelevanceAssertionTextArea);
 
-        jRelevanceLabel.setText("Relevance Assertion:");
+        jRelevanceLabel.setText("Pattern Assertion:");
 
         jPOrderComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { " ", "By Occurance Time", "By Detection Time", "By User Defined Attribute" }));
 
@@ -616,9 +616,9 @@ public class VertexPropertyDialog extends javax.swing.JDialog {
     	this.jAgentSubTypeComboBox.setSelectedItem(agent.getAgentSubType());
     	   	
     	//selection
-    	EPASelection selection = agent.getAgentSelection();
-    	if (selection!=null)
-    		this.jAgentSelectionTextArea.setText(agent.getAgentSelection().selectionExpression);
+    	EPAFiltering filter = agent.getAgentFiltering();
+    	if (filter!=null)
+    		this.jAgentSelectionTextArea.setText(agent.getAgentFiltering().filteringExpression);
     	
     	
     	//pattern
@@ -627,7 +627,7 @@ public class VertexPropertyDialog extends javax.swing.JDialog {
     	if (pattern!=null){
     		this.jAgentPatternTypeComboBox.setSelectedItem(pattern.patternType);
         	this.jContextList.setSelectedIndices(PopulateListsUtils.getIDs4Strings(pattern.contexts, MainEditor.contexts));
-        	this.jRelevanceAssertionTextArea.setText(pattern.relevanceAssertion);
+        	this.jRelevanceAssertionTextArea.setText(pattern.patternAssertion);
         	//this.jPSynonymComboBox.setSelectedItem(pattern.synonymPolicy);
         	//this.jPSynonymTextField.setText(pattern.synonymPolicyParam);
         	this.jPOrderComboBox.setSelectedItem(pattern.orderPolicy);
@@ -716,9 +716,9 @@ public class VertexPropertyDialog extends javax.swing.JDialog {
     	vertex.setAgentSubType((String)this.jAgentSubTypeComboBox.getSelectedItem());
     	   	
     	//selection
-    	EPASelection selection = new EPASelection();
-    	selection.selectionExpression = (String)this.jAgentSelectionTextArea.getText();
-    	vertex.setAgentSelection(selection);
+    	EPAFiltering filter = new EPAFiltering();
+    	filter.filteringExpression = (String)this.jAgentSelectionTextArea.getText();
+    	vertex.setAgentFilter(filter);
     	
     	//pattern
     	EPAPattern pattern = new EPAPattern();
@@ -726,7 +726,7 @@ public class VertexPropertyDialog extends javax.swing.JDialog {
     	pattern.patternType = (String)this.jAgentPatternTypeComboBox.getSelectedItem();
     	storeParticipantSet(pattern,this.jParticipantTable.getModel());
     	pattern.contexts = PopulateListsUtils.getStrings4IDs(this.jContextList.getSelectedIndices(),MainEditor.contexts);
-    	pattern.relevanceAssertion = this.jRelevanceAssertionTextArea.getText();
+    	pattern.patternAssertion = this.jRelevanceAssertionTextArea.getText();
     	//pattern.synonymPolicy = (String)this.jPSynonymComboBox.getSelectedItem();
     	//pattern.synonymPolicyParam = this.jPSynonymTextField.getText();
     	pattern.orderPolicy = (String)this.jPOrderComboBox.getSelectedItem();

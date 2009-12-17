@@ -36,7 +36,7 @@ public class GraphElements {
 		private String agentType;
 		private String agentSubType;
 
-		private EPASelection agentSelection;
+		private EPAFiltering agentFiltering;
 		private EPAPattern agentPattern;
 		private EPADerivation agentDerivation;
 
@@ -146,12 +146,12 @@ public class GraphElements {
 			this.agentSubType = agentSubType;
 		}
 
-		public EPASelection getAgentSelection() {
-			return agentSelection;
+		public EPAFiltering getAgentFiltering() {
+			return agentFiltering;
 		}
 
-		public void setAgentSelection(EPASelection agentSelection) {
-			this.agentSelection = agentSelection;
+		public void setAgentFilter(EPAFiltering agentFiltering) {
+			this.agentFiltering = agentFiltering;
 		}
 
 		public EPAPattern getAgentPattern() {

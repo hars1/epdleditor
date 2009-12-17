@@ -299,7 +299,7 @@
     </Container>
     <Component class="javax.swing.JLabel" name="jAgentSelectionLabel">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Selection:"/>
+        <Property name="text" type="java.lang.String" value="Filter:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jPatternLabel">
@@ -461,7 +461,7 @@
     </Container>
     <Component class="javax.swing.JLabel" name="jRelevanceLabel">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Relevance Assertion:"/>
+        <Property name="text" type="java.lang.String" value="Pattern Assertion:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JComboBox" name="jPOrderComboBox">
