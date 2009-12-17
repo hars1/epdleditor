@@ -193,7 +193,8 @@ public class MyMouseMenus {
 	    this.addActionListener(new ActionListener() {
 	        public void actionPerformed(ActionEvent e) {
 	            VertexPropertyDialog dialog = new VertexPropertyDialog(frame, vertex);
-	            dialog.setLocation((int)point.getX()+ frame.getX(), (int)point.getY()+ frame.getY());
+	            //dialog.setLocation((int)point.getX()+ frame.getX(), (int)point.getY()+ frame.getY());
+	            dialog.setLocation(frame.getX(), frame.getY());
 	            dialog.setVisible(true);
 	        }
 	        
