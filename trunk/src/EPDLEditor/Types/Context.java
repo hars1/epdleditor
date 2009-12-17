@@ -68,30 +68,34 @@ public class Context implements Identifiable{
 				tableContexts = new Object [][] {
 		                {"Interval Start", null},
 		                {"Interval End", null},
-		                {"Period", null}
+		                {"Period", null},
+		                {"Temporal Ordering", null}
 		            };
 				break;
 			case 1:
 				tableContexts = new Object [][] {
-		                {"Initiator", null},
-		                {"Terminator", null},
-		                {"Expiration Offset", null},
-		                {"Matched By", null},
-		                {"Synonym Policy", null}
+		                {"Initiators", null},
+		                {"Terminators", null},
+		                {"Expiration Time Offset", null},
+		                {"Expiration Event Count", null},
+		                {"Context Initiator Policy", null},
+		                {"Temporal Ordering", null}
 		            };
 				break;
 			case 2:
 				tableContexts = new Object [][] {
 		                {"Interval Period", null},
 		                {"Interval Duration", null},
-		                {"Overlapping", null}
+		                {"Interval Size", null},
+		                {"Temporal Ordering", null}
 		            };
 				break;
 			case 3:
 				tableContexts = new Object [][] {
-		                {"Event Type", null},
-		                {"Event Count", null},
-		                {"Matched By", null}
+		                {"Event Types", null},
+		                {"Interval Size", null},
+		                {"Event Period", null},
+		                {"Temporal Ordering", null}
 		            };
 				break;
 			}
@@ -115,7 +119,8 @@ public class Context implements Identifiable{
 				tableContexts = new Object [][] {
 		                {"Event Type", null},
 		                {"Matching Expression", null},
-		                {"Distance Expression", null}
+		                {"Distance Expression", null},
+		                {"Context Initiator Policy", null}
 		            };
 				break;
 			}
@@ -123,13 +128,14 @@ public class Context implements Identifiable{
 		case 2:
 			tableContexts = new Object [][] {
 	                {"Entity", null},
-	                {"Relevant States", null}
+	                {"Relevant States", null},
+	                {"Temporal Ordering", null}
 	            };
 			break;
 		case 3:
 			tableContexts = new Object [][] {
-	                {"Attribute", null},
-	                {"Partition Expression", null}
+	                {"Attributes", null},
+	                {"Grouping Expressions", null}
 	            };
 			break;
 		case 4:

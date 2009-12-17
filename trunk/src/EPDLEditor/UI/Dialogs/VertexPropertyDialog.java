@@ -209,7 +209,7 @@ public class VertexPropertyDialog extends javax.swing.JDialog {
 
         jPatternTypeLabel.setText("Pattern Type:");
 
-        jAgentPatternTypeComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { " ", "All", "Any", "Count", "Value Max", "Value Min", "Value Average", "Absence", "Always", "Sometimes", "Not Selected", "Sequence", "Increasing", "Decreasing", "Stable", "Non Increasing", "Non Decreasing", "Mixed", "Min Distance", "Max Distance ", "Average Distance", "Relative Min Distance", "Relative Max Distance", "Relative Average Distance", "Moving in Consistance Direction", "Moving in Mixed Direction", "Stationary" }));
+        jAgentPatternTypeComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "All", "Any", "Count", "Value Max", "Value Min", "Value Average", "Relative Min", "Relative Max", "Absence", "Always", "Sometimes", "Not Selected", "Sequence", "Increasing", "Decreasing", "Stable", "Non Increasing", "Non Decreasing", "Mixed", "Min Distance", "Max Distance ", "Average Distance", "Relative Min Distance", "Relative Max Distance", "Relative Average Distance", "Moving in Consistent Direction", "Moving in Mixed Direction", "Stationary", "Moving Towards" }));
         jAgentPatternTypeComboBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jAgentPatternTypeComboBoxActionPerformed(evt);
@@ -248,7 +248,7 @@ public class VertexPropertyDialog extends javax.swing.JDialog {
                 {null, null, null, null, null, null}
             },
             new String [] {
-                "Participant", "Event Type", "Synonym Policy", "Synonym Param", "Consumption Policy", "Consumption Param"
+                "Participant", "Event Type", "Repeated Type Policy", "Repeated Type Param", "Consumption Policy", "Consumption Param"
             }
         ) {
             Class[] types = new Class [] {
@@ -304,7 +304,7 @@ public class VertexPropertyDialog extends javax.swing.JDialog {
                             .add(jDerivationLabel))
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                         .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                            .add(jDerivedTableScrollPane, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 892, Short.MAX_VALUE)
+                            .add(jDerivedTableScrollPane, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 930, Short.MAX_VALUE)
                             .add(layout.createSequentialGroup()
                                 .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                                     .add(jPatternTypeLabel)
@@ -337,12 +337,12 @@ public class VertexPropertyDialog extends javax.swing.JDialog {
                                 .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                                     .add(layout.createSequentialGroup()
                                         .add(jPatternAnnotationLabel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 173, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 262, Short.MAX_VALUE))
-                                    .add(jPatternAnnoScrollPane, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 435, Short.MAX_VALUE)))
-                            .add(jParticipantTableScrollPane, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 892, Short.MAX_VALUE)
-                            .add(org.jdesktop.layout.GroupLayout.TRAILING, jAgentSelection, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 892, Short.MAX_VALUE)
+                                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 300, Short.MAX_VALUE))
+                                    .add(jPatternAnnoScrollPane, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 473, Short.MAX_VALUE)))
+                            .add(jParticipantTableScrollPane, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 930, Short.MAX_VALUE)
+                            .add(org.jdesktop.layout.GroupLayout.TRAILING, jAgentSelection, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 930, Short.MAX_VALUE)
                             .add(layout.createSequentialGroup()
-                                .add(jScrollPane3, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 883, Short.MAX_VALUE)
+                                .add(jScrollPane3, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 921, Short.MAX_VALUE)
                                 .add(9, 9, 9))
                             .add(layout.createSequentialGroup()
                                 .add(jLabel8)
@@ -415,9 +415,9 @@ public class VertexPropertyDialog extends javax.swing.JDialog {
                     .add(jRelevanceAssertScrollPane))
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
                 .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(layout.createSequentialGroup()
-                        .add(jDerivedTableScrollPane, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 109, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 124, Short.MAX_VALUE)
+                    .add(org.jdesktop.layout.GroupLayout.TRAILING, layout.createSequentialGroup()
+                        .add(jDerivedTableScrollPane, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 207, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 26, Short.MAX_VALUE)
                         .add(jAgentOKButton))
                     .add(layout.createSequentialGroup()
                         .add(jDerivationLabel)
@@ -462,7 +462,7 @@ public class VertexPropertyDialog extends javax.swing.JDialog {
                     java.lang.Boolean.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
                 };
                 String[] columnNames = new String [] {
-                      "Participant", "Event Type", "Synonym Policy", "Synonym Param", "Consumption Policy", "Consumption Param"
+                      "Participant", "Event Type", "Repeated Type Policy", "Repeated Type Param", "Consumption Policy", "Consumption Param"
                  };
         		Object[][] contents = new Object[getPotentialParticipents().size()][columnNames.length];
                 public Class getColumnClass(int columnIndex) {
@@ -679,8 +679,8 @@ public class VertexPropertyDialog extends javax.swing.JDialog {
     		if (participantSetHash.containsKey(s)){
     			tm.setValueAt((Boolean)true, i, 0);
     			ParticipantEvent pe = participantSetHash.get(s);
-    			tm.setValueAt(pe.synonymPolicy, i, 2);   
-        		tm.setValueAt(pe.synonymPolicyParam, i, 3);
+    			tm.setValueAt(pe.repeatedTypePolicy, i, 2);   
+        		tm.setValueAt(pe.consumptionPolicyParam, i, 3);
         		tm.setValueAt(pe.consumptionPolicy, i, 4);
         		tm.setValueAt(pe.consumptionPolicyParam, i, 5);
     		}
@@ -763,8 +763,8 @@ public class VertexPropertyDialog extends javax.swing.JDialog {
     		if (tm.getValueAt(i, 0)!=null && (Boolean)tm.getValueAt(i, 0)){
         		ParticipantEvent pe = new ParticipantEvent();
         		pe.eventId = (String)tm.getValueAt(i, 1);
-        		pe.synonymPolicy = (String)tm.getValueAt(i, 2);
-				pe.synonymPolicyParam = (String)tm.getValueAt(i, 3);
+        		pe.repeatedTypePolicy = (String)tm.getValueAt(i, 2);
+				pe.repeatedTypePolicyParam = (String)tm.getValueAt(i, 3);
 	        	pe.consumptionPolicy = (String)tm.getValueAt(i, 4);
 	        	pe.consumptionPolicyParam = (String)tm.getValueAt(i, 5);
 	        				
