@@ -11,7 +11,7 @@
         <patternType>Always</patternType>
         <participantSet/>
         <contexts/>
-        <patternAssertion>assignment count &lt; 5</patternAssertion>
+        <relevanceAssertion>assignment count &lt; 5</relevanceAssertion>
         <orderPolicy> </orderPolicy>
         <orderPolicyParam></orderPolicyParam>
         <matchingPolicy> </matchingPolicy>
@@ -33,7 +33,7 @@
         <patternType> </patternType>
         <participantSet/>
         <contexts/>
-        <patternAssertion></patternAssertion>
+        <relevanceAssertion></relevanceAssertion>
         <orderPolicy> </orderPolicy>
         <orderPolicyParam></orderPolicyParam>
         <matchingPolicy> </matchingPolicy>
@@ -55,7 +55,7 @@
         <patternType>Absence</patternType>
         <participantSet/>
         <contexts/>
-        <patternAssertion></patternAssertion>
+        <relevanceAssertion></relevanceAssertion>
         <orderPolicy> </orderPolicy>
         <orderPolicyParam></orderPolicyParam>
         <matchingPolicy> </matchingPolicy>
@@ -77,7 +77,7 @@
         <patternType> </patternType>
         <participantSet/>
         <contexts/>
-        <patternAssertion></patternAssertion>
+        <relevanceAssertion></relevanceAssertion>
         <orderPolicy> </orderPolicy>
         <orderPolicyParam></orderPolicyParam>
         <matchingPolicy> </matchingPolicy>
@@ -99,7 +99,7 @@
         <patternType> </patternType>
         <participantSet/>
         <contexts/>
-        <patternAssertion></patternAssertion>
+        <relevanceAssertion></relevanceAssertion>
         <orderPolicy> </orderPolicy>
         <orderPolicyParam></orderPolicyParam>
         <matchingPolicy> </matchingPolicy>
@@ -125,7 +125,7 @@
           </EPDLEditor.Types.ParticipantEvent>
         </participantSet>
         <contexts/>
-        <patternAssertion></patternAssertion>
+        <relevanceAssertion></relevanceAssertion>
         <orderPolicy> </orderPolicy>
         <orderPolicyParam></orderPolicyParam>
         <matchingPolicy> </matchingPolicy>
@@ -147,7 +147,7 @@
         <patternType> </patternType>
         <participantSet/>
         <contexts/>
-        <patternAssertion></patternAssertion>
+        <relevanceAssertion></relevanceAssertion>
         <orderPolicy> </orderPolicy>
         <orderPolicyParam></orderPolicyParam>
         <matchingPolicy> </matchingPolicy>
@@ -169,7 +169,7 @@
         <patternType>Absence</patternType>
         <participantSet/>
         <contexts/>
-        <patternAssertion></patternAssertion>
+        <relevanceAssertion></relevanceAssertion>
         <orderPolicy> </orderPolicy>
         <orderPolicyParam></orderPolicyParam>
         <matchingPolicy> </matchingPolicy>
@@ -191,7 +191,7 @@
         <patternType> </patternType>
         <participantSet/>
         <contexts/>
-        <patternAssertion></patternAssertion>
+        <relevanceAssertion></relevanceAssertion>
         <orderPolicy> </orderPolicy>
         <orderPolicyParam></orderPolicyParam>
         <matchingPolicy> </matchingPolicy>
@@ -213,7 +213,7 @@
         <patternType> </patternType>
         <participantSet/>
         <contexts/>
-        <patternAssertion></patternAssertion>
+        <relevanceAssertion></relevanceAssertion>
         <orderPolicy> </orderPolicy>
         <orderPolicyParam></orderPolicyParam>
         <matchingPolicy> </matchingPolicy>
@@ -235,7 +235,7 @@
         <patternType> </patternType>
         <participantSet/>
         <contexts/>
-        <patternAssertion></patternAssertion>
+        <relevanceAssertion></relevanceAssertion>
         <orderPolicy> </orderPolicy>
         <orderPolicyParam></orderPolicyParam>
         <matchingPolicy> </matchingPolicy>
@@ -257,7 +257,7 @@
         <patternType> </patternType>
         <participantSet/>
         <contexts/>
-        <patternAssertion></patternAssertion>
+        <relevanceAssertion></relevanceAssertion>
         <orderPolicy> </orderPolicy>
         <orderPolicyParam></orderPolicyParam>
         <matchingPolicy> </matchingPolicy>
@@ -279,7 +279,7 @@
         <patternType> </patternType>
         <participantSet/>
         <contexts/>
-        <patternAssertion></patternAssertion>
+        <relevanceAssertion></relevanceAssertion>
         <orderPolicy> </orderPolicy>
         <orderPolicyParam></orderPolicyParam>
         <matchingPolicy> </matchingPolicy>
@@ -301,7 +301,7 @@
         <patternType>Any</patternType>
         <participantSet/>
         <contexts/>
-        <patternAssertion>Delivery Bid.Committed Pick Up Time  &lt; Bid Request. Required Pick Up Time + 5 minutes</patternAssertion>
+        <relevanceAssertion>Delivery Bid.Committed Pick Up Time  &lt; Bid Request. Required Pick Up Time + 5 minutes</relevanceAssertion>
         <orderPolicy> </orderPolicy>
         <orderPolicyParam></orderPolicyParam>
         <matchingPolicy> </matchingPolicy>
@@ -323,7 +323,7 @@
         <patternType>Sometimes</patternType>
         <participantSet/>
         <contexts/>
-        <patternAssertion>assignment count = 0</patternAssertion>
+        <relevanceAssertion>assignment count = 0</relevanceAssertion>
         <orderPolicy> </orderPolicy>
         <orderPolicyParam></orderPolicyParam>
         <matchingPolicy> </matchingPolicy>
@@ -345,7 +345,7 @@
         <patternType> </patternType>
         <participantSet/>
         <contexts/>
-        <patternAssertion></patternAssertion>
+        <relevanceAssertion></relevanceAssertion>
         <orderPolicy> </orderPolicy>
         <orderPolicyParam></orderPolicyParam>
         <matchingPolicy> </matchingPolicy>
@@ -367,7 +367,7 @@
         <patternType>Sequence</patternType>
         <participantSet/>
         <contexts/>
-        <patternAssertion></patternAssertion>
+        <relevanceAssertion></relevanceAssertion>
         <orderPolicy> </orderPolicy>
         <orderPolicyParam></orderPolicyParam>
         <matchingPolicy> </matchingPolicy>
@@ -389,7 +389,7 @@
         <patternType> </patternType>
         <participantSet/>
         <contexts/>
-        <patternAssertion></patternAssertion>
+        <relevanceAssertion></relevanceAssertion>
         <orderPolicy> </orderPolicy>
         <orderPolicyParam></orderPolicyParam>
         <matchingPolicy> </matchingPolicy>
@@ -411,7 +411,7 @@
         <patternType> </patternType>
         <participantSet/>
         <contexts/>
-        <patternAssertion></patternAssertion>
+        <relevanceAssertion></relevanceAssertion>
         <orderPolicy> </orderPolicy>
         <orderPolicyParam></orderPolicyParam>
         <matchingPolicy> </matchingPolicy>
@@ -433,7 +433,7 @@
         <patternType>Always</patternType>
         <participantSet/>
         <contexts/>
-        <patternAssertion></patternAssertion>
+        <relevanceAssertion></relevanceAssertion>
         <orderPolicy> </orderPolicy>
         <orderPolicyParam></orderPolicyParam>
         <matchingPolicy> </matchingPolicy>
@@ -455,7 +455,7 @@
         <patternType>Always</patternType>
         <participantSet/>
         <contexts/>
-        <patternAssertion></patternAssertion>
+        <relevanceAssertion></relevanceAssertion>
         <orderPolicy> </orderPolicy>
         <orderPolicyParam></orderPolicyParam>
         <matchingPolicy> </matchingPolicy>
@@ -477,7 +477,7 @@
         <patternType> </patternType>
         <participantSet/>
         <contexts/>
-        <patternAssertion></patternAssertion>
+        <relevanceAssertion></relevanceAssertion>
         <orderPolicy> </orderPolicy>
         <orderPolicyParam></orderPolicyParam>
         <matchingPolicy> </matchingPolicy>
@@ -499,7 +499,7 @@
         <patternType> </patternType>
         <participantSet/>
         <contexts/>
-        <patternAssertion></patternAssertion>
+        <relevanceAssertion></relevanceAssertion>
         <orderPolicy> </orderPolicy>
         <orderPolicyParam></orderPolicyParam>
         <matchingPolicy> </matchingPolicy>
@@ -521,7 +521,7 @@
         <patternType>Count</patternType>
         <participantSet/>
         <contexts/>
-        <patternAssertion> &gt; 5 </patternAssertion>
+        <relevanceAssertion> &gt; 5 </relevanceAssertion>
         <orderPolicy> </orderPolicy>
         <orderPolicyParam></orderPolicyParam>
         <matchingPolicy> </matchingPolicy>
@@ -543,7 +543,7 @@
         <patternType>Decreasing</patternType>
         <participantSet/>
         <contexts/>
-        <patternAssertion>Assignment Count</patternAssertion>
+        <relevanceAssertion>Assignment Count</relevanceAssertion>
         <orderPolicy> </orderPolicy>
         <orderPolicyParam></orderPolicyParam>
         <matchingPolicy> </matchingPolicy>
@@ -565,7 +565,7 @@
         <patternType>Absence</patternType>
         <participantSet/>
         <contexts/>
-        <patternAssertion></patternAssertion>
+        <relevanceAssertion></relevanceAssertion>
         <orderPolicy> </orderPolicy>
         <orderPolicyParam></orderPolicyParam>
         <matchingPolicy> </matchingPolicy>
@@ -587,7 +587,7 @@
         <patternType> </patternType>
         <participantSet/>
         <contexts/>
-        <patternAssertion></patternAssertion>
+        <relevanceAssertion></relevanceAssertion>
         <orderPolicy> </orderPolicy>
         <orderPolicyParam></orderPolicyParam>
         <matchingPolicy> </matchingPolicy>

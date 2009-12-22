@@ -221,7 +221,7 @@ public class VertexPropertyDialog extends javax.swing.JDialog {
         jRelevanceAssertionTextArea.setRows(5);
         jRelevanceAssertScrollPane.setViewportView(jRelevanceAssertionTextArea);
 
-        jRelevanceLabel.setText("Pattern Assertion:");
+        jRelevanceLabel.setText("Relevance Assertion:");
 
         jPOrderComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { " ", "By Occurance Time", "By Detection Time", "By User Defined Attribute" }));
 
@@ -627,7 +627,7 @@ public class VertexPropertyDialog extends javax.swing.JDialog {
     	if (pattern!=null){
     		this.jAgentPatternTypeComboBox.setSelectedItem(pattern.patternType);
         	this.jContextList.setSelectedIndices(PopulateListsUtils.getIDs4Strings(pattern.contexts, MainEditor.contexts));
-        	this.jRelevanceAssertionTextArea.setText(pattern.patternAssertion);
+        	this.jRelevanceAssertionTextArea.setText(pattern.relevanceAssertion);
         	//this.jPSynonymComboBox.setSelectedItem(pattern.synonymPolicy);
         	//this.jPSynonymTextField.setText(pattern.synonymPolicyParam);
         	this.jPOrderComboBox.setSelectedItem(pattern.orderPolicy);
@@ -726,7 +726,7 @@ public class VertexPropertyDialog extends javax.swing.JDialog {
     	pattern.patternType = (String)this.jAgentPatternTypeComboBox.getSelectedItem();
     	storeParticipantSet(pattern,this.jParticipantTable.getModel());
     	pattern.contexts = PopulateListsUtils.getStrings4IDs(this.jContextList.getSelectedIndices(),MainEditor.contexts);
-    	pattern.patternAssertion = this.jRelevanceAssertionTextArea.getText();
+    	pattern.relevanceAssertion = this.jRelevanceAssertionTextArea.getText();
     	//pattern.synonymPolicy = (String)this.jPSynonymComboBox.getSelectedItem();
     	//pattern.synonymPolicyParam = this.jPSynonymTextField.getText();
     	pattern.orderPolicy = (String)this.jPOrderComboBox.getSelectedItem();
