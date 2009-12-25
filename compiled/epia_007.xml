@@ -10,7 +10,7 @@
       <agentPattern>
         <patternType>Always</patternType>
         <participantSet/>
-        <contexts/>
+        <context/>
         <relevanceAssertion>assignment count &lt; 5</relevanceAssertion>
         <orderPolicy> </orderPolicy>
         <orderPolicyParam></orderPolicyParam>
@@ -32,7 +32,7 @@
       <agentPattern>
         <patternType> </patternType>
         <participantSet/>
-        <contexts/>
+        <context/>
         <relevanceAssertion></relevanceAssertion>
         <orderPolicy> </orderPolicy>
         <orderPolicyParam></orderPolicyParam>
@@ -54,7 +54,7 @@
       <agentPattern>
         <patternType>Absence</patternType>
         <participantSet/>
-        <contexts/>
+        <context/>
         <relevanceAssertion></relevanceAssertion>
         <orderPolicy> </orderPolicy>
         <orderPolicyParam></orderPolicyParam>
@@ -76,7 +76,7 @@
       <agentPattern>
         <patternType> </patternType>
         <participantSet/>
-        <contexts/>
+        <context/>
         <relevanceAssertion></relevanceAssertion>
         <orderPolicy> </orderPolicy>
         <orderPolicyParam></orderPolicyParam>
@@ -98,7 +98,7 @@
       <agentPattern>
         <patternType> </patternType>
         <participantSet/>
-        <contexts/>
+        <context/>
         <relevanceAssertion></relevanceAssertion>
         <orderPolicy> </orderPolicy>
         <orderPolicyParam></orderPolicyParam>
@@ -124,7 +124,7 @@
             <eventId>Assingment</eventId>
           </EPDLEditor.Types.ParticipantEvent>
         </participantSet>
-        <contexts/>
+        <context/>
         <relevanceAssertion></relevanceAssertion>
         <orderPolicy> </orderPolicy>
         <orderPolicyParam></orderPolicyParam>
@@ -146,7 +146,7 @@
       <agentPattern>
         <patternType> </patternType>
         <participantSet/>
-        <contexts/>
+        <context/>
         <relevanceAssertion></relevanceAssertion>
         <orderPolicy> </orderPolicy>
         <orderPolicyParam></orderPolicyParam>
@@ -168,7 +168,7 @@
       <agentPattern>
         <patternType>Absence</patternType>
         <participantSet/>
-        <contexts/>
+        <context/>
         <relevanceAssertion></relevanceAssertion>
         <orderPolicy> </orderPolicy>
         <orderPolicyParam></orderPolicyParam>
@@ -190,7 +190,7 @@
       <agentPattern>
         <patternType> </patternType>
         <participantSet/>
-        <contexts/>
+        <context/>
         <relevanceAssertion></relevanceAssertion>
         <orderPolicy> </orderPolicy>
         <orderPolicyParam></orderPolicyParam>
@@ -212,7 +212,7 @@
       <agentPattern>
         <patternType> </patternType>
         <participantSet/>
-        <contexts/>
+        <context/>
         <relevanceAssertion></relevanceAssertion>
         <orderPolicy> </orderPolicy>
         <orderPolicyParam></orderPolicyParam>
@@ -234,7 +234,7 @@
       <agentPattern>
         <patternType> </patternType>
         <participantSet/>
-        <contexts/>
+        <context/>
         <relevanceAssertion></relevanceAssertion>
         <orderPolicy> </orderPolicy>
         <orderPolicyParam></orderPolicyParam>
@@ -256,7 +256,7 @@
       <agentPattern>
         <patternType> </patternType>
         <participantSet/>
-        <contexts/>
+        <context/>
         <relevanceAssertion></relevanceAssertion>
         <orderPolicy> </orderPolicy>
         <orderPolicyParam></orderPolicyParam>
@@ -278,7 +278,7 @@
       <agentPattern>
         <patternType> </patternType>
         <participantSet/>
-        <contexts/>
+        <context/>
         <relevanceAssertion></relevanceAssertion>
         <orderPolicy> </orderPolicy>
         <orderPolicyParam></orderPolicyParam>
@@ -300,7 +300,7 @@
       <agentPattern>
         <patternType>Any</patternType>
         <participantSet/>
-        <contexts/>
+        <context/>
         <relevanceAssertion>Delivery Bid.Committed Pick Up Time  &lt; Bid Request. Required Pick Up Time + 5 minutes</relevanceAssertion>
         <orderPolicy> </orderPolicy>
         <orderPolicyParam></orderPolicyParam>
@@ -322,7 +322,7 @@
       <agentPattern>
         <patternType>Sometimes</patternType>
         <participantSet/>
-        <contexts/>
+        <context/>
         <relevanceAssertion>assignment count = 0</relevanceAssertion>
         <orderPolicy> </orderPolicy>
         <orderPolicyParam></orderPolicyParam>
@@ -344,7 +344,7 @@
       <agentPattern>
         <patternType> </patternType>
         <participantSet/>
-        <contexts/>
+        <context/>
         <relevanceAssertion></relevanceAssertion>
         <orderPolicy> </orderPolicy>
         <orderPolicyParam></orderPolicyParam>
@@ -366,7 +366,7 @@
       <agentPattern>
         <patternType>Sequence</patternType>
         <participantSet/>
-        <contexts/>
+        <context/>
         <relevanceAssertion></relevanceAssertion>
         <orderPolicy> </orderPolicy>
         <orderPolicyParam></orderPolicyParam>
@@ -388,7 +388,7 @@
       <agentPattern>
         <patternType> </patternType>
         <participantSet/>
-        <contexts/>
+        <context/>
         <relevanceAssertion></relevanceAssertion>
         <orderPolicy> </orderPolicy>
         <orderPolicyParam></orderPolicyParam>
@@ -410,7 +410,7 @@
       <agentPattern>
         <patternType> </patternType>
         <participantSet/>
-        <contexts/>
+        <context/>
         <relevanceAssertion></relevanceAssertion>
         <orderPolicy> </orderPolicy>
         <orderPolicyParam></orderPolicyParam>
@@ -432,7 +432,7 @@
       <agentPattern>
         <patternType>Always</patternType>
         <participantSet/>
-        <contexts/>
+        <context/>
         <relevanceAssertion></relevanceAssertion>
         <orderPolicy> </orderPolicy>
         <orderPolicyParam></orderPolicyParam>
@@ -454,7 +454,7 @@
       <agentPattern>
         <patternType>Always</patternType>
         <participantSet/>
-        <contexts/>
+        <context/>
         <relevanceAssertion></relevanceAssertion>
         <orderPolicy> </orderPolicy>
         <orderPolicyParam></orderPolicyParam>
@@ -476,7 +476,7 @@
       <agentPattern>
         <patternType> </patternType>
         <participantSet/>
-        <contexts/>
+        <context/>
         <relevanceAssertion></relevanceAssertion>
         <orderPolicy> </orderPolicy>
         <orderPolicyParam></orderPolicyParam>
@@ -498,7 +498,7 @@
       <agentPattern>
         <patternType> </patternType>
         <participantSet/>
-        <contexts/>
+        <context/>
         <relevanceAssertion></relevanceAssertion>
         <orderPolicy> </orderPolicy>
         <orderPolicyParam></orderPolicyParam>
@@ -520,7 +520,7 @@
       <agentPattern>
         <patternType>Count</patternType>
         <participantSet/>
-        <contexts/>
+        <context/>
         <relevanceAssertion> &gt; 5 </relevanceAssertion>
         <orderPolicy> </orderPolicy>
         <orderPolicyParam></orderPolicyParam>
@@ -542,7 +542,7 @@
       <agentPattern>
         <patternType>Decreasing</patternType>
         <participantSet/>
-        <contexts/>
+        <context/>
         <relevanceAssertion>Assignment Count</relevanceAssertion>
         <orderPolicy> </orderPolicy>
         <orderPolicyParam></orderPolicyParam>
@@ -564,7 +564,7 @@
       <agentPattern>
         <patternType>Absence</patternType>
         <participantSet/>
-        <contexts/>
+        <context/>
         <relevanceAssertion></relevanceAssertion>
         <orderPolicy> </orderPolicy>
         <orderPolicyParam></orderPolicyParam>
@@ -586,7 +586,7 @@
       <agentPattern>
         <patternType> </patternType>
         <participantSet/>
-        <contexts/>
+        <context/>
         <relevanceAssertion></relevanceAssertion>
         <orderPolicy> </orderPolicy>
         <orderPolicyParam></orderPolicyParam>
