@@ -3,6 +3,7 @@ package EPDLEditor.Types;
 import javax.swing.table.TableModel;
 
 import EPDLEditor.MainEditor;
+import EPDLEditor.Types.GraphElements.MyVertex;
 
 
 
@@ -177,6 +178,26 @@ public class Context implements Identifiable{
        
         
         return contextNames;
+	}
+	
+	/** Checks if the context is being used, if so returns the agent that uses it,
+	 * otherwise (not used) it is deleted and null is returned.
+	 * @param ev
+	 * @return
+	 */
+	public static String deleteContext(Context ev) {
+		for (MyVertex v:MainEditor.g.getVertices()){
+			if (v.getAgentPattern()!=null && v.getAgentPattern().context.compareTo(ev.getID())==0)
+				return v.getAgentId();
+		}
+		
+		for (int i=0; i<MainEditor.contexts.size();i++){
+			if (MainEditor.contexts.get(i).contextIdentifier.compareTo(ev.contextIdentifier)==0){
+				MainEditor.contexts.remove(i);
+				break;
+			}		
+		}
+		return null;
 	}
 
 }

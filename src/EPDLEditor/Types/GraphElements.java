@@ -187,9 +187,6 @@ public class GraphElements {
 	}
 
 	public static class MyEdge extends ViewableGraphElement {
-		// public static String[] eventOptions = { "Event 1", "Event 2",
-		// "Event 3", "Derived Event 1", "Derived Event 2", "Derived Event 3" };
-
 		private String name;
 
 		private String source;
@@ -239,8 +236,11 @@ public class GraphElements {
 			this.name = name;
 		}
 
-		public String toString() {
-			// if loaded from XML the description will be there but the ids not.
+		public void reloadEventIds(){
+			eventIds = null;
+			restoreEventIds();
+		}
+		private void restoreEventIds() {
 			if (eventIds == null && events != null) {
 				eventIds = new int[events.length];
 				for (int i = 0; i < eventIds.length; i++) {
@@ -250,7 +250,12 @@ public class GraphElements {
 						;
 					eventIds[i] = k;
 				}
-			}
+			}			
+		}
+
+		public String toString() {
+			// if loaded from XML the description will be there but the ids not.
+			restoreEventIds();
 
 			String rslt;
 			if (eventIds == null)
