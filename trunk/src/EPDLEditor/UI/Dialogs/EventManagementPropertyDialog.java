@@ -19,8 +19,10 @@ import javax.swing.table.TableModel;
 
 import EPDLEditor.MainEditor;
 import EPDLEditor.Types.Attribute;
+import EPDLEditor.Types.Context;
 import EPDLEditor.Types.Event;
 import EPDLEditor.UI.Menus.MyMouseMenus.EventTypePropItem;
+import EPDLEditor.exceptions.ObjectBeingUsedException;
 
 /**
  *
@@ -49,6 +51,8 @@ public class EventManagementPropertyDialog extends javax.swing.JDialog {
         jLabel1 = new javax.swing.JLabel();
         jReferencedEventScrollPane = new javax.swing.JScrollPane();
         jReferencedEvent = new javax.swing.JList();
+        jEditButton = new javax.swing.JButton();
+        jDeleteButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Event Type Properties");
@@ -72,7 +76,7 @@ public class EventManagementPropertyDialog extends javax.swing.JDialog {
             }
         });
 
-        jLabel1.setText("Existing Event Types (Click to edit):");
+        jLabel1.setText("Existing Event Types:");
 
         jReferencedEvent.setModel(new javax.swing.AbstractListModel() {
             String[] strings = { "Event 1", "Event 2", "Event 3", "Derived Event 1", "Derived Event 2", "Derived Event 3" };
@@ -87,6 +91,20 @@ public class EventManagementPropertyDialog extends javax.swing.JDialog {
         });
         jReferencedEventScrollPane.setViewportView(jReferencedEvent);
 
+        jEditButton.setText("Edit");
+        jEditButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jEditButtonokButtonHandler(evt);
+            }
+        });
+
+        jDeleteButton.setText("Delete");
+        jDeleteButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jDeleteButtonokButtonHandler(evt);
+            }
+        });
+
         org.jdesktop.layout.GroupLayout layout = new org.jdesktop.layout.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -96,11 +114,13 @@ public class EventManagementPropertyDialog extends javax.swing.JDialog {
                 .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(jReferencedEventScrollPane, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 267, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                     .add(jButton1)
-                    .add(jLabel1))
-                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .add(org.jdesktop.layout.GroupLayout.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(213, Short.MAX_VALUE)
-                .add(jDoneButton)
+                    .add(jLabel1)
+                    .add(org.jdesktop.layout.GroupLayout.TRAILING, layout.createSequentialGroup()
+                        .add(jEditButton)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                        .add(jDeleteButton)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 42, Short.MAX_VALUE)
+                        .add(jDoneButton)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -113,7 +133,10 @@ public class EventManagementPropertyDialog extends javax.swing.JDialog {
                 .add(18, 18, 18)
                 .add(jReferencedEventScrollPane, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 406, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .add(18, 18, 18)
-                .add(jDoneButton, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 29, Short.MAX_VALUE)
+                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                    .add(jDoneButton, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 29, Short.MAX_VALUE)
+                    .add(jEditButton, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 29, Short.MAX_VALUE)
+                    .add(jDeleteButton, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 29, Short.MAX_VALUE))
                 .add(17, 17, 17))
         );
 
@@ -125,9 +148,9 @@ public class EventManagementPropertyDialog extends javax.swing.JDialog {
         dispose();
     }//GEN-LAST:event_jDoneButtonokButtonHandler
 
-    public void formComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_formComponentShown 	
+    public void formComponentShown(java.awt.event.ComponentEvent evt) {                                      
     	reloadEventList();
-    }//GEN-LAST:event_formComponentShown
+    }                                   
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
     	Event ev = new Event();
@@ -154,19 +177,38 @@ public class EventManagementPropertyDialog extends javax.swing.JDialog {
 	}
 
 	private void jReferencedEventValueChanged(javax.swing.event.ListSelectionEvent evt) {//GEN-FIRST:event_jReferencedEventValueChanged
-    	int selectedEventIdx = jReferencedEvent.getSelectedIndex();
-    	if (selectedEventIdx==-1) return;
-    	Event ev = MainEditor.events.get(selectedEventIdx);
-    	
-    	editEvent(ev);
+
     }//GEN-LAST:event_jReferencedEventValueChanged
+
+        private void jEditButtonokButtonHandler(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jEditButtonokButtonHandler
+        	int selectedEventIdx = jReferencedEvent.getSelectedIndex();
+        	if (selectedEventIdx==-1) return;
+        	Event ev = MainEditor.events.get(selectedEventIdx);
+        	
+        	editEvent(ev);
+        }//GEN-LAST:event_jEditButtonokButtonHandler
+
+        private void jDeleteButtonokButtonHandler(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jDeleteButtonokButtonHandler
+        	int selectedEventIdx = jReferencedEvent.getSelectedIndex();
+        	if (selectedEventIdx==-1) return;
+        	Event ev = MainEditor.events.get(selectedEventIdx);
+        	
+        	String edgeUsing = Event.deleteEvent(ev);
+        	if (edgeUsing!=null){
+        		String errorTxt = ev.getID() +" is being used by "+edgeUsing;
+        		MainEditor.dispayError(errorTxt, new ObjectBeingUsedException(errorTxt));
+        	} else 
+                reloadEventList();
+        }//GEN-LAST:event_jDeleteButtonokButtonHandler
     
     
  
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jDeleteButton;
     private javax.swing.JButton jDoneButton;
+    private javax.swing.JButton jEditButton;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JList jReferencedEvent;
     private javax.swing.JScrollPane jReferencedEventScrollPane;

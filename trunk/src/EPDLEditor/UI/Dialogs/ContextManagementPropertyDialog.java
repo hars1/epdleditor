@@ -7,11 +7,9 @@
 
 package EPDLEditor.UI.Dialogs;
 
-import java.awt.event.ActionEvent;
-
 import EPDLEditor.MainEditor;
 import EPDLEditor.Types.Context;
-import EPDLEditor.Types.Event;
+import EPDLEditor.exceptions.ObjectBeingUsedException;
 
 /**
  *
@@ -40,6 +38,8 @@ public class ContextManagementPropertyDialog extends javax.swing.JDialog {
         jLabel1 = new javax.swing.JLabel();
         jReferencedEventScrollPane = new javax.swing.JScrollPane();
         jReferencedContext = new javax.swing.JList();
+        jEditButton = new javax.swing.JButton();
+        jDeleteButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Event Type Properties");
@@ -78,6 +78,20 @@ public class ContextManagementPropertyDialog extends javax.swing.JDialog {
         });
         jReferencedEventScrollPane.setViewportView(jReferencedContext);
 
+        jEditButton.setText("Edit");
+        jEditButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jEditButtonokButtonHandler(evt);
+            }
+        });
+
+        jDeleteButton.setText("Delete");
+        jDeleteButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jDeleteButtonokButtonHandler(evt);
+            }
+        });
+
         org.jdesktop.layout.GroupLayout layout = new org.jdesktop.layout.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -87,11 +101,13 @@ public class ContextManagementPropertyDialog extends javax.swing.JDialog {
                 .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(jReferencedEventScrollPane, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 267, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                     .add(jButton1)
-                    .add(jLabel1))
-                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .add(org.jdesktop.layout.GroupLayout.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(213, Short.MAX_VALUE)
-                .add(jDoneButton)
+                    .add(jLabel1)
+                    .add(org.jdesktop.layout.GroupLayout.TRAILING, layout.createSequentialGroup()
+                        .add(jEditButton)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                        .add(jDeleteButton)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 42, Short.MAX_VALUE)
+                        .add(jDoneButton)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -104,7 +120,10 @@ public class ContextManagementPropertyDialog extends javax.swing.JDialog {
                 .add(18, 18, 18)
                 .add(jReferencedEventScrollPane, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 406, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .add(18, 18, 18)
-                .add(jDoneButton, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 29, Short.MAX_VALUE)
+                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                    .add(jDoneButton, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 29, Short.MAX_VALUE)
+                    .add(jEditButton, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 29, Short.MAX_VALUE)
+                    .add(jDeleteButton, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 29, Short.MAX_VALUE))
                 .add(17, 17, 17))
         );
 
@@ -115,9 +134,9 @@ public class ContextManagementPropertyDialog extends javax.swing.JDialog {
         dispose();
     }//GEN-LAST:event_jDoneButtonokButtonHandler
 
-    public void formComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_formComponentShown  	
+    public void formComponentShown(java.awt.event.ComponentEvent evt) {                                       
     	updateContextsList();
-    }//GEN-LAST:event_formComponentShown
+    }                                   
 
     private void updateContextsList() {
         jReferencedContext.setModel(new javax.swing.AbstractListModel() {
@@ -144,17 +163,41 @@ public class ContextManagementPropertyDialog extends javax.swing.JDialog {
 	}
 
 	private void jReferencedContextValueChanged(javax.swing.event.ListSelectionEvent evt) {//GEN-FIRST:event_jReferencedContextValueChanged
-    	int selectedEventIdx = jReferencedContext.getSelectedIndex();
-    	if (selectedEventIdx==-1) return;
-    	Context ev = MainEditor.contexts.get(selectedEventIdx);
-    	
-    	editContext(ev);
+//    	int selectedEventIdx = jReferencedContext.getSelectedIndex();
+//    	if (selectedEventIdx==-1) return;
+//    	Context ev = MainEditor.contexts.get(selectedEventIdx);
+//    	
+//    	editContext(ev);
     }//GEN-LAST:event_jReferencedContextValueChanged
+
+        private void jEditButtonokButtonHandler(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jEditButtonokButtonHandler
+        	int selectedEventIdx = jReferencedContext.getSelectedIndex();
+        	if (selectedEventIdx==-1) return;
+        	Context ev = MainEditor.contexts.get(selectedEventIdx);
+        	
+        	editContext(ev);
+        }//GEN-LAST:event_jEditButtonokButtonHandler
+
+        private void jDeleteButtonokButtonHandler(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jDeleteButtonokButtonHandler
+        	int selectedEventIdx = jReferencedContext.getSelectedIndex();
+        	if (selectedEventIdx==-1) return;
+        	Context ev = MainEditor.contexts.get(selectedEventIdx);
+        	
+        	String agentUsing = Context.deleteContext(ev);
+        	if (agentUsing!=null){
+        		String errorTxt = ev.getID() +" is being used by "+agentUsing;
+        		MainEditor.dispayError(errorTxt, new ObjectBeingUsedException(errorTxt));
+        	} else 
+                updateContextsList();
+        	
+        }//GEN-LAST:event_jDeleteButtonokButtonHandler
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jDeleteButton;
     private javax.swing.JButton jDoneButton;
+    private javax.swing.JButton jEditButton;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JList jReferencedContext;
     private javax.swing.JScrollPane jReferencedEventScrollPane;

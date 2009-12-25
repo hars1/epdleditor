@@ -283,7 +283,7 @@ public class MainEditor {
 	    	dispayError("Internal Error: ",e);
 	    }
 }
-	protected static void dispayError(String errorDesc,Exception ex) {
+	public static void dispayError(String errorDesc,Exception ex) {
 		String error = "Version"+version+'\n';
 		for (StackTraceElement er:ex.getStackTrace()){
 			error+=er.toString()+'\n';

@@ -2,6 +2,9 @@ package EPDLEditor.Types;
 
 import javax.swing.table.TableModel;
 
+import EPDLEditor.MainEditor;
+import EPDLEditor.Types.GraphElements.MyEdge;
+
 
 public class Event implements Identifiable{
 
@@ -41,5 +44,31 @@ public class Event implements Identifiable{
 	}
 	public String getID() {
 		return this.eventTypeIdentifier;
+	}
+	/** Checks if the event is being used, if so returns the edge that uses it,
+	 * otherwise (not used) it is deleted and null is returned.
+	 * @param ev
+	 * @return
+	 */
+	public static String deleteEvent(Event ev) {
+		// check if there is a reference, if so abort
+		for (MyEdge v:MainEditor.g.getEdges())
+			for (int i:v.getEventIds())
+				if (MainEditor.events.get(i).getID().compareTo(ev.getID())==0)
+					return v.getName();
+				
+		// delete the event type
+		for (int i=0; i<MainEditor.events.size();i++){
+			if (MainEditor.events.get(i).getID().compareTo(ev.getID())==0){
+				MainEditor.events.remove(i);
+				break;
+			}
+		}
+		
+		// reload the event ids for all edges.
+		for (MyEdge v:MainEditor.g.getEdges())
+			v.reloadEventIds();
+		
+		return null;		
 	}
 }
