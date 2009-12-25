@@ -58,7 +58,7 @@ public class GraphElements {
 				{ "", "By Occurance Time", "By Detection Time",
 						"By User Defined Attribute" },
 				{ "", "Single", "Single Deferred", "Unrestricted", "Bounded" },
-				{ "", "Consume", "Reuse", "Bounded Reuse", "Bounded" } };
+				{ "", "Consume", "Reuse", "Bounded Reuse"} };
 
 		public static String[] agentTypeOptions = { producer, consumer, epa,
 				gsa };
