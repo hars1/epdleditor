@@ -168,5 +168,15 @@ public class Context implements Identifiable{
 	public String getID() {
 		return this.contextIdentifier;
 	}
+	public static String[] getDefinedContexts() {
+        String[] contextNames = new String[MainEditor.contexts.size()+1];
+        int i=0;
+        contextNames[i++] = "";
+        for (Context c:MainEditor.contexts)
+        	contextNames[i++]=c.getID();
+       
+        
+        return contextNames;
+	}
 
 }

@@ -6,7 +6,7 @@ public class EPAPattern {
 	}
 	public String patternType;
 	public ParticipantEvent[] participantSet;
-	public String[] contexts;
+	public String context;
 	public String relevanceAssertion;
 	public String orderPolicy;
 	public String orderPolicyParam;
