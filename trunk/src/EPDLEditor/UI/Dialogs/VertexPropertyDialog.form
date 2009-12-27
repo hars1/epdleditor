@@ -99,92 +99,89 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="1" attributes="0">
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="1" attributes="0">
-                  <Component id="jAgentOKButton" alignment="1" min="-2" max="-2" attributes="0"/>
-                  <Group type="102" alignment="0" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jPatternLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jDerivationLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel6" alignment="0" min="-2" max="-2" attributes="0"/>
+          <Group type="102" attributes="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Component id="jAgentOKButton" alignment="1" min="-2" max="-2" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="JPatternAssertionLbl" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jAgentSelectionLabel" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jDerivedTableScrollPane" pref="887" max="32767" attributes="1"/>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="jAgentPatternTypeComboBox" min="-2" pref="205" max="-2" attributes="0"/>
-                                  <Component id="jParticipantSetLabel" min="-2" max="-2" attributes="0"/>
-                                  <Group type="102" alignment="1" attributes="1">
-                                      <EmptySpace max="32767" attributes="0"/>
-                                      <Component id="jPatternTypeLabel" min="-2" pref="94" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="105" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jPatternLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jDerivationLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel6" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="JPatternAssertionLbl" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="jAgentSelectionLabel" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
-                              <EmptySpace max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jAgentContextComboBox" min="-2" pref="205" max="-2" attributes="0"/>
-                                  <Component id="jContextLabel" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="jPOrderTextField" alignment="0" pref="163" max="32767" attributes="1"/>
-                                      <Component id="jPOrderComboBox" alignment="0" max="32767" attributes="1"/>
-                                  </Group>
-                                  <Component id="jOrderLabel" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" attributes="0">
-                                      <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
+                                  <Component id="jDerivedTableScrollPane" pref="965" max="32767" attributes="1"/>
+                                  <Group type="102" alignment="0" attributes="0">
                                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                          <Component id="jPMatchingComboBox" alignment="0" max="32767" attributes="1"/>
-                                          <Component id="jPMatchingTextField" alignment="1" min="-2" pref="191" max="-2" attributes="1"/>
+                                          <Component id="jAgentPatternTypeComboBox" min="-2" pref="205" max="-2" attributes="0"/>
+                                          <Group type="102" alignment="1" attributes="1">
+                                              <EmptySpace max="32767" attributes="0"/>
+                                              <Component id="jPatternTypeLabel" min="-2" pref="94" max="-2" attributes="0"/>
+                                              <EmptySpace min="-2" pref="105" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Component id="jParticipantSetLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="jAgentContextComboBox" min="-2" pref="205" max="-2" attributes="0"/>
+                                          <Component id="jContextLabel" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                          <Group type="102" attributes="0">
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="jPMatchingComboBox" min="-2" pref="215" max="-2" attributes="1"/>
+                                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                              <Component id="jPMatchingTextField" min="-2" pref="191" max="-2" attributes="1"/>
+                                          </Group>
+                                          <Group type="102" alignment="0" attributes="1">
+                                              <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+                                              <Component id="jMatchingLabel" min="-2" pref="185" max="-2" attributes="0"/>
+                                              <EmptySpace max="32767" attributes="0"/>
+                                              <Component id="jMatchingLabel1" min="-2" pref="185" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="jRelevanceLabel" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jRelevanceAssertScrollPane" min="-2" pref="451" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="102" attributes="0">
+                                              <Component id="jPatternAnnotationLabel" min="-2" pref="173" max="-2" attributes="0"/>
+                                              <EmptySpace pref="335" max="32767" attributes="0"/>
+                                          </Group>
+                                          <Component id="jPatternAnnoScrollPane" pref="508" max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
                                   <Group type="102" attributes="0">
-                                      <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
-                                      <Component id="jMatchingLabel" min="-2" pref="185" max="-2" attributes="0"/>
+                                      <Component id="jScrollPane3" pref="956" max="32767" attributes="2"/>
+                                      <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
                                   </Group>
-                              </Group>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jRelevanceLabel" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jRelevanceAssertScrollPane" min="-2" pref="451" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" attributes="0">
-                                      <Component id="jPatternAnnotationLabel" min="-2" pref="173" max="-2" attributes="0"/>
-                                      <EmptySpace pref="257" max="32767" attributes="0"/>
+                                      <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+                                      <Component id="jAgentTypeComboBox" min="-2" pref="286" max="-2" attributes="2"/>
+                                      <EmptySpace pref="146" max="32767" attributes="0"/>
+                                      <Component id="jAgentSubTypeLabel" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="jAgentSubTypeComboBox" min="-2" pref="324" max="-2" attributes="1"/>
                                   </Group>
-                                  <Component id="jPatternAnnoScrollPane" pref="430" max="32767" attributes="0"/>
+                                  <Component id="jAgentSelection" pref="965" max="32767" attributes="2"/>
                               </Group>
                           </Group>
-                          <Component id="jParticipantTableScrollPane" alignment="0" pref="887" max="32767" attributes="1"/>
-                          <Group type="102" attributes="0">
-                              <Component id="jScrollPane3" pref="878" max="32767" attributes="2"/>
-                              <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" attributes="0">
-                              <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
-                              <Component id="jAgentTypeComboBox" min="-2" pref="286" max="-2" attributes="2"/>
-                              <EmptySpace pref="68" max="32767" attributes="0"/>
-                              <Component id="jAgentSubTypeLabel" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jAgentSubTypeComboBox" min="-2" pref="324" max="-2" attributes="1"/>
-                          </Group>
-                          <Component id="jAgentSelection" pref="887" max="32767" attributes="2"/>
                       </Group>
                   </Group>
+                  <Component id="jParticipantTableScrollPane" alignment="1" min="-2" pref="965" max="-2" attributes="1"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
@@ -216,45 +213,29 @@
                   </Group>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jPatternTypeLabel" alignment="3" min="-2" max="-2" attributes="1"/>
+                  <Component id="jContextLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jMatchingLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jMatchingLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jPatternTypeLabel" alignment="3" min="-2" max="-2" attributes="1"/>
-                          <Component id="jContextLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
-                              <Component id="jPatternLabel" min="-2" pref="16" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                              <Component id="jAgentPatternTypeComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jAgentContextComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
-                      <Component id="jParticipantSetLabel" min="-2" pref="22" max="-2" attributes="1"/>
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
+                      <Component id="jPatternLabel" min="-2" pref="16" max="-2" attributes="0"/>
                   </Group>
-                  <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                      <Group type="102" alignment="1" attributes="1">
-                          <Component id="jMatchingLabel" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
-                          <Component id="jPMatchingComboBox" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jPMatchingTextField" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="1" attributes="0">
-                          <Component id="jOrderLabel" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jPOrderComboBox" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jPOrderTextField" min="-2" max="-2" attributes="0"/>
-                      </Group>
+                  <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                      <Component id="jAgentPatternTypeComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jAgentContextComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jPMatchingComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jPMatchingTextField" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="jParticipantTableScrollPane" min="-2" pref="109" max="-2" attributes="0"/>
+              <Component id="jParticipantSetLabel" min="-2" pref="22" max="-2" attributes="1"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jParticipantTableScrollPane" min="-2" pref="160" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jRelevanceLabel" alignment="3" min="-2" pref="14" max="-2" attributes="0"/>
@@ -448,20 +429,6 @@
         <Property name="text" type="java.lang.String" value="Relevance Assertion:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JComboBox" name="jPOrderComboBox">
-      <Properties>
-        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="4">
-            <StringItem index="0" value=" "/>
-            <StringItem index="1" value="By Occurance Time"/>
-            <StringItem index="2" value="By Detection Time"/>
-            <StringItem index="3" value="By User Defined Attribute"/>
-          </StringArray>
-        </Property>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="jPOrderTextField">
-    </Component>
     <Component class="javax.swing.JComboBox" name="jPMatchingComboBox">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
@@ -476,11 +443,6 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="jPMatchingTextField">
-    </Component>
-    <Component class="javax.swing.JLabel" name="jOrderLabel">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Order Policy"/>
-      </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jMatchingLabel">
       <Properties>
@@ -523,17 +485,29 @@
               </Border>
             </Property>
             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-              <Table columnCount="6" rowCount="5">
+              <Table columnCount="8" rowCount="5">
                 <Column editable="true" title="Participant" type="java.lang.Boolean"/>
                 <Column editable="true" title="Event Type" type="java.lang.String"/>
                 <Column editable="true" title="Repeated Type Policy" type="java.lang.String"/>
                 <Column editable="true" title="Repeated Type Param" type="java.lang.String"/>
                 <Column editable="true" title="Consumption Policy" type="java.lang.String"/>
                 <Column editable="true" title="Consumption Param" type="java.lang.String"/>
+                <Column editable="true" title="Order Policy" type="java.lang.String"/>
+                <Column editable="true" title="Order Policy Param" type="java.lang.String"/>
               </Table>
             </Property>
             <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
               <TableColumnModel selectionModel="0">
+                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
+                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
                 <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
                   <Title/>
                   <Editor/>
@@ -672,6 +646,11 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jAgentContextComboBoxActionPerformed"/>
       </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jMatchingLabel1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Matching Cardinality Param"/>
+      </Properties>
     </Component>
   </SubComponents>
 </Form>

@@ -12,8 +12,6 @@
         <participantSet/>
         <context/>
         <relevanceAssertion>assignment count &lt; 5</relevanceAssertion>
-        <orderPolicy> </orderPolicy>
-        <orderPolicyParam></orderPolicyParam>
         <matchingPolicy> </matchingPolicy>
         <matchingPolicyParam></matchingPolicyParam>
         <annotation></annotation>
@@ -34,8 +32,6 @@
         <participantSet/>
         <context/>
         <relevanceAssertion></relevanceAssertion>
-        <orderPolicy> </orderPolicy>
-        <orderPolicyParam></orderPolicyParam>
         <matchingPolicy> </matchingPolicy>
         <matchingPolicyParam></matchingPolicyParam>
         <annotation></annotation>
@@ -56,8 +52,6 @@
         <participantSet/>
         <context/>
         <relevanceAssertion></relevanceAssertion>
-        <orderPolicy> </orderPolicy>
-        <orderPolicyParam></orderPolicyParam>
         <matchingPolicy> </matchingPolicy>
         <matchingPolicyParam></matchingPolicyParam>
         <annotation></annotation>
@@ -78,8 +72,6 @@
         <participantSet/>
         <context/>
         <relevanceAssertion></relevanceAssertion>
-        <orderPolicy> </orderPolicy>
-        <orderPolicyParam></orderPolicyParam>
         <matchingPolicy> </matchingPolicy>
         <matchingPolicyParam></matchingPolicyParam>
         <annotation></annotation>
@@ -100,8 +92,6 @@
         <participantSet/>
         <context/>
         <relevanceAssertion></relevanceAssertion>
-        <orderPolicy> </orderPolicy>
-        <orderPolicyParam></orderPolicyParam>
         <matchingPolicy> </matchingPolicy>
         <matchingPolicyParam></matchingPolicyParam>
         <annotation></annotation>
@@ -126,8 +116,6 @@
         </participantSet>
         <context/>
         <relevanceAssertion></relevanceAssertion>
-        <orderPolicy> </orderPolicy>
-        <orderPolicyParam></orderPolicyParam>
         <matchingPolicy> </matchingPolicy>
         <matchingPolicyParam></matchingPolicyParam>
         <annotation></annotation>
@@ -148,8 +136,6 @@
         <participantSet/>
         <context/>
         <relevanceAssertion></relevanceAssertion>
-        <orderPolicy> </orderPolicy>
-        <orderPolicyParam></orderPolicyParam>
         <matchingPolicy> </matchingPolicy>
         <matchingPolicyParam></matchingPolicyParam>
         <annotation></annotation>
@@ -170,8 +156,6 @@
         <participantSet/>
         <context/>
         <relevanceAssertion></relevanceAssertion>
-        <orderPolicy> </orderPolicy>
-        <orderPolicyParam></orderPolicyParam>
         <matchingPolicy> </matchingPolicy>
         <matchingPolicyParam></matchingPolicyParam>
         <annotation></annotation>
@@ -192,8 +176,6 @@
         <participantSet/>
         <context/>
         <relevanceAssertion></relevanceAssertion>
-        <orderPolicy> </orderPolicy>
-        <orderPolicyParam></orderPolicyParam>
         <matchingPolicy> </matchingPolicy>
         <matchingPolicyParam></matchingPolicyParam>
         <annotation></annotation>
@@ -214,8 +196,6 @@
         <participantSet/>
         <context/>
         <relevanceAssertion></relevanceAssertion>
-        <orderPolicy> </orderPolicy>
-        <orderPolicyParam></orderPolicyParam>
         <matchingPolicy> </matchingPolicy>
         <matchingPolicyParam></matchingPolicyParam>
         <annotation></annotation>
@@ -236,8 +216,6 @@
         <participantSet/>
         <context/>
         <relevanceAssertion></relevanceAssertion>
-        <orderPolicy> </orderPolicy>
-        <orderPolicyParam></orderPolicyParam>
         <matchingPolicy> </matchingPolicy>
         <matchingPolicyParam></matchingPolicyParam>
         <annotation></annotation>
@@ -258,8 +236,6 @@
         <participantSet/>
         <context/>
         <relevanceAssertion></relevanceAssertion>
-        <orderPolicy> </orderPolicy>
-        <orderPolicyParam></orderPolicyParam>
         <matchingPolicy> </matchingPolicy>
         <matchingPolicyParam></matchingPolicyParam>
         <annotation></annotation>
@@ -280,8 +256,6 @@
         <participantSet/>
         <context/>
         <relevanceAssertion></relevanceAssertion>
-        <orderPolicy> </orderPolicy>
-        <orderPolicyParam></orderPolicyParam>
         <matchingPolicy> </matchingPolicy>
         <matchingPolicyParam></matchingPolicyParam>
         <annotation></annotation>
@@ -302,8 +276,6 @@
         <participantSet/>
         <context/>
         <relevanceAssertion>Delivery Bid.Committed Pick Up Time  &lt; Bid Request. Required Pick Up Time + 5 minutes</relevanceAssertion>
-        <orderPolicy> </orderPolicy>
-        <orderPolicyParam></orderPolicyParam>
         <matchingPolicy> </matchingPolicy>
         <matchingPolicyParam></matchingPolicyParam>
         <annotation>Automatic matching </annotation>
@@ -324,8 +296,6 @@
         <participantSet/>
         <context/>
         <relevanceAssertion>assignment count = 0</relevanceAssertion>
-        <orderPolicy> </orderPolicy>
-        <orderPolicyParam></orderPolicyParam>
         <matchingPolicy> </matchingPolicy>
         <matchingPolicyParam></matchingPolicyParam>
         <annotation></annotation>
@@ -346,8 +316,6 @@
         <participantSet/>
         <context/>
         <relevanceAssertion></relevanceAssertion>
-        <orderPolicy> </orderPolicy>
-        <orderPolicyParam></orderPolicyParam>
         <matchingPolicy> </matchingPolicy>
         <matchingPolicyParam></matchingPolicyParam>
         <annotation></annotation>
@@ -368,8 +336,6 @@
         <participantSet/>
         <context/>
         <relevanceAssertion></relevanceAssertion>
-        <orderPolicy> </orderPolicy>
-        <orderPolicyParam></orderPolicyParam>
         <matchingPolicy> </matchingPolicy>
         <matchingPolicyParam></matchingPolicyParam>
         <annotation></annotation>
@@ -390,8 +356,6 @@
         <participantSet/>
         <context/>
         <relevanceAssertion></relevanceAssertion>
-        <orderPolicy> </orderPolicy>
-        <orderPolicyParam></orderPolicyParam>
         <matchingPolicy> </matchingPolicy>
         <matchingPolicyParam></matchingPolicyParam>
         <annotation></annotation>
@@ -412,8 +376,6 @@
         <participantSet/>
         <context/>
         <relevanceAssertion></relevanceAssertion>
-        <orderPolicy> </orderPolicy>
-        <orderPolicyParam></orderPolicyParam>
         <matchingPolicy> </matchingPolicy>
         <matchingPolicyParam></matchingPolicyParam>
         <annotation></annotation>
@@ -434,8 +396,6 @@
         <participantSet/>
         <context/>
         <relevanceAssertion></relevanceAssertion>
-        <orderPolicy> </orderPolicy>
-        <orderPolicyParam></orderPolicyParam>
         <matchingPolicy> </matchingPolicy>
         <matchingPolicyParam></matchingPolicyParam>
         <annotation></annotation>
@@ -456,8 +416,6 @@
         <participantSet/>
         <context/>
         <relevanceAssertion></relevanceAssertion>
-        <orderPolicy> </orderPolicy>
-        <orderPolicyParam></orderPolicyParam>
         <matchingPolicy> </matchingPolicy>
         <matchingPolicyParam></matchingPolicyParam>
         <annotation></annotation>
@@ -478,8 +436,6 @@
         <participantSet/>
         <context/>
         <relevanceAssertion></relevanceAssertion>
-        <orderPolicy> </orderPolicy>
-        <orderPolicyParam></orderPolicyParam>
         <matchingPolicy> </matchingPolicy>
         <matchingPolicyParam></matchingPolicyParam>
         <annotation></annotation>
@@ -500,8 +456,6 @@
         <participantSet/>
         <context/>
         <relevanceAssertion></relevanceAssertion>
-        <orderPolicy> </orderPolicy>
-        <orderPolicyParam></orderPolicyParam>
         <matchingPolicy> </matchingPolicy>
         <matchingPolicyParam></matchingPolicyParam>
         <annotation></annotation>
@@ -522,8 +476,6 @@
         <participantSet/>
         <context/>
         <relevanceAssertion> &gt; 5 </relevanceAssertion>
-        <orderPolicy> </orderPolicy>
-        <orderPolicyParam></orderPolicyParam>
         <matchingPolicy> </matchingPolicy>
         <matchingPolicyParam></matchingPolicyParam>
         <annotation></annotation>
@@ -544,8 +496,6 @@
         <participantSet/>
         <context/>
         <relevanceAssertion>Assignment Count</relevanceAssertion>
-        <orderPolicy> </orderPolicy>
-        <orderPolicyParam></orderPolicyParam>
         <matchingPolicy> </matchingPolicy>
         <matchingPolicyParam></matchingPolicyParam>
         <annotation></annotation>
@@ -566,8 +516,6 @@
         <participantSet/>
         <context/>
         <relevanceAssertion></relevanceAssertion>
-        <orderPolicy> </orderPolicy>
-        <orderPolicyParam></orderPolicyParam>
         <matchingPolicy> </matchingPolicy>
         <matchingPolicyParam></matchingPolicyParam>
         <annotation></annotation>
@@ -588,8 +536,6 @@
         <participantSet/>
         <context/>
         <relevanceAssertion></relevanceAssertion>
-        <orderPolicy> </orderPolicy>
-        <orderPolicyParam></orderPolicyParam>
         <matchingPolicy> </matchingPolicy>
         <matchingPolicyParam></matchingPolicyParam>
         <annotation></annotation>
