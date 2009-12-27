@@ -8,8 +8,6 @@ public class EPAPattern {
 	public ParticipantEvent[] participantSet;
 	public String context;
 	public String relevanceAssertion;
-	public String orderPolicy;
-	public String orderPolicyParam;
 	public String matchingPolicy;
 	public String matchingPolicyParam;
 

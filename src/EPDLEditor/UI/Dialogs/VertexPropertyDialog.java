@@ -87,11 +87,8 @@ public class VertexPropertyDialog extends javax.swing.JDialog {
         jRelevanceAssertScrollPane = new javax.swing.JScrollPane();
         jRelevanceAssertionTextArea = new javax.swing.JTextArea();
         jRelevanceLabel = new javax.swing.JLabel();
-        jPOrderComboBox = new javax.swing.JComboBox();
-        jPOrderTextField = new javax.swing.JTextField();
         jPMatchingComboBox = new javax.swing.JComboBox();
         jPMatchingTextField = new javax.swing.JTextField();
-        jOrderLabel = new javax.swing.JLabel();
         jMatchingLabel = new javax.swing.JLabel();
         jPatternAnnotationLabel = new javax.swing.JLabel();
         jPatternAnnoScrollPane = new javax.swing.JScrollPane();
@@ -102,6 +99,7 @@ public class VertexPropertyDialog extends javax.swing.JDialog {
         jDerivedTable = new javax.swing.JTable();
         JPatternAssertionLbl = new javax.swing.JLabel();
         jAgentContextComboBox = new javax.swing.JComboBox();
+        jMatchingLabel1 = new javax.swing.JLabel();
 
         jAgentSubTypeComboBox5.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "None", "Consume", "Reuse", "Bounded Reuse" }));
         jAgentSubTypeComboBox5.addActionListener(new java.awt.event.ActionListener() {
@@ -216,11 +214,7 @@ public class VertexPropertyDialog extends javax.swing.JDialog {
 
         jRelevanceLabel.setText("Relevance Assertion:");
 
-        jPOrderComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { " ", "By Occurance Time", "By Detection Time", "By User Defined Attribute" }));
-
         jPMatchingComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { " ", "Single", "Single Deferred", "Unrestricted", "Bounded" }));
-
-        jOrderLabel.setText("Order Policy");
 
         jMatchingLabel.setText("Matching Cardinality Policy");
 
@@ -234,18 +228,18 @@ public class VertexPropertyDialog extends javax.swing.JDialog {
         jParticipantTable.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jParticipantTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null}
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "Participant", "Event Type", "Repeated Type Policy", "Repeated Type Param", "Consumption Policy", "Consumption Param"
+                "Participant", "Event Type", "Repeated Type Policy", "Repeated Type Param", "Consumption Policy", "Consumption Param", "Order Policy", "Order Policy Param"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Boolean.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+                java.lang.Boolean.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -290,76 +284,76 @@ public class VertexPropertyDialog extends javax.swing.JDialog {
             }
         });
 
+        jMatchingLabel1.setText("Matching Cardinality Param");
+
         org.jdesktop.layout.GroupLayout layout = new org.jdesktop.layout.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(org.jdesktop.layout.GroupLayout.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
-                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
-                    .add(jAgentOKButton)
-                    .add(org.jdesktop.layout.GroupLayout.LEADING, layout.createSequentialGroup()
-                        .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                            .add(jPatternLabel)
-                            .add(jDerivationLabel)
-                            .add(jLabel6)
-                            .add(layout.createSequentialGroup()
-                                .add(JPatternAssertionLbl)
-                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                                .add(jAgentSelectionLabel)))
-                        .add(18, 18, 18)
-                        .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                            .add(jDerivedTableScrollPane, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 887, Short.MAX_VALUE)
-                            .add(layout.createSequentialGroup()
-                                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
-                                    .add(jAgentPatternTypeComboBox, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 205, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                    .add(jParticipantSetLabel)
-                                    .add(org.jdesktop.layout.GroupLayout.TRAILING, layout.createSequentialGroup()
-                                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .add(jPatternTypeLabel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 94, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                        .add(105, 105, 105)))
-                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+            .add(layout.createSequentialGroup()
+                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(org.jdesktop.layout.GroupLayout.TRAILING, layout.createSequentialGroup()
+                        .addContainerGap()
+                        .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
+                            .add(jAgentOKButton)
+                            .add(org.jdesktop.layout.GroupLayout.LEADING, layout.createSequentialGroup()
                                 .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                                    .add(jAgentContextComboBox, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 205, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                    .add(jContextLabel))
-                                .add(56, 56, 56)
-                                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                                    .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
-                                        .add(jPOrderTextField, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 163, Short.MAX_VALUE)
-                                        .add(jPOrderComboBox, 0, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                    .add(jOrderLabel))
-                                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                                    .add(jPatternLabel)
+                                    .add(jDerivationLabel)
+                                    .add(jLabel6)
                                     .add(layout.createSequentialGroup()
-                                        .add(14, 14, 14)
+                                        .add(JPatternAssertionLbl)
+                                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                                        .add(jAgentSelectionLabel)))
+                                .add(18, 18, 18)
+                                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                                    .add(jDerivedTableScrollPane, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 965, Short.MAX_VALUE)
+                                    .add(layout.createSequentialGroup()
                                         .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
-                                            .add(jPMatchingComboBox, 0, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .add(org.jdesktop.layout.GroupLayout.TRAILING, jPMatchingTextField, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 191, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
+                                            .add(jAgentPatternTypeComboBox, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 205, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                            .add(org.jdesktop.layout.GroupLayout.TRAILING, layout.createSequentialGroup()
+                                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .add(jPatternTypeLabel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 94, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                                .add(105, 105, 105))
+                                            .add(jParticipantSetLabel))
+                                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                                        .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                                            .add(jAgentContextComboBox, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 205, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                            .add(jContextLabel))
+                                        .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
+                                            .add(layout.createSequentialGroup()
+                                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                                                .add(jPMatchingComboBox, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 215, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
+                                                .add(jPMatchingTextField, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 191, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                                            .add(layout.createSequentialGroup()
+                                                .add(24, 24, 24)
+                                                .add(jMatchingLabel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 185, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .add(jMatchingLabel1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 185, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))))
                                     .add(layout.createSequentialGroup()
-                                        .add(20, 20, 20)
-                                        .add(jMatchingLabel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 185, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))))
-                            .add(layout.createSequentialGroup()
-                                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                                    .add(jRelevanceLabel)
-                                    .add(jRelevanceAssertScrollPane, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 451, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                                        .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                                            .add(jRelevanceLabel)
+                                            .add(jRelevanceAssertScrollPane, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 451, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                                        .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                                            .add(layout.createSequentialGroup()
+                                                .add(jPatternAnnotationLabel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 173, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 335, Short.MAX_VALUE))
+                                            .add(jPatternAnnoScrollPane, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 508, Short.MAX_VALUE)))
                                     .add(layout.createSequentialGroup()
-                                        .add(jPatternAnnotationLabel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 173, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 257, Short.MAX_VALUE))
-                                    .add(jPatternAnnoScrollPane, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 430, Short.MAX_VALUE)))
-                            .add(jParticipantTableScrollPane, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 887, Short.MAX_VALUE)
-                            .add(layout.createSequentialGroup()
-                                .add(jScrollPane3, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 878, Short.MAX_VALUE)
-                                .add(9, 9, 9))
-                            .add(layout.createSequentialGroup()
-                                .add(jLabel8)
-                                .add(33, 33, 33)
-                                .add(jAgentTypeComboBox, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 286, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 68, Short.MAX_VALUE)
-                                .add(jAgentSubTypeLabel)
-                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                                .add(jAgentSubTypeComboBox, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 324, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                            .add(jAgentSelection, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 887, Short.MAX_VALUE))))
+                                        .add(jScrollPane3, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 956, Short.MAX_VALUE)
+                                        .add(9, 9, 9))
+                                    .add(layout.createSequentialGroup()
+                                        .add(jLabel8)
+                                        .add(33, 33, 33)
+                                        .add(jAgentTypeComboBox, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 286, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 146, Short.MAX_VALUE)
+                                        .add(jAgentSubTypeLabel)
+                                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                                        .add(jAgentSubTypeComboBox, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 324, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                                    .add(jAgentSelection, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 965, Short.MAX_VALUE)))))
+                    .add(org.jdesktop.layout.GroupLayout.TRAILING, jParticipantTableScrollPane, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 965, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -383,36 +377,25 @@ public class VertexPropertyDialog extends javax.swing.JDialog {
                         .add(jAgentSelectionLabel)
                         .add(JPatternAssertionLbl, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 16, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                    .add(jPatternTypeLabel)
+                    .add(jContextLabel)
+                    .add(jMatchingLabel)
+                    .add(jMatchingLabel1))
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(layout.createSequentialGroup()
-                        .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                            .add(jPatternTypeLabel)
-                            .add(jContextLabel))
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                            .add(layout.createSequentialGroup()
-                                .add(4, 4, 4)
-                                .add(jPatternLabel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 16, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                            .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                                .add(jAgentPatternTypeComboBox, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                .add(jAgentContextComboBox, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
-                        .add(51, 51, 51)
-                        .add(jParticipantSetLabel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 22, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                    .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING, false)
-                        .add(layout.createSequentialGroup()
-                            .add(jMatchingLabel)
-                            .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .add(jPMatchingComboBox, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                            .add(jPMatchingTextField, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                        .add(layout.createSequentialGroup()
-                            .add(jOrderLabel)
-                            .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                            .add(jPOrderComboBox, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                            .add(jPOrderTextField, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))))
+                        .add(4, 4, 4)
+                        .add(jPatternLabel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 16, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                    .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                        .add(jAgentPatternTypeComboBox, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .add(jAgentContextComboBox, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .add(jPMatchingComboBox, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .add(jPMatchingTextField, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(jParticipantTableScrollPane, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 109, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .add(jParticipantSetLabel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 22, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(jParticipantTableScrollPane, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 160, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                     .add(jRelevanceLabel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 14, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
@@ -464,10 +447,10 @@ public class VertexPropertyDialog extends javax.swing.JDialog {
 
         jParticipantTable.setModel(new javax.swing.table.AbstractTableModel() {
                 Class[] types = new Class [] {
-                    java.lang.Boolean.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+                    java.lang.Boolean.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
                 };
                 String[] columnNames = new String [] {
-                      "Participant", "Event Type", "Repeated Type Policy", "Repeated Type Param", "Consumption Policy", "Consumption Param"
+                      "Participant", "Event Type", "Repeated Type Policy", "Repeated Type Param", "Consumption Policy", "Consumption Param", "Order Policy", "Order Param"
                  };
         		Object[][] contents = new Object[getPotentialParticipents().size()][columnNames.length];
                 public Class getColumnClass(int columnIndex) {
@@ -476,7 +459,7 @@ public class VertexPropertyDialog extends javax.swing.JDialog {
                 @Override
                 public boolean isCellEditable(int rowIndex,
                         int columnIndex){
-                	return ((columnIndex==0)||(columnIndex==2)||(columnIndex==3)||(columnIndex==4)||(columnIndex==5));
+                	return ((columnIndex==0)||(columnIndex==2)||(columnIndex==3)||(columnIndex==4)||(columnIndex==5)||(columnIndex==6)||(columnIndex==7));
                 }
 				public int getColumnCount() {
 					return columnNames.length;
@@ -556,6 +539,14 @@ public class VertexPropertyDialog extends javax.swing.JDialog {
 	  	}
 	  	consumptionPolicy.setCellEditor(new DefaultCellEditor(consumptionComboBox));
         
+	    TableColumn orderPolicy = jParticipantTable.getColumnModel().getColumn(6);
+	    	
+	  	JComboBox orderComboBox = new JComboBox();
+	  	for (String s:vertex.policyTypes[vertex.orderPid]){
+	  		orderComboBox.addItem(s);		
+	  	}
+	  	orderPolicy.setCellEditor(new DefaultCellEditor(orderComboBox));
+	  	
         populate(vertex);
         
     }//GEN-LAST:event_formComponentShown
@@ -587,9 +578,7 @@ public class VertexPropertyDialog extends javax.swing.JDialog {
     	jRelevanceAssertScrollPane.setVisible(epaDetectPattern);
     	//jPoliciesLabel.setVisible(epaDetectPattern);
 
-    	jOrderLabel.setVisible(epaDetectPattern);
-    	jPOrderComboBox.setVisible(epaDetectPattern);
-    	jPOrderTextField.setVisible(epaDetectPattern);
+
     	jMatchingLabel.setVisible(epaDetectPattern);
     	jPMatchingComboBox.setVisible(epaDetectPattern);
     	jPMatchingTextField.setVisible(epaDetectPattern);
@@ -641,8 +630,7 @@ public class VertexPropertyDialog extends javax.swing.JDialog {
         	this.jRelevanceAssertionTextArea.setText(pattern.relevanceAssertion);
         	//this.jPSynonymComboBox.setSelectedItem(pattern.synonymPolicy);
         	//this.jPSynonymTextField.setText(pattern.synonymPolicyParam);
-        	this.jPOrderComboBox.setSelectedItem(pattern.orderPolicy);
-        	this.jPOrderTextField.setText(pattern.orderPolicyParam);
+
         	this.jPMatchingComboBox.setSelectedItem(pattern.matchingPolicy);
         	this.jPMatchingTextField.setText(pattern.matchingPolicyParam);
         	//this.jPConsumptionComboBox.setSelectedItem(pattern.consumptionPolicy);
@@ -691,9 +679,11 @@ public class VertexPropertyDialog extends javax.swing.JDialog {
     			tm.setValueAt((Boolean)true, i, 0);
     			ParticipantEvent pe = participantSetHash.get(s);
     			tm.setValueAt(pe.repeatedTypePolicy, i, 2);   
-        		tm.setValueAt(pe.consumptionPolicyParam, i, 3);
+        		tm.setValueAt(pe.repeatedTypePolicyParam, i, 3);
         		tm.setValueAt(pe.consumptionPolicy, i, 4);
         		tm.setValueAt(pe.consumptionPolicyParam, i, 5);
+        		tm.setValueAt(pe.orderPolicy, i, 6);
+        		tm.setValueAt(pe.orderPolicyParam, i, 7);
     		}
     		i++;
     	}
@@ -741,8 +731,6 @@ public class VertexPropertyDialog extends javax.swing.JDialog {
     	pattern.relevanceAssertion = this.jRelevanceAssertionTextArea.getText();
     	//pattern.synonymPolicy = (String)this.jPSynonymComboBox.getSelectedItem();
     	//pattern.synonymPolicyParam = this.jPSynonymTextField.getText();
-    	pattern.orderPolicy = (String)this.jPOrderComboBox.getSelectedItem();
-    	pattern.orderPolicyParam = this.jPOrderTextField.getText();
     	pattern.matchingPolicy = (String)this.jPMatchingComboBox.getSelectedItem();
     	pattern.matchingPolicyParam = this.jPMatchingTextField.getText();
     	//pattern.consumptionPolicy = (String)this.jPConsumptionComboBox.getSelectedItem();
@@ -779,7 +767,9 @@ public class VertexPropertyDialog extends javax.swing.JDialog {
 				pe.repeatedTypePolicyParam = (String)tm.getValueAt(i, 3);
 	        	pe.consumptionPolicy = (String)tm.getValueAt(i, 4);
 	        	pe.consumptionPolicyParam = (String)tm.getValueAt(i, 5);
-	        				
+	        	pe.orderPolicy = (String)tm.getValueAt(i, 6);
+	        	pe.orderPolicyParam = (String)tm.getValueAt(i, 7);
+	        	
 	        	participantSetArrayList.add(pe);
     		}		
     	}	
@@ -833,11 +823,9 @@ public class VertexPropertyDialog extends javax.swing.JDialog {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jMatchingLabel;
-    private javax.swing.JLabel jOrderLabel;
+    private javax.swing.JLabel jMatchingLabel1;
     private javax.swing.JComboBox jPMatchingComboBox;
     private javax.swing.JTextField jPMatchingTextField;
-    private javax.swing.JComboBox jPOrderComboBox;
-    private javax.swing.JTextField jPOrderTextField;
     private javax.swing.JLabel jParticipantSetLabel;
     private javax.swing.JTable jParticipantTable;
     private javax.swing.JScrollPane jParticipantTableScrollPane;
