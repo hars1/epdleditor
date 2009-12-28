@@ -56,7 +56,7 @@ import edu.uci.ics.jung.visualization.decorators.ToStringLabeller;
  * @author Ronen Vaisenberg and Dr. Greg M. Bernstein
  */
 public class MainEditor {
-	private static String version = "3.0";
+	private static String version = "3.5";
 	public static VisualizationViewer<GraphElements.MyVertex,GraphElements.MyEdge> vv;
 	public static DirectedSparseMultigraph<GraphElements.MyVertex, GraphElements.MyEdge> g;
 	public static ArrayList<Event> events;

@@ -16,6 +16,8 @@ public class Context implements Identifiable{
 	public String[] compositionContexts;
 	public String compositionOperator;
 	public static int compositeContextId = 4;
+	public static final String[] ContextTypes = new String[] { "Temporal", "Spatial", "State Oriented", "Segmentation Oriented", "Composite" };
+
 	public Context(){
 		this.contextIdentifier="";
 		this.contextType = "Temporal";
@@ -189,6 +191,12 @@ public class Context implements Identifiable{
 		for (MyVertex v:MainEditor.g.getVertices()){
 			if (v.getAgentPattern()!=null && v.getAgentPattern().context.compareTo(ev.getID())==0)
 				return v.getAgentId();
+		}
+		for (Context c:MainEditor.contexts){
+			if (c.contextType==Context.ContextTypes[compositeContextId])
+				for (String s:c.compositionContexts)
+					if (s.compareTo(c.getID())==0)
+						return "Context "+s;
 		}
 		
 		for (int i=0; i<MainEditor.contexts.size();i++){

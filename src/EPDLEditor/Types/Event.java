@@ -8,6 +8,7 @@ import EPDLEditor.Types.GraphElements.MyEdge;
 
 public class Event implements Identifiable{
 
+	public static final String[] EventCompositionOptions = new String[] { "False", "True" };
 	public String eventTypeIdentifier;
 	public boolean eventCompositionIndicator;
 	public String eventTemporalGranularity;
@@ -56,7 +57,12 @@ public class Event implements Identifiable{
 			for (int i:v.getEventIds())
 				if (MainEditor.events.get(i).getID().compareTo(ev.getID())==0)
 					return v.getName();
-				
+		
+		// check if there is a reference in another event type
+		for (Event e:MainEditor.events)
+			if (e.eventCompositionIndicator && e.referencedEvent.compareTo(ev.getID())==0)
+					return "Event "+e.getID();
+		
 		// delete the event type
 		for (int i=0; i<MainEditor.events.size();i++){
 			if (MainEditor.events.get(i).getID().compareTo(ev.getID())==0){

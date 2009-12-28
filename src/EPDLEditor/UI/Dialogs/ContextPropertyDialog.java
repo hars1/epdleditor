@@ -118,7 +118,7 @@ public class ContextPropertyDialog extends javax.swing.JDialog {
             }
         });
 
-        jContextTypeComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Temporal", "Spatial", "State Oriented", "Segmentation Oriented", "Composite" }));
+        jContextTypeComboBox.setModel(new javax.swing.DefaultComboBoxModel(Context.ContextTypes));
         jContextTypeComboBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jContextTypeComboBoxActionPerformed(evt);
@@ -252,8 +252,15 @@ public class ContextPropertyDialog extends javax.swing.JDialog {
             public int getSize() { return MainEditor.contexts.size(); }
             public Object getElementAt(int i) { return MainEditor.contexts.get(i).contextIdentifier; }
         });
-        
+        /**
+         *
+         * The line below is due to a bug in JAVA release, see
+         * http://bugs.sun.com/bugdatabase/view_bug.do?bug_id=4503845
+         */
+    	jPartitionParamsTable.putClientProperty("terminateEditOnFocusLost", Boolean.TRUE);
+
     	populate(context);
+    	
     }//GEN-LAST:event_formComponentShown
 
     private void jContextTypeComboBoxPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_jContextTypeComboBoxPropertyChange
