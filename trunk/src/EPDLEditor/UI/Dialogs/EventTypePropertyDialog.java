@@ -125,7 +125,7 @@ public class EventTypePropertyDialog extends javax.swing.JDialog {
             }
         });
 
-        jEventCompIndicComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "False", "True" }));
+        jEventCompIndicComboBox.setModel(new javax.swing.DefaultComboBoxModel(Event.EventCompositionOptions));
         jEventCompIndicComboBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jEventCompIndicComboBoxActionPerformed(evt);
@@ -243,6 +243,13 @@ public class EventTypePropertyDialog extends javax.swing.JDialog {
 }//GEN-LAST:event_jEventCompIndicComboBoxActionPerformed
 
     public void formComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_formComponentShown
+        /**
+        *
+        * The line below is due to a bug in JAVA release, see
+        * http://bugs.sun.com/bugdatabase/view_bug.do?bug_id=4503845
+        */
+    	jPayloadTable.putClientProperty("terminateEditOnFocusLost", Boolean.TRUE);
+    	
     	TableColumn semanticRole = jPayloadTable.getColumnModel().getColumn(2);
 
     	JComboBox comboBox = new JComboBox();
@@ -265,6 +272,8 @@ public class EventTypePropertyDialog extends javax.swing.JDialog {
     	typeComboBox.addItem("Location");
     	typeComboBox.addItem("Reference to Another Event");
     	payloadTypes.setCellEditor(new DefaultCellEditor(typeComboBox));
+    	
+    	
     	
         jReferencedEvent.setModel(new javax.swing.AbstractListModel() {             
             public int getSize() { return MainEditor.events.size(); }

@@ -22,8 +22,8 @@ public class PopulateListsUtils {
 	}
 	public static String[] getStrings4IDs(int[] selected, ArrayList<?> list) {
 		String[] rslt = new String[selected.length];
-		for (int i=0; i<rslt.length;i++){
-			rslt[i] = new String(((Identifiable)list.get(i)).getID());;
+		for (int i=0; i<selected.length;i++){
+			rslt[i] = new String(((Identifiable)list.get(selected[i])).getID());
 		}
 		return rslt;
 	}

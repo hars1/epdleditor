@@ -481,6 +481,12 @@ public class VertexPropertyDialog extends javax.swing.JDialog {
 					contents[rowIndex][columnIndex] = aValue;
 				}
             });
+        /**
+        *
+        * The line below is due to a bug in JAVA release, see
+        * http://bugs.sun.com/bugdatabase/view_bug.do?bug_id=4503845
+        */
+        jParticipantTable.putClientProperty("terminateEditOnFocusLost", Boolean.TRUE);
         
         jDerivedTable.setModel(new javax.swing.table.AbstractTableModel() {
             Class[] types = new Class [] {
@@ -518,6 +524,14 @@ public class VertexPropertyDialog extends javax.swing.JDialog {
 				contents[rowIndex][columnIndex] = aValue;
 			}
         });
+        
+        /**
+        *
+        * The line below is due to a bug in JAVA release, see
+        * http://bugs.sun.com/bugdatabase/view_bug.do?bug_id=4503845
+        */
+        jDerivedTable.putClientProperty("terminateEditOnFocusLost", Boolean.TRUE);
+        
         jDerivedTable.getColumnModel().getColumn(2).setCellRenderer(new TextAreaRenderer());
         jDerivedTable.getColumnModel().getColumn(3).setCellRenderer(new TextAreaRenderer());
         jDerivedTable.setRowHeight(50);
