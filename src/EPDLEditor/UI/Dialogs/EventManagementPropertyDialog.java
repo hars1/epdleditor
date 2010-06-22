@@ -7,6 +7,7 @@
 
 package EPDLEditor.UI.Dialogs;
 
+import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -162,7 +163,11 @@ public class EventManagementPropertyDialog extends javax.swing.JDialog {
 
     private void editEvent(Event ev) {
         EventTypePropertyDialog dialog = new EventTypePropertyDialog(MainEditor.frame,ev);
-        dialog.setLocation((int) MainEditor.frame.getX(), (int) MainEditor.frame.getY());
+        Dimension componentSize =  dialog.getSize();
+		Dimension panelSize =  MainEditor.frame.getSize();
+		int componentX = (panelSize.width<componentSize.width?0: MainEditor.frame.getX()+(panelSize.width-componentSize.width)/2);
+		int componentY = (panelSize.height<componentSize.height?0: MainEditor.frame.getY()+(panelSize.height-componentSize.height)/2);
+		dialog.setLocation(componentX, componentY);
         dialog.setVisible(true);
         reloadEventList();
 

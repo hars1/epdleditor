@@ -10,6 +10,7 @@
 package EPDLEditor.UI.Menus;
 
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -193,9 +194,13 @@ public class MyMouseMenus {
 	    this.addActionListener(new ActionListener() {
 	        public void actionPerformed(ActionEvent e) {
 	            VertexPropertyDialog dialog = new VertexPropertyDialog(frame, vertex);
-	            //dialog.setLocation((int)point.getX()+ frame.getX(), (int)point.getY()+ frame.getY());
-	            dialog.setLocation(frame.getX(), frame.getY());
-	            dialog.setVisible(true);
+        		// open the component at the center of the parent component.
+        		Dimension componentSize = dialog.getSize();
+        		Dimension panelSize = frame.getSize();
+        		int componentX = (panelSize.width<componentSize.width?0:frame.getX()+(panelSize.width-componentSize.width)/2);
+        		int componentY = (panelSize.height<componentSize.height?0:frame.getY()+(panelSize.height-componentSize.height)/2);
+        		dialog.setLocation(componentX, componentY);
+        		dialog.setVisible(true);
 	        }
 	        
 	    });

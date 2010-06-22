@@ -63,11 +63,12 @@ public class MainEditor {
 	public static ArrayList<Context> contexts;
 	public static Layout<GraphElements.MyVertex, GraphElements.MyEdge> layout;
 	public static JFrame frame;
-	private static int visualizerWidth = 800;
-	private static int visualizerHight = 500;
+	private static Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+	private static int visualizerWidth = screenSize.width;
+	private static int visualizerHight = screenSize.height;
 	private static int layoutGridStep = 100;
-	private static int layoutPointZeroX = 80;
-	private static int layoutPointZeroY = 80;
+	private static int layoutPointZeroX = 0;
+	private static int layoutPointZeroY = 0;
     /**
      * @param args the command line arguments
      */
@@ -82,7 +83,7 @@ public class MainEditor {
 	        // Layout<V, E>, VisualizationViewer<V,E>
 	//        Map<GraphElements.MyVertex,Point2D> vertexLocations = new HashMap<GraphElements.MyVertex, Point2D>();
 	        
-	        layout.setSize(new Dimension(300,300));
+	        //layout.setSize(new Dimension(300,300));
 	        vv = new VisualizationViewer<GraphElements.MyVertex,GraphElements.MyEdge>(layout);
 	        vv.setPreferredSize(new Dimension(visualizerWidth,visualizerHight));
 	        
@@ -234,25 +235,36 @@ public class MainEditor {
 	        
 	        // Let's add a menu option to manage the event types and contexts
 	        JMenu manage = new JMenu("Manage");
-	        JMenuItem manageEventTypes = new JMenuItem("Manage Event Types...");
-	        manageEventTypes.setBackground(Color.orange);
+	        JMenuItem manageEventTypes = new JMenuItem("Event Types...");
+	        //manageEventTypes.setBackground(Color.orange);
 	        manageEventTypes.addActionListener(new ActionListener() {
 	        	public void actionPerformed(ActionEvent e) {
 	        		EventManagementPropertyDialog cmpd = new EventManagementPropertyDialog(frame);
-	        		cmpd.setLocation((int) frame.getX(), (int) frame.getY());
+	        		// open the component at the center of the parent component.
+	        		Dimension componentSize = cmpd.getSize();
+	        		Dimension panelSize = frame.getSize();
+	        		int componentX = (panelSize.width<componentSize.width?0:frame.getX()+(panelSize.width-componentSize.width)/2);
+	        		int componentY = (panelSize.height<componentSize.height?0:frame.getY()+(panelSize.height-componentSize.height)/2);
+	        		cmpd.setLocation(componentX, componentY);
 	        		cmpd.setVisible(true);
 	        	}
 	        	});
+	        
 	
 	        manage.add(manageEventTypes);
 	        // Let's add a menu option to create the contexts
 	        
-	        JMenuItem manageContexts = new JMenuItem("Manage Contexts...");
-	        manageContexts.setBackground(Color.GREEN);
+	        JMenuItem manageContexts = new JMenuItem("Contexts...");
+	        //manageContexts.setBackground(Color.GREEN);
 	        manageContexts.addActionListener(new ActionListener() {
 	        	public void actionPerformed(ActionEvent e) {
 	        		ContextManagementPropertyDialog cmpd = new ContextManagementPropertyDialog(frame);
-	        		cmpd.setLocation((int) frame.getX(), (int) frame.getY());
+	        		// open the component at the center of the parent component.
+	        		Dimension componentSize = cmpd.getSize();
+	        		Dimension panelSize = frame.getSize();
+	        		int componentX = (panelSize.width<componentSize.width?0:frame.getX()+(panelSize.width-componentSize.width)/2);
+	        		int componentY = (panelSize.height<componentSize.height?0:frame.getY()+(panelSize.height-componentSize.height)/2);
+	        		cmpd.setLocation(componentX, componentY);
 	        		cmpd.setVisible(true);
 	        	}
 	        	});
