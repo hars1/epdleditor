@@ -7,6 +7,8 @@
 
 package EPDLEditor.UI.Dialogs;
 
+import java.awt.Dimension;
+
 import EPDLEditor.MainEditor;
 import EPDLEditor.Types.Context;
 import EPDLEditor.exceptions.ObjectBeingUsedException;
@@ -22,7 +24,7 @@ public class ContextManagementPropertyDialog extends javax.swing.JDialog {
     public ContextManagementPropertyDialog(java.awt.Frame parent) {
         super(parent, true);
         initComponents();
-        setTitle("Event Type Management");
+        setTitle("Context Management");
     }
     
     /** This method is called from within the constructor to
@@ -155,8 +157,12 @@ public class ContextManagementPropertyDialog extends javax.swing.JDialog {
 
     private void editContext(Context cx) {
     	ContextPropertyDialog dialog = new ContextPropertyDialog(MainEditor.frame,cx);
-        dialog.setLocation((int) MainEditor.frame.getX(), (int) MainEditor.frame.getY());
-        dialog.setVisible(true);
+        Dimension componentSize =  dialog.getSize();
+		Dimension panelSize =  MainEditor.frame.getSize();
+		int componentX = (panelSize.width<componentSize.width?0: MainEditor.frame.getX()+(panelSize.width-componentSize.width)/2);
+		int componentY = (panelSize.height<componentSize.height?0: MainEditor.frame.getY()+(panelSize.height-componentSize.height)/2);
+		dialog.setLocation(componentX, componentY);
+    	dialog.setVisible(true);
         // repaint the list
         updateContextsList();
 		
