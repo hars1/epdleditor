@@ -153,6 +153,14 @@ public class VertexPropertyDialog extends javax.swing.JDialog {
                 formComponentShown(evt);
             }
         });
+        addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                KeyTypedHandler(evt);
+            }
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                keyReleasedHandler(evt);
+            }
+        });
 
         jAgentOKButton.setText("OK");
         jAgentOKButton.addActionListener(new java.awt.event.ActionListener() {
@@ -185,7 +193,7 @@ public class VertexPropertyDialog extends javax.swing.JDialog {
             }
         });
 
-        jAgentTypeComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Producer", "Consumer", "Event Processing Agent", "Global State Agent" }));
+        jAgentTypeComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Producer", "Consumer", "Event Processing Agent", "Global State Agent", "Business Rule Agent" }));
         jAgentTypeComboBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jAgentTypeComboBoxActionPerformed(evt);
@@ -431,7 +439,7 @@ public class VertexPropertyDialog extends javax.swing.JDialog {
 		
 	}
 
-	private void okButtonHandler(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_okButtonHandler
+	private void okButtonHandler(ActionEvent evt) {//GEN-FIRST:event_okButtonHandler
 		// validate the uniqness of the agent name
         try{
         	store();
@@ -620,6 +628,16 @@ public class VertexPropertyDialog extends javax.swing.JDialog {
     private void jAgentContextComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jAgentContextComboBoxActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jAgentContextComboBoxActionPerformed
+
+    private void keyReleasedHandler(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_keyReleasedHandler
+    	if (evt.getKeyChar()==(char)13)
+    		okButtonHandler(null);
+    }//GEN-LAST:event_keyReleasedHandler
+
+    private void KeyTypedHandler(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_KeyTypedHandler
+    	if (evt.getKeyChar()==(char)13)
+    		okButtonHandler(null);
+    }//GEN-LAST:event_KeyTypedHandler
 
 
 

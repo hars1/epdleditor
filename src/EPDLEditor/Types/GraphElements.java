@@ -50,6 +50,8 @@ public class GraphElements {
 		public static String epa = "Event Processing Agent";
 		public static String gsa = "Global State Agent";
 		public static String patternDetectionEPA = "Detect Pattern";
+		public static String bra = "Business Rule Agent";
+
 		public static String[] policies = { "Synonym", "Order",
 				"Matching Cardinality", "Consumption" };
 		public static int synonymPid = 0;
@@ -66,7 +68,7 @@ public class GraphElements {
 				{ "", "Consume", "Reuse", "Bounded Reuse"} };
 
 		public static String[] agentTypeOptions = { producer, consumer, epa,
-				gsa };
+				gsa, bra };
 
 
 		public static String[] getSubTypeOptions(int selectedIndex) {
