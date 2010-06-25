@@ -20,9 +20,12 @@ public class EdgePropertyDialog extends javax.swing.JDialog {
     /** Creates new form EdgePropertyDialog */
     public EdgePropertyDialog(java.awt.Frame parent, GraphElements.MyEdge edge) {
         super(parent, true);
-        initComponents();
         this.edge = edge;
+        initComponents();
         setTitle("Edge: " + edge.toString());
+        
+        //this.edge.setName(edge.getName());
+        
         if (edge.getEventIds()!=null)
         	this.jList1.setSelectedIndices(edge.getEventIds());
     }

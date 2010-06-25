@@ -7,6 +7,7 @@
 
 package EPDLEditor.UI.Dialogs;
 
+import java.awt.Paint;
 import java.awt.event.ActionEvent;
 import java.beans.PropertyChangeEvent;
 import java.util.ArrayList;
@@ -15,20 +16,21 @@ import java.util.Hashtable;
 
 import javax.swing.DefaultCellEditor;
 import javax.swing.JComboBox;
-import javax.swing.JTextField;
 import javax.swing.table.TableColumn;
 import javax.swing.table.TableModel;
+
+import org.apache.commons.collections15.Transformer;
 
 import EPDLEditor.MainEditor;
 import EPDLEditor.Types.Context;
 import EPDLEditor.Types.DerivedEvent;
 import EPDLEditor.Types.EPADerivation;
-import EPDLEditor.Types.EPAPattern;
 import EPDLEditor.Types.EPAFiltering;
+import EPDLEditor.Types.EPAPattern;
 import EPDLEditor.Types.GraphElements;
 import EPDLEditor.Types.ParticipantEvent;
 import EPDLEditor.Types.GraphElements.MyVertex;
-import EPDLEditor.UI.PopulateListsUtils;
+import EPDLEditor.UI.renderers.GraphElementsVisualization;
 import EPDLEditor.UI.renderers.TextAreaRenderer;
 import EPDLEditor.exceptions.UniqueNameException;
 
@@ -42,9 +44,10 @@ public class VertexPropertyDialog extends javax.swing.JDialog {
     /** Creates new form EdgePropertyDialog */
     public VertexPropertyDialog(java.awt.Frame parent, GraphElements.MyVertex vertex) {
         super(parent, true);
+        this.vertex = vertex;
 
         initComponents();
-        this.vertex = vertex;
+        this.jAgentIdTextPane.setText(vertex.getAgentId());
         //setTitle(vertex.getName());
         //this.jAgentTypeList.setSelectedValue("Event Processing Agent", true);
         //this.jAgentTypeList.setEnabled(false);
@@ -437,6 +440,7 @@ public class VertexPropertyDialog extends javax.swing.JDialog {
         	return;
         }
         setTitle(vertex.toString());
+
         MainEditor.vv.repaint();
         dispose();        
     }//GEN-LAST:event_okButtonHandler
@@ -659,22 +663,24 @@ public class VertexPropertyDialog extends javax.swing.JDialog {
     }
 	private HashSet<String> getPotentialParticipents(){
 		HashSet<String> inEdgesEventNames = new HashSet<String>();
-		for (GraphElements.MyEdge e:MainEditor.g.getInEdges(vertex)){
-			if (e.getEventIds()==null) continue;
-    		for (int i:e.getEventIds()){
-    			inEdgesEventNames.add(MainEditor.events.get(i).eventTypeIdentifier);
-    		}
-    	}
+		if (MainEditor.g.containsVertex(vertex))
+			for (GraphElements.MyEdge e:MainEditor.g.getInEdges(vertex)){
+				if (e.getEventIds()==null) continue;
+	    		for (int i:e.getEventIds()){
+	    			inEdgesEventNames.add(MainEditor.events.get(i).eventTypeIdentifier);
+	    		}
+	    	}
 		return inEdgesEventNames;
 	}
     private HashSet<String> getPotentialDerivation() {
 		HashSet<String> outEdgesEventNames = new HashSet<String>();
-		for (GraphElements.MyEdge e:MainEditor.g.getOutEdges(vertex)){
-			if (e.getEventIds()==null) continue;
-    		for (int i:e.getEventIds()){
-    			outEdgesEventNames.add(MainEditor.events.get(i).eventTypeIdentifier);
-    		}
-    	}
+		if (MainEditor.g.containsVertex(vertex))
+			for (GraphElements.MyEdge e:MainEditor.g.getOutEdges(vertex)){
+				if (e.getEventIds()==null) continue;
+	    		for (int i:e.getEventIds()){
+	    			outEdgesEventNames.add(MainEditor.events.get(i).eventTypeIdentifier);
+	    		}
+	    	}
 		return outEdgesEventNames;
 	}
     private void populateParticipatSetTable(EPAPattern pattern,
