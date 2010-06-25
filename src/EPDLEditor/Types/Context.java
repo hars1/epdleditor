@@ -71,8 +71,8 @@ public class Context implements Identifiable{
 				tableContexts = new Object [][] {
 		                {"Interval Start", null},
 		                {"Interval End", null},
-		                {"Period", null},
-		                {"Temporal Ordering", null}
+		                {"Recurrence", null},
+		                {"Duration", null}
 		            };
 				break;
 			case 1:
@@ -81,7 +81,8 @@ public class Context implements Identifiable{
 		                {"Terminators", null},
 		                {"Expiration Time Offset", null},
 		                {"Expiration Event Count", null},
-		                {"Context Initiator Policy", null},
+		                {"Initiator Policy", null},
+		                {"Terminator Policy", null},
 		                {"Temporal Ordering", null}
 		            };
 				break;

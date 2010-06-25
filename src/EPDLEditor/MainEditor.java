@@ -8,7 +8,6 @@
 
 package EPDLEditor;
 
-import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.FileDialog;
 import java.awt.Toolkit;
@@ -37,6 +36,9 @@ import EPDLEditor.UI.Dialogs.ContextManagementPropertyDialog;
 import EPDLEditor.UI.Dialogs.EventManagementPropertyDialog;
 import EPDLEditor.UI.Menus.MyMouseMenus;
 import EPDLEditor.UI.Menus.PopupVertexEdgeMenuMousePlugin;
+import EPDLEditor.UI.renderers.GraphElementsVisualization;
+import EPDLEditor.UI.renderers.GraphVertexIconManager;
+import EPDLEditor.UI.renderers.VertexShapeVisualization;
 import EPDLEditor.XML.DataStructure2XMLify;
 
 import com.thoughtworks.xstream.XStream;
@@ -56,7 +58,7 @@ import edu.uci.ics.jung.visualization.decorators.ToStringLabeller;
  * @author Ronen Vaisenberg and Dr. Greg M. Bernstein
  */
 public class MainEditor {
-	private static String version = "3.5";
+	private static String version = "3.6";
 	public static VisualizationViewer<GraphElements.MyVertex,GraphElements.MyEdge> vv;
 	public static DirectedSparseMultigraph<GraphElements.MyVertex, GraphElements.MyEdge> g;
 	public static ArrayList<Event> events;
@@ -67,8 +69,8 @@ public class MainEditor {
 	private static int visualizerWidth = screenSize.width;
 	private static int visualizerHight = screenSize.height;
 	private static int layoutGridStep = 100;
-	private static int layoutPointZeroX = 0;
-	private static int layoutPointZeroY = 0;
+	private static int layoutPointZeroX = 80;
+	private static int layoutPointZeroY = 80;
     /**
      * @param args the command line arguments
      */
@@ -85,6 +87,11 @@ public class MainEditor {
 	        
 	        //layout.setSize(new Dimension(300,300));
 	        vv = new VisualizationViewer<GraphElements.MyVertex,GraphElements.MyEdge>(layout);
+			
+	        vv.getRenderContext().setVertexFillPaintTransformer(new GraphElementsVisualization());
+	        vv.getRenderContext().setVertexShapeTransformer(new VertexShapeVisualization());
+			//vv.getRenderContext().setVertexIconTransformer(new GraphVertexIconManager());
+
 	        vv.setPreferredSize(new Dimension(visualizerWidth,visualizerHight));
 	        
 	        // Show vertex and edge labels

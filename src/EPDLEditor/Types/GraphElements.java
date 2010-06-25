@@ -9,6 +9,9 @@
 
 package EPDLEditor.Types;
 
+import java.awt.Dimension;
+import java.io.IOException;
+
 import javax.swing.DefaultCellEditor;
 import javax.swing.JComboBox;
 import javax.swing.JTable;
@@ -18,6 +21,8 @@ import javax.swing.table.TableModel;
 import org.apache.commons.collections15.Factory;
 
 import EPDLEditor.MainEditor;
+import EPDLEditor.UI.Dialogs.EdgePropertyDialog;
+import EPDLEditor.UI.Dialogs.VertexPropertyDialog;
 import EPDLEditor.exceptions.UniqueNameException;
 
 /**
@@ -104,6 +109,8 @@ public class GraphElements {
 
 		public MyVertex(String name) {
 			this.agentId = name;
+			// default type incase that no other type was selected.
+			this.agentType = MyVertex.consumer;
 		}
 
 		public String getAgentId() {
@@ -258,7 +265,7 @@ public class GraphElements {
 			restoreEventIds();
 
 			String rslt;
-			if (eventIds == null)
+			if (eventIds == null || eventIds.length==0)
 				rslt = name;
 			else {
 				rslt = "";
@@ -286,9 +293,19 @@ public class GraphElements {
 			return instance;
 		}
 
-		public GraphElements.MyVertex create() {
+		public MyVertex create() {
 			String name = "Agent" + nodeCount++;
 			MyVertex v = new MyVertex(name);
+
+			VertexPropertyDialog dialog = new VertexPropertyDialog(MainEditor.frame, v);
+    		// open the component at the center of the parent component.
+    		Dimension componentSize = dialog.getSize();
+    		Dimension panelSize = MainEditor.frame.getSize();
+    		int componentX = (panelSize.width<componentSize.width?0:MainEditor.frame.getX()+(panelSize.width-componentSize.width)/2);
+    		int componentY = (panelSize.height<componentSize.height?0:MainEditor.frame.getY()+(panelSize.height-componentSize.height)/2);
+    		dialog.setLocation(componentX, componentY);
+    		dialog.setVisible(true);
+    		
 			return v;
 		}
 
@@ -311,9 +328,18 @@ public class GraphElements {
 
 		public GraphElements.MyEdge create() {
 			String name = "Link" + linkCount++;
-			MyEdge link = new MyEdge(name);
+			MyEdge edge = new MyEdge(name);
 
-			return link;
+			EdgePropertyDialog dialog = new EdgePropertyDialog(MainEditor.frame, edge);
+    		// open the component at the center of the parent component.
+    		Dimension componentSize = dialog.getSize();
+    		Dimension panelSize = MainEditor.frame.getSize();
+    		int componentX = (panelSize.width<componentSize.width?0:MainEditor.frame.getX()+(panelSize.width-componentSize.width)/2);
+    		int componentY = (panelSize.height<componentSize.height?0:MainEditor.frame.getY()+(panelSize.height-componentSize.height)/2);
+    		dialog.setLocation(componentX, componentY);
+    		dialog.setVisible(true);
+            
+			return edge;
 		}
 
 		public static double getDefaultWeight() {

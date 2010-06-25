@@ -68,15 +68,16 @@ public class ContextPropertyDialog extends javax.swing.JDialog {
             }
         });
 
-        jLabel7.setText("Context Subtype:");
+        jLabel7.setText("Context Type:");
 
         jLabel3.setText("Composition:");
 
-        jLabel6.setText("Context Type:");
+        jLabel6.setText("Context Dimension:");
 
         jPartitionParamsTable.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPartitionParamsTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
+                {null, null},
                 {null, null},
                 {null, null},
                 {null, null},
@@ -118,7 +119,7 @@ public class ContextPropertyDialog extends javax.swing.JDialog {
             }
         });
 
-        jContextTypeComboBox.setModel(new javax.swing.DefaultComboBoxModel(Context.ContextTypes));
+        jContextTypeComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Temporal", "Spatial", "State Oriented", "Segmentation Oriented", "Composite" }));
         jContextTypeComboBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jContextTypeComboBoxActionPerformed(evt);
@@ -141,7 +142,7 @@ public class ContextPropertyDialog extends javax.swing.JDialog {
         });
         jScrollPane1.setViewportView(jContextList);
 
-        jCompOperator.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Union", "Intersection", "Difference" }));
+        jCompOperator.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Intersection", "Union", "Difference" }));
 
         jScrollPane3.setViewportView(jContextIdTextPane);
 
@@ -193,21 +194,21 @@ public class ContextPropertyDialog extends javax.swing.JDialog {
                 .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(jLabel5)
                     .add(jScrollPane3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 14, Short.MAX_VALUE)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 12, Short.MAX_VALUE)
                 .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(jContextTypeComboBox, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 21, Short.MAX_VALUE)
                     .add(org.jdesktop.layout.GroupLayout.TRAILING, jLabel6, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 21, Short.MAX_VALUE))
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED, 38, Short.MAX_VALUE)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED, 36, Short.MAX_VALUE)
                 .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
                     .add(jLabel7, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .add(jContextSubTypeComboBox))
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 14, Short.MAX_VALUE)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 12, Short.MAX_VALUE)
                 .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(layout.createSequentialGroup()
                         .add(jLabel2)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 106, Short.MAX_VALUE)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 114, Short.MAX_VALUE)
                         .add(jLabel3))
-                    .add(jScrollPane4, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 119, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                    .add(jScrollPane4, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 146, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                     .add(jLabel1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -215,7 +216,7 @@ public class ContextPropertyDialog extends javax.swing.JDialog {
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(jCompOperator, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(org.jdesktop.layout.GroupLayout.TRAILING, jScrollPane1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 139, Short.MAX_VALUE))
+                    .add(org.jdesktop.layout.GroupLayout.TRAILING, jScrollPane1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 137, Short.MAX_VALUE))
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(jDoneButton))
         );

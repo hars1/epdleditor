@@ -25,26 +25,37 @@ public class GraphLayoutUtils {
 		HashMap<String,GraphElements.MyVertex> prevLevel = new HashMap<String,GraphElements.MyVertex>();
 		HashMap<String,GraphElements.MyVertex> probed = new HashMap<String,GraphElements.MyVertex>();
 		
+		HashMap<GraphElements.MyVertex,Point2D> consumerLevelLocations = new HashMap<GraphElements.MyVertex,Point2D>();
+		
 		//Get the depth of the graph
 		int graphNumLevels = getGraphDiameter(g);
 		//Get the first level of vertices
 		currLevel = GraphLayoutUtils.GetFirstLevel(g,probed);
 		
-		int x=layoutPointZeroX,y=layoutPointZeroY;
+		int x=layoutPointZeroX,y=layoutPointZeroY, prevX=0;
 		while (currLevel.size()!=0){
 			//Draw the previous Level
 			int currLevelStep = (int)(((double)visualizerHight-layoutGridStep)/(double)currLevel.size());
 			for (GraphElements.MyVertex v: currLevel.values()){
 				Point2D p = new Point(x,y);
 				y=y+currLevelStep;
-    			layout.setLocation(v, p);	
+    			layout.setLocation(v, p);
+    			if (g.getSuccessors(v).size()==0)
+    				consumerLevelLocations.put(v, p);
 			}			
 			//Advance to the next Level
+			prevX = x;
 			x=x+(int)(((double)visualizerWidth-layoutGridStep)/(double)graphNumLevels);
 			y=layoutPointZeroY;
 			prevLevel = (HashMap<String,GraphElements.MyVertex>)currLevel.clone();
 			currLevel = getNextLevel(g,prevLevel,probed); 
 		}
+		
+		// move all consumers to the same drawing level (same X position)
+		for (GraphElements.MyVertex v: consumerLevelLocations.keySet())
+			layout.setLocation(v, new Point(prevX,(int)consumerLevelLocations.get(v).getY()));
+		
+		
 		
 	}
 
@@ -95,7 +106,4 @@ public class GraphLayoutUtils {
 		
 		return currLevel;
 	}
-	
-
-
 }
