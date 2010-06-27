@@ -51,6 +51,8 @@ public class GraphElements {
 		public static String gsa = "Global State Agent";
 		public static String patternDetectionEPA = "Detect Pattern";
 		public static String bra = "Business Rule Agent";
+		
+		public static String subType_enrich = "Enrich";
 
 		public static String[] policies = { "Synonym", "Order",
 				"Matching Cardinality", "Consumption" };
@@ -93,7 +95,7 @@ public class GraphElements {
 				rslt[2] = new String("Aggregate");
 				rslt[3] = new String("Split");
 				rslt[4] = new String("Compose");
-				rslt[5] = new String("Enrich");
+				rslt[5] = new String(subType_enrich);
 				rslt[6] = new String("Project");
 				rslt[7] = new String(patternDetectionEPA);
 				break;

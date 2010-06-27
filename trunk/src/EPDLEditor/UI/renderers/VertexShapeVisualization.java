@@ -60,16 +60,31 @@ public class VertexShapeVisualization implements Transformer<MyVertex, Shape>{
 			result.add(new Area(circle));
 		}
 		
+		double shapeMaxX = result.getBounds().getMaxX();
 		// add a notation for the usage of context in the processing
 		if (v.getAgentPattern()!=null && v.getAgentPattern().context!=null && !v.getAgentPattern().context.isEmpty()){
-			Ellipse2D.Double outsideC = new Ellipse2D.Double(result.getBounds().getMaxX(), result.getBounds().getMinY(), 18.0, 18.0);
-			Ellipse2D.Double insideC  = new Ellipse2D.Double(result.getBounds().getMaxX()+4, result.getBounds().getMinY()+4, 10.0, 10.0);
+			Ellipse2D.Double outsideC = new Ellipse2D.Double(shapeMaxX, result.getBounds().getMinY(), 18.0, 18.0);
+			Ellipse2D.Double insideC  = new Ellipse2D.Double(shapeMaxX+4, result.getBounds().getMinY()+4, 10.0, 10.0);
 			Area C = new Area(outsideC);
 			C.exclusiveOr(new Area(insideC));
 			Rectangle line = new Rectangle();
 			line.setFrame(insideC.getMaxX()-4,insideC.getCenterY()-2,8,4);
 			C.subtract(new Area(line));
 			result.add(C);	
+		}
+		
+		// add a database icon for enrichement
+		if (v.getAgentSubType()!=null && v.getAgentSubType().compareTo(MyVertex.subType_enrich)==0){
+			Rectangle base = new Rectangle();
+			base.setFrame(shapeMaxX,result.getBounds().getMaxY()-2,18,10);
+			Area DB = new Area(base);
+			Ellipse2D.Double top = new Ellipse2D.Double(base.getBounds().getMinX(), base.getBounds().getMinY()-5, 18.0, 10.0);
+			DB.subtract(new Area(top));
+			Ellipse2D.Double bottom = new Ellipse2D.Double(base.getBounds().getMinX(), base.getBounds().getMaxY()-5, 18.0, 10.0);
+			DB.add(new Area(bottom));
+			top.setFrame(base.getBounds().getMinX(), base.getBounds().getMinY()-5.5, 18.0, 10.0);
+			result.add(new Area(top));	
+			result.add(DB);
 		}
 
 		
