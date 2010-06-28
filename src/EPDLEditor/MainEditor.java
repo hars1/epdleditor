@@ -36,14 +36,14 @@ import EPDLEditor.UI.Dialogs.ContextManagementPropertyDialog;
 import EPDLEditor.UI.Dialogs.EventManagementPropertyDialog;
 import EPDLEditor.UI.Menus.MyMouseMenus;
 import EPDLEditor.UI.Menus.PopupVertexEdgeMenuMousePlugin;
+import EPDLEditor.UI.renderers.EdgeLabelCloseness;
 import EPDLEditor.UI.renderers.GraphElementsVisualization;
-import EPDLEditor.UI.renderers.GraphVertexIconManager;
+import EPDLEditor.UI.renderers.GraphStaticLayoutSaveLocation;
 import EPDLEditor.UI.renderers.VertexShapeVisualization;
 import EPDLEditor.XML.DataStructure2XMLify;
 
 import com.thoughtworks.xstream.XStream;
 
-import edu.uci.ics.jung.algorithms.layout.Layout;
 import edu.uci.ics.jung.algorithms.layout.StaticLayout;
 import edu.uci.ics.jung.graph.DirectedSparseMultigraph;
 import edu.uci.ics.jung.visualization.VisualizationViewer;
@@ -63,7 +63,8 @@ public class MainEditor {
 	public static DirectedSparseMultigraph<GraphElements.MyVertex, GraphElements.MyEdge> g;
 	public static ArrayList<Event> events;
 	public static ArrayList<Context> contexts;
-	public static Layout<GraphElements.MyVertex, GraphElements.MyEdge> layout;
+	//public static GraphStaticLayoutSaveLocation layout;
+	public static StaticLayout layout;
 	public static JFrame frame;
 	private static Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
 	private static int visualizerWidth = screenSize.width;
@@ -81,7 +82,7 @@ public class MainEditor {
 	        g= new DirectedSparseMultigraph<GraphElements.MyVertex, GraphElements.MyEdge>();
 	        events = new ArrayList<Event>();
 	        contexts = new ArrayList<Context>();
-	        layout = new StaticLayout(g);
+	        layout = new GraphStaticLayoutSaveLocation(g);
 	        // Layout<V, E>, VisualizationViewer<V,E>
 	//        Map<GraphElements.MyVertex,Point2D> vertexLocations = new HashMap<GraphElements.MyVertex, Point2D>();
 	        
@@ -91,11 +92,12 @@ public class MainEditor {
 	        vv.getRenderContext().setVertexFillPaintTransformer(new GraphElementsVisualization());
 	        vv.getRenderContext().setVertexShapeTransformer(new VertexShapeVisualization());
 			//vv.getRenderContext().setVertexIconTransformer(new GraphVertexIconManager());
-
+	        
 	        vv.setPreferredSize(new Dimension(visualizerWidth,visualizerHight));
 	        
 	        // Show vertex and edge labels
 	        vv.getRenderContext().setVertexLabelTransformer(new ToStringLabeller());
+			vv.getRenderContext().setEdgeLabelClosenessTransformer(new EdgeLabelCloseness());
 	        vv.getRenderContext().setEdgeLabelTransformer(new ToStringLabeller());
 	        // Create a graph mouse and add it to the visualization viewer
 	        EditingModalGraphMouse gm = new EditingModalGraphMouse(vv.getRenderContext(), 
