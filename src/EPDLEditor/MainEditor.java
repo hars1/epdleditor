@@ -36,10 +36,13 @@ import EPDLEditor.UI.Dialogs.ContextManagementPropertyDialog;
 import EPDLEditor.UI.Dialogs.EventManagementPropertyDialog;
 import EPDLEditor.UI.Menus.MyMouseMenus;
 import EPDLEditor.UI.Menus.PopupVertexEdgeMenuMousePlugin;
+import EPDLEditor.UI.renderers.EdgeColorVisualization;
 import EPDLEditor.UI.renderers.EdgeLabelCloseness;
-import EPDLEditor.UI.renderers.GraphElementsVisualization;
+import EPDLEditor.UI.renderers.EdgeStrokeVisualization;
 import EPDLEditor.UI.renderers.GraphStaticLayoutSaveLocation;
+import EPDLEditor.UI.renderers.VertexColorVisualization;
 import EPDLEditor.UI.renderers.VertexShapeVisualization;
+import EPDLEditor.UI.renderers.VertexStrokeVisualization;
 import EPDLEditor.XML.DataStructure2XMLify;
 
 import com.thoughtworks.xstream.XStream;
@@ -89,9 +92,14 @@ public class MainEditor {
 	        //layout.setSize(new Dimension(300,300));
 	        vv = new VisualizationViewer<GraphElements.MyVertex,GraphElements.MyEdge>(layout);
 			
-	        vv.getRenderContext().setVertexFillPaintTransformer(new GraphElementsVisualization());
+	        vv.getRenderContext().setVertexFillPaintTransformer(new VertexColorVisualization());
 	        vv.getRenderContext().setVertexShapeTransformer(new VertexShapeVisualization());
+	        vv.getRenderContext().setVertexStrokeTransformer(new VertexStrokeVisualization());
+
 			//vv.getRenderContext().setVertexIconTransformer(new GraphVertexIconManager());
+	        vv.getRenderContext().setEdgeStrokeTransformer(new EdgeStrokeVisualization());
+	        vv.getRenderContext().setEdgeDrawPaintTransformer(new EdgeColorVisualization());
+
 	        
 	        vv.setPreferredSize(new Dimension(visualizerWidth,visualizerHight));
 	        
