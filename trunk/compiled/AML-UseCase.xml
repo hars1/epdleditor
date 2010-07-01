@@ -1,9 +1,49 @@
 <EPDL>
   <agents>
     <agent>
-      <agentId>External Pro/Con</agentId>
-      <agentType>Consumer</agentType>
-      <agentSubType>Software</agentSubType>
+      <agentId>Incrising Deposits Sum</agentId>
+      <agentType>Event Processing Agent</agentType>
+      <agentSubType>Detect Pattern</agentSubType>
+      <agentFiltering>
+        <filteringExpression></filteringExpression>
+      </agentFiltering>
+      <agentPattern>
+        <patternType>All</patternType>
+        <participantSet/>
+        <context>A</context>
+        <relevanceAssertion></relevanceAssertion>
+        <matchingPolicy> </matchingPolicy>
+        <matchingPolicyParam></matchingPolicyParam>
+        <annotation></annotation>
+      </agentPattern>
+      <agentDerivation>
+        <derivationSet/>
+      </agentDerivation>
+    </agent>
+    <agent>
+      <agentId>Check Balance Nature</agentId>
+      <agentType>Business Rule Agent</agentType>
+      <agentSubType></agentSubType>
+      <agentFiltering>
+        <filteringExpression></filteringExpression>
+      </agentFiltering>
+      <agentPattern>
+        <patternType>All</patternType>
+        <participantSet/>
+        <context>A</context>
+        <relevanceAssertion></relevanceAssertion>
+        <matchingPolicy> </matchingPolicy>
+        <matchingPolicyParam></matchingPolicyParam>
+        <annotation></annotation>
+      </agentPattern>
+      <agentDerivation>
+        <derivationSet/>
+      </agentDerivation>
+    </agent>
+    <agent>
+      <agentId>Transactions</agentId>
+      <agentType>Producer</agentType>
+      <agentSubType>Human</agentSubType>
       <agentFiltering>
         <filteringExpression></filteringExpression>
       </agentFiltering>
@@ -11,6 +51,26 @@
         <patternType>All</patternType>
         <participantSet/>
         <context></context>
+        <relevanceAssertion></relevanceAssertion>
+        <matchingPolicy> </matchingPolicy>
+        <matchingPolicyParam></matchingPolicyParam>
+        <annotation></annotation>
+      </agentPattern>
+      <agentDerivation>
+        <derivationSet/>
+      </agentDerivation>
+    </agent>
+    <agent>
+      <agentId>Frequent Big Cash Deposits</agentId>
+      <agentType>Event Processing Agent</agentType>
+      <agentSubType>Enrich</agentSubType>
+      <agentFiltering>
+        <filteringExpression>Frequent Big Cash Deposits</filteringExpression>
+      </agentFiltering>
+      <agentPattern>
+        <patternType>All</patternType>
+        <participantSet/>
+        <context>A</context>
         <relevanceAssertion></relevanceAssertion>
         <matchingPolicy> </matchingPolicy>
         <matchingPolicyParam></matchingPolicyParam>
@@ -41,88 +101,8 @@
       </agentDerivation>
     </agent>
     <agent>
-      <agentId>Alarms Analyzer</agentId>
-      <agentType>Producer</agentType>
-      <agentSubType>Hardware</agentSubType>
-      <agentFiltering>
-        <filteringExpression></filteringExpression>
-      </agentFiltering>
-      <agentPattern>
-        <patternType>All</patternType>
-        <participantSet/>
-        <context></context>
-        <relevanceAssertion></relevanceAssertion>
-        <matchingPolicy> </matchingPolicy>
-        <matchingPolicyParam></matchingPolicyParam>
-        <annotation></annotation>
-      </agentPattern>
-      <agentDerivation>
-        <derivationSet/>
-      </agentDerivation>
-    </agent>
-    <agent>
       <agentId>Alerts Inspector</agentId>
       <agentType>Consumer</agentType>
-      <agentFiltering>
-        <filteringExpression></filteringExpression>
-      </agentFiltering>
-      <agentPattern>
-        <patternType>All</patternType>
-        <participantSet/>
-        <context></context>
-        <relevanceAssertion></relevanceAssertion>
-        <matchingPolicy> </matchingPolicy>
-        <matchingPolicyParam></matchingPolicyParam>
-        <annotation></annotation>
-      </agentPattern>
-      <agentDerivation>
-        <derivationSet/>
-      </agentDerivation>
-    </agent>
-    <agent>
-      <agentId>Assign Handling Priorities</agentId>
-      <agentType>Business Rule Agent</agentType>
-      <agentSubType></agentSubType>
-      <agentFiltering>
-        <filteringExpression></filteringExpression>
-      </agentFiltering>
-      <agentPattern>
-        <patternType>All</patternType>
-        <participantSet/>
-        <context>A</context>
-        <relevanceAssertion></relevanceAssertion>
-        <matchingPolicy> </matchingPolicy>
-        <matchingPolicyParam></matchingPolicyParam>
-        <annotation></annotation>
-      </agentPattern>
-      <agentDerivation>
-        <derivationSet/>
-      </agentDerivation>
-    </agent>
-    <agent>
-      <agentId>Incrising Deposits Sum</agentId>
-      <agentType>Event Processing Agent</agentType>
-      <agentSubType>Detect Pattern</agentSubType>
-      <agentFiltering>
-        <filteringExpression></filteringExpression>
-      </agentFiltering>
-      <agentPattern>
-        <patternType>All</patternType>
-        <participantSet/>
-        <context>A</context>
-        <relevanceAssertion></relevanceAssertion>
-        <matchingPolicy> </matchingPolicy>
-        <matchingPolicyParam></matchingPolicyParam>
-        <annotation></annotation>
-      </agentPattern>
-      <agentDerivation>
-        <derivationSet/>
-      </agentDerivation>
-    </agent>
-    <agent>
-      <agentId>Alert Manager</agentId>
-      <agentType>Consumer</agentType>
-      <agentSubType>Hardware</agentSubType>
       <agentFiltering>
         <filteringExpression></filteringExpression>
       </agentFiltering>
@@ -160,9 +140,29 @@
       </agentDerivation>
     </agent>
     <agent>
-      <agentId>Transactions</agentId>
+      <agentId>Assign Risk Score</agentId>
+      <agentType>Event Processing Agent</agentType>
+      <agentSubType>Filter</agentSubType>
+      <agentFiltering>
+        <filteringExpression></filteringExpression>
+      </agentFiltering>
+      <agentPattern>
+        <patternType>All</patternType>
+        <participantSet/>
+        <context>A</context>
+        <relevanceAssertion></relevanceAssertion>
+        <matchingPolicy> </matchingPolicy>
+        <matchingPolicyParam></matchingPolicyParam>
+        <annotation></annotation>
+      </agentPattern>
+      <agentDerivation>
+        <derivationSet/>
+      </agentDerivation>
+    </agent>
+    <agent>
+      <agentId>Alarms Analyzer</agentId>
       <agentType>Producer</agentType>
-      <agentSubType>Human</agentSubType>
+      <agentSubType>Hardware</agentSubType>
       <agentFiltering>
         <filteringExpression></filteringExpression>
       </agentFiltering>
@@ -180,16 +180,56 @@
       </agentDerivation>
     </agent>
     <agent>
-      <agentId>Frequent big cash deposits and transfers abroad</agentId>
-      <agentType>Event Processing Agent</agentType>
-      <agentSubType>Detect Pattern</agentSubType>
+      <agentId>Is big deposit?</agentId>
+      <agentType>Business Rule Agent</agentType>
+      <agentSubType></agentSubType>
       <agentFiltering>
         <filteringExpression></filteringExpression>
       </agentFiltering>
       <agentPattern>
         <patternType>All</patternType>
         <participantSet/>
-        <context>A</context>
+        <context></context>
+        <relevanceAssertion></relevanceAssertion>
+        <matchingPolicy> </matchingPolicy>
+        <matchingPolicyParam></matchingPolicyParam>
+        <annotation></annotation>
+      </agentPattern>
+      <agentDerivation>
+        <derivationSet/>
+      </agentDerivation>
+    </agent>
+    <agent>
+      <agentId>Alert Manager</agentId>
+      <agentType>Consumer</agentType>
+      <agentSubType>Hardware</agentSubType>
+      <agentFiltering>
+        <filteringExpression></filteringExpression>
+      </agentFiltering>
+      <agentPattern>
+        <patternType>All</patternType>
+        <participantSet/>
+        <context></context>
+        <relevanceAssertion></relevanceAssertion>
+        <matchingPolicy> </matchingPolicy>
+        <matchingPolicyParam></matchingPolicyParam>
+        <annotation></annotation>
+      </agentPattern>
+      <agentDerivation>
+        <derivationSet/>
+      </agentDerivation>
+    </agent>
+    <agent>
+      <agentId>External Pro/Con</agentId>
+      <agentType>Consumer</agentType>
+      <agentSubType>Software</agentSubType>
+      <agentFiltering>
+        <filteringExpression></filteringExpression>
+      </agentFiltering>
+      <agentPattern>
+        <patternType>All</patternType>
+        <participantSet/>
+        <context></context>
         <relevanceAssertion></relevanceAssertion>
         <matchingPolicy> </matchingPolicy>
         <matchingPolicyParam></matchingPolicyParam>
@@ -240,9 +280,9 @@
       </agentDerivation>
     </agent>
     <agent>
-      <agentId>Check Balance Nature</agentId>
-      <agentType>Business Rule Agent</agentType>
-      <agentSubType></agentSubType>
+      <agentId>Frequent big cash deposits and transfers abroad</agentId>
+      <agentType>Event Processing Agent</agentType>
+      <agentSubType>Detect Pattern</agentSubType>
       <agentFiltering>
         <filteringExpression></filteringExpression>
       </agentFiltering>
@@ -260,9 +300,9 @@
       </agentDerivation>
     </agent>
     <agent>
-      <agentId>Assign Risk Score</agentId>
-      <agentType>Event Processing Agent</agentType>
-      <agentSubType>Filter</agentSubType>
+      <agentId>Lack of Documentation</agentId>
+      <agentType>Business Rule Agent</agentType>
+      <agentSubType></agentSubType>
       <agentFiltering>
         <filteringExpression></filteringExpression>
       </agentFiltering>
@@ -300,31 +340,11 @@
       </agentDerivation>
     </agent>
     <agent>
-      <agentId>Lack of Documentation</agentId>
-      <agentType>Event Processing Agent</agentType>
-      <agentSubType>Enrich</agentSubType>
+      <agentId>Assign Handling Priorities</agentId>
+      <agentType>Business Rule Agent</agentType>
+      <agentSubType></agentSubType>
       <agentFiltering>
         <filteringExpression></filteringExpression>
-      </agentFiltering>
-      <agentPattern>
-        <patternType>All</patternType>
-        <participantSet/>
-        <context>A</context>
-        <relevanceAssertion></relevanceAssertion>
-        <matchingPolicy> </matchingPolicy>
-        <matchingPolicyParam></matchingPolicyParam>
-        <annotation></annotation>
-      </agentPattern>
-      <agentDerivation>
-        <derivationSet/>
-      </agentDerivation>
-    </agent>
-    <agent>
-      <agentId>Frequent Big Cash Deposits</agentId>
-      <agentType>Event Processing Agent</agentType>
-      <agentSubType>Enrich</agentSubType>
-      <agentFiltering>
-        <filteringExpression>Frequent Big Cash Deposits</filteringExpression>
       </agentFiltering>
       <agentPattern>
         <patternType>All</patternType>
@@ -342,54 +362,6 @@
   </agents>
   <channels>
     <channel>
-      <name>Link5</name>
-      <source>Monitor False Alarms</source>
-      <destination>Assign Risk Score</destination>
-      <events>
-        <referenceIdentifier>Adjust Values</referenceIdentifier>
-      </events>
-    </channel>
-    <channel>
-      <name>Link0</name>
-      <source>Transactions</source>
-      <destination>Frequent Big Cash Deposits</destination>
-      <events>
-        <referenceIdentifier>Transactions</referenceIdentifier>
-      </events>
-    </channel>
-    <channel>
-      <name>Link10</name>
-      <source>Frequent big cash deposits and transfers abroad</source>
-      <destination>Lack of Documentation</destination>
-      <events>
-        <referenceIdentifier>Suspecious Activity</referenceIdentifier>
-      </events>
-    </channel>
-    <channel>
-      <name>Link1</name>
-      <source>Assign Handling Priorities</source>
-      <destination>Monitor Risky Activity</destination>
-      <events>
-        <referenceIdentifier>Prioritized Activity</referenceIdentifier>
-      </events>
-    </channel>
-    <channel>
-      <name>Link2</name>
-      <source>Transactions</source>
-      <destination>Check Balance Nature</destination>
-      <events>
-        <referenceIdentifier>Transactions</referenceIdentifier>
-      </events>
-    </channel>
-    <channel>
-      <name>Link6</name>
-      <source>Frequent Big Cash Deposits</source>
-      <destination>Frequent big cash deposits and transfers abroad</destination>
-      <events>
-        <referenceIdentifier>Frequent Big Cash Deposits</referenceIdentifier>
-      </events>
-    </channel>
-    <channel>
       <name>Link6</name>
       <source>Alarms Analyzer</source>
       <destination>Monitor False Alarms</destination>
@@ -406,11 +378,71 @@
       </events>
     </channel>
     <channel>
+      <name>Link6</name>
+      <source>Frequent Big Cash Deposits</source>
+      <destination>Frequent big cash deposits and transfers abroad</destination>
+      <events>
+        <referenceIdentifier>Frequent Big Cash Deposits</referenceIdentifier>
+      </events>
+    </channel>
+    <channel>
+      <name>Link12</name>
+      <source>Lack of Documentation</source>
+      <destination>External Pro/Con</destination>
+      <events/>
+    </channel>
+    <channel>
+      <name>Link0</name>
+      <source>Assign Risk Score</source>
+      <destination>Assign Handling Priorities</destination>
+      <events>
+        <referenceIdentifier>Scored Activity</referenceIdentifier>
+      </events>
+    </channel>
+    <channel>
+      <name>Link3</name>
+      <source>Monitor Risky Activity</source>
+      <destination>Alert Manager</destination>
+      <events>
+        <referenceIdentifier>Alert</referenceIdentifier>
+      </events>
+    </channel>
+    <channel>
+      <name>Link1</name>
+      <source>Assign Handling Priorities</source>
+      <destination>Monitor Risky Activity</destination>
+      <events>
+        <referenceIdentifier>Prioritized Activity</referenceIdentifier>
+      </events>
+    </channel>
+    <channel>
+      <name>Link0</name>
+      <source>Frequent Big Cash Deposits</source>
+      <destination>Is big deposit?</destination>
+      <events/>
+    </channel>
+    <channel>
+      <name>Link2</name>
+      <source>Monitor Risky Activity</source>
+      <destination>Assign Handling Priorities</destination>
+      <events>
+        <referenceIdentifier>Alert</referenceIdentifier>
+      </events>
+    </channel>
+    <channel>
       <name>Link8</name>
       <source>Lack of Account Activity</source>
       <destination>Assign Risk Score</destination>
       <events>
         <referenceIdentifier>Lack of account Activity</referenceIdentifier>
+      </events>
+    </channel>
+    <channel>
+      <name>Link0</name>
+      <source>Transactions</source>
+      <destination>Frequent Big Cash Deposits</destination>
+      <events>
+        <referenceIdentifier>Transactions</referenceIdentifier>
       </events>
     </channel>
     <channel>
@@ -422,19 +454,11 @@
       </events>
     </channel>
     <channel>
-      <name>Link4</name>
-      <source>Alert Handler</source>
-      <destination>Monitor Risky Activity</destination>
+      <name>Link7</name>
+      <source>Assign Handling Priorities</source>
+      <destination>Alerts Inspector</destination>
       <events>
-        <referenceIdentifier>Acknowledged Activity</referenceIdentifier>
-      </events>
-    </channel>
-    <channel>
-      <name>Link4</name>
-      <source>Transactions</source>
-      <destination>Incrising Deposits Sum</destination>
-      <events>
-        <referenceIdentifier>Transactions</referenceIdentifier>
+        <referenceIdentifier>Prioritized Activity</referenceIdentifier>
       </events>
     </channel>
     <channel>
@@ -454,27 +478,19 @@
       </events>
     </channel>
     <channel>
-      <name>Link0</name>
-      <source>Assign Risk Score</source>
-      <destination>Assign Handling Priorities</destination>
-      <events>
-        <referenceIdentifier>Scored Activity</referenceIdentifier>
-      </events>
-    </channel>
-    <channel>
-      <name>Link7</name>
-      <source>Assign Handling Priorities</source>
-      <destination>Alerts Inspector</destination>
-      <events>
-        <referenceIdentifier>Prioritized Activity</referenceIdentifier>
-      </events>
-    </channel>
-    <channel>
       <name>Link2</name>
-      <source>Monitor Risky Activity</source>
-      <destination>Assign Handling Priorities</destination>
+      <source>Transactions</source>
+      <destination>Check Balance Nature</destination>
       <events>
-        <referenceIdentifier>Alert</referenceIdentifier>
+        <referenceIdentifier>Transactions</referenceIdentifier>
+      </events>
+    </channel>
+    <channel>
+      <name>Link4</name>
+      <source>Transactions</source>
+      <destination>Incrising Deposits Sum</destination>
+      <events>
+        <referenceIdentifier>Transactions</referenceIdentifier>
       </events>
     </channel>
     <channel>
@@ -486,17 +502,25 @@
       </events>
     </channel>
     <channel>
-      <name>Link3</name>
-      <source>Monitor Risky Activity</source>
-      <destination>Alert Manager</destination>
+      <name>Link10</name>
+      <source>Frequent big cash deposits and transfers abroad</source>
+      <destination>Lack of Documentation</destination>
       <events>
-        <referenceIdentifier>Alert</referenceIdentifier>
+        <referenceIdentifier>Suspecious Activity</referenceIdentifier>
       </events>
     </channel>
     <channel>
-      <name>Link12</name>
-      <source>Lack of Documentation</source>
-      <destination>External Pro/Con</destination>
+      <name>Link5</name>
+      <source>Monitor False Alarms</source>
+      <destination>Assign Risk Score</destination>
+      <events>
+        <referenceIdentifier>Adjust Values</referenceIdentifier>
+      </events>
+    </channel>
+    <channel>
+      <name>Link1</name>
+      <source>Is big deposit?</source>
+      <destination>Frequent Big Cash Deposits</destination>
       <events/>
     </channel>
     <channel>
@@ -505,6 +529,14 @@
       <destination>Assign Risk Score</destination>
       <events>
         <referenceIdentifier>Rounded Payments</referenceIdentifier>
+      </events>
+    </channel>
+    <channel>
+      <name>Link4</name>
+      <source>Alert Handler</source>
+      <destination>Monitor Risky Activity</destination>
+      <events>
+        <referenceIdentifier>Acknowledged Activity</referenceIdentifier>
       </events>
     </channel>
   </channels>

@@ -30,7 +30,7 @@ import EPDLEditor.Types.EPAPattern;
 import EPDLEditor.Types.GraphElements;
 import EPDLEditor.Types.ParticipantEvent;
 import EPDLEditor.Types.GraphElements.MyVertex;
-import EPDLEditor.UI.renderers.GraphElementsVisualization;
+import EPDLEditor.UI.renderers.VertexColorVisualization;
 import EPDLEditor.UI.renderers.TextAreaRenderer;
 import EPDLEditor.exceptions.UniqueNameException;
 
