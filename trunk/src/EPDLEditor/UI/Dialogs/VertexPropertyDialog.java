@@ -171,6 +171,11 @@ public class VertexPropertyDialog extends javax.swing.JDialog {
 
         jAgentSelectionTextArea.setColumns(20);
         jAgentSelectionTextArea.setRows(1);
+        jAgentSelectionTextArea.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jAgentSelectionTextAreaMouseClicked(evt);
+            }
+        });
         jAgentSelection.setViewportView(jAgentSelectionTextArea);
 
         jAgentSelectionLabel.setText("Filter:");
@@ -638,6 +643,10 @@ public class VertexPropertyDialog extends javax.swing.JDialog {
     	if (evt.getKeyChar()==(char)13)
     		okButtonHandler(null);
     }//GEN-LAST:event_KeyTypedHandler
+
+    private void jAgentSelectionTextAreaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jAgentSelectionTextAreaMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jAgentSelectionTextAreaMouseClicked
 
 
 
