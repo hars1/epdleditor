@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="http://www.bearcave.com/expression" xmlns="http://www.bearcave.com/expression" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified" blockDefault="extension" finalDefault="restriction" version="1.0">
+        <!--                      -->
+	<xs:element name="EXPRESSION">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:choice>
+					<xs:element name="EQUAL" type="ASGN_TYPE"/>
+					<xs:group ref="EXPR_GROUP"/>
+				</xs:choice>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+        <!--                      -->
+	<xs:complexType name="ASGN_TYPE">
+		<xs:sequence>
+			<xs:element name="IDENT" type="xs:Name"/>
+			<xs:group ref="EXPR_GROUP"/>
+		</xs:sequence>
+	</xs:complexType>
+        <!--                      -->
+	<xs:group name="EXPR_GROUP">
+		<xs:sequence>
+			<xs:choice>
+				<xs:element name="PLUS" type="MUL_OPR_TYPE"/>
+				<xs:element name="MINUS" type="MUL_OPR_TYPE"/>
+				<xs:group ref="MUL_GROUP"/>
+			</xs:choice>
+		</xs:sequence>
+	</xs:group>
+        <!--                      -->
+	<xs:complexType name="MUL_OPR_TYPE">
+		<xs:sequence>
+			<xs:group ref="EXPR_GROUP"/>
+			<xs:group ref="EXPR_GROUP"/>
+		</xs:sequence>
+	</xs:complexType>
+        <!--                      -->
+	<xs:group name="MUL_GROUP">
+		<xs:sequence>
+			<xs:choice>
+				<xs:element name="TIMES" type="TERM_TYPE"/>
+				<xs:element name="DIV" type="TERM_TYPE"/>
+				<xs:element name="MOD" type="TERM_TYPE"/>
+				<xs:group ref="UNARY_GROUP"/>
+			</xs:choice>
+		</xs:sequence>
+	</xs:group>
+        <!--                      -->
+	<xs:complexType name="TERM_TYPE">
+		<xs:sequence>
+			<xs:group ref="MUL_GROUP"/>
+			<xs:group ref="MUL_GROUP"/>
+		</xs:sequence>
+	</xs:complexType>
+        <!--                      -->
+	<xs:group name="UNARY_GROUP">
+		<xs:sequence>
+			<xs:choice>
+				<xs:element name="UMINUS" type="PRIMARY_EXPR_TYPE"/>
+				<xs:group ref="PRIMARY_EXPR_GROUP"/>
+			</xs:choice>
+		</xs:sequence>
+	</xs:group>
+        <!--                      -->
+	<xs:complexType name="PRIMARY_EXPR_TYPE">
+		<xs:sequence>
+			<xs:group ref="PRIMARY_EXPR_GROUP"/>
+		</xs:sequence>
+	</xs:complexType>
+        <!--                      -->
+	<xs:group name="PRIMARY_EXPR_GROUP">
+		<xs:choice>
+			<xs:element name="IDENT" type="xs:Name"/>
+			<xs:element name="INT">
+				<xs:simpleType>
+					<xs:restriction base="xs:integer"/>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="PAREN">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:group ref="EXPR_GROUP"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:choice>
+	</xs:group>
+        <!--                      -->
+</xs:schema>

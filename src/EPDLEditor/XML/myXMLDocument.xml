@@ -1,0 +1,20 @@
+      <ex:EXPRESSION 
+           <ex:EQUAL>
+               <ex:IDENT>x</ex:IDENT>
+               <ex:PLUS>
+                   <ex:IDENT>a</ex:IDENT>
+                   <ex:TIMES>
+                       <ex:INT>4</ex:INT>
+                       <ex:PAREN>
+                           <ex:PLUS>
+                               <ex:IDENT>b</ex:IDENT>
+                               <ex:UMINUS>
+                                   <ex:IDENT>c</ex:IDENT>
+                               </ex:UMINUS>
+                           </ex:PLUS>
+                       </ex:PAREN>
+                   </ex:TIMES>
+               </ex:PLUS>
+           </ex:EQUAL>
+       </ex:EXPRESSION>
+
